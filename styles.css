@@ -482,6 +482,8 @@ h3 {
 .fit-card {
   padding: 36px;
   background: var(--surface-strong);
+  display: flex;
+  flex-direction: column;
 }
 
 .fit-card__inner {
@@ -492,6 +494,7 @@ h3 {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.52)),
     linear-gradient(135deg, rgba(13, 23, 38, 0.02), transparent 60%);
+  flex: 1;
 }
 
 .fit-card__inner--muted {
