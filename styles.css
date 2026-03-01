@@ -553,15 +553,18 @@ h3 {
 }
 
 .testimonial-person {
-  display: block;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  align-items: center;
   margin-bottom: 18px;
 }
 
 .testimonial-avatar {
-  width: 100%;
+  width: 96px;
   min-width: 0;
-  height: auto;
-  aspect-ratio: 4 / 3;
+  height: 96px;
+  aspect-ratio: auto;
   border-radius: 16px;
   background: rgba(13, 23, 38, 0.05);
   overflow: hidden;
@@ -575,6 +578,10 @@ h3 {
   object-fit: cover;
   object-position: center 18%;
   box-shadow: none;
+}
+
+.testimonial-meta {
+  min-width: 0;
 }
 
 .testimonial-kicker {
@@ -814,6 +821,16 @@ code {
   .hero__stats,
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-person {
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+  }
+
+  .testimonial-avatar {
+    width: 80px;
+    height: 80px;
   }
 }
 
