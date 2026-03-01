@@ -492,7 +492,8 @@ h3 {
 
 .principles,
 .signal-grid,
-.testimonial-grid {
+.testimonial-grid,
+.about-grid {
   display: grid;
   gap: 18px;
 }
@@ -512,10 +513,61 @@ h3 {
   margin-top: 28px;
 }
 
+.about-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 28px;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-photo-card {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.about-proof {
+  margin-top: 24px;
+}
+
+.about-proof__inner {
+  padding: 24px 26px;
+  border: 1px solid rgba(13, 23, 38, 0.08);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.56)),
+    linear-gradient(135deg, rgba(255, 77, 61, 0.03), transparent 60%);
+}
+
+.about-proof__lead {
+  margin-bottom: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
 .principle-card,
 .signal-card,
 .fit-card,
-.testimonial-card {
+.testimonial-card,
+.about-card {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -606,6 +658,76 @@ h3 {
   font-size: 0.9rem;
   line-height: 1.45;
   color: var(--text-soft);
+}
+
+.about-card {
+  padding: 28px;
+  border: 1px solid rgba(13, 23, 38, 0.08);
+  background: var(--surface-strong);
+}
+
+.about-card span {
+  display: inline-flex;
+  margin-bottom: 26px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 77, 61, 0.12);
+  color: var(--accent-deep);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.22rem;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.about-card p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+.about-card__lead {
+  margin-bottom: 18px !important;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.about-card__list li {
+  position: relative;
+  padding-left: 40px;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.about-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.02rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background:
+    rgba(255, 77, 61, 0.1)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d92f21' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='M12 5l7 7-7 7'/%3E%3C/svg%3E")
+    no-repeat center / 14px 14px;
 }
 
 .testimonial-quote {
@@ -767,7 +889,12 @@ code {
   .section--split,
   .principles,
   .signal-grid,
-  .testimonial-grid {
+  .testimonial-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
     grid-template-columns: 1fr;
   }
 
