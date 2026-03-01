@@ -366,7 +366,8 @@ h3 {
 }
 
 .principles,
-.signal-grid {
+.signal-grid,
+.testimonial-grid {
   display: grid;
   gap: 18px;
 }
@@ -381,9 +382,15 @@ h3 {
   margin-top: 28px;
 }
 
+.testimonial-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 28px;
+}
+
 .principle-card,
 .signal-card,
-.fit-card {
+.fit-card,
+.testimonial-card {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -409,6 +416,74 @@ h3 {
   padding: 26px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.testimonial-card {
+  padding: 28px;
+  border: 1px solid rgba(13, 23, 38, 0.08);
+  background: var(--surface-strong);
+  box-shadow: none;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(13, 23, 38, 0.05);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar--image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  box-shadow: none;
+}
+
+.testimonial-person > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.testimonial-kicker {
+  margin-bottom: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.testimonial-person h3 {
+  margin-bottom: 4px;
+  font-size: 1.18rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.testimonial-role {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-soft);
+}
+
+.testimonial-quote {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.68;
+  color: var(--text-soft);
 }
 
 .fit-card {
@@ -517,7 +592,8 @@ code {
   .section--form,
   .section--split,
   .principles,
-  .signal-grid {
+  .signal-grid,
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
