@@ -3,11 +3,11 @@ const DEFAULT_LANGUAGE = navigator.language.toLowerCase().startsWith("es") ? "es
 
 const translations = {
   en: {
-    "header.cta": "Start the diagnostic",
+    "header.cta": "Get My Revenue Audit",
     "hero.eyebrow": "For Seed and Series A B2B startups with traction",
     "hero.title": "Unlock stalled revenue with hands-on GTM execution.",
     "hero.lede": "Built for founders already generating revenue who know the sales machine is underperforming, but do not need another 50-slide deck.",
-    "hero.primaryCta": "Get a WhatsApp diagnosis",
+    "hero.primaryCta": "Get My Revenue Audit",
     "hero.secondaryCta": "See how it works",
     "hero.stats.mrr": "Ideal MRR range",
     "hero.stats.weeklyLabel": "Weekly",
@@ -136,11 +136,11 @@ const translations = {
     "message.context": "Context",
   },
   es: {
-    "header.cta": "Iniciar diagnóstico",
+    "header.cta": "Quiero Mi Auditoría",
     "hero.eyebrow": "Para startups B2B Seed y Series A con tracción",
     "hero.title": "Destraba ingresos con ejecución GTM práctica y directa.",
     "hero.lede": "Pensado para founders con revenue que saben que su proceso comercial no está rindiendo, pero no necesitan otra presentación de 50 slides.",
-    "hero.primaryCta": "Recibir diagnóstico por WhatsApp",
+    "hero.primaryCta": "Quiero Mi Auditoría",
     "hero.secondaryCta": "Ver cómo funciona",
     "hero.stats.mrr": "Rango ideal de MRR",
     "hero.stats.weeklyLabel": "Semanal",
