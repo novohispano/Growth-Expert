@@ -396,13 +396,15 @@ h3 {
   font-size: 1.06rem;
   line-height: 1.18;
   letter-spacing: -0.025em;
+  color: var(--text);
 }
 
 .pattern-item__body p {
   margin-bottom: 0;
   color: var(--text-soft);
   font-size: 0.98rem;
-  line-height: 1.55;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .check-list li {
@@ -544,7 +546,9 @@ h3 {
 .testimonial-card {
   padding: 28px;
   border: 1px solid rgba(13, 23, 38, 0.08);
-  background: var(--surface-strong);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82)),
+    linear-gradient(135deg, rgba(255, 77, 61, 0.03), transparent 58%);
   box-shadow: none;
 }
 
@@ -586,6 +590,7 @@ h3 {
   font-size: 1.18rem;
   line-height: 1.08;
   letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 .testimonial-role {
@@ -598,7 +603,7 @@ h3 {
 .testimonial-quote {
   margin-bottom: 0;
   font-size: 1rem;
-  line-height: 1.68;
+  line-height: 1.65;
   color: var(--text-soft);
 }
 
@@ -669,6 +674,16 @@ h3 {
   border-radius: 20px;
   background: rgba(255, 77, 61, 0.08);
   color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-note strong {
+  color: var(--text);
+}
+
+.form-note span {
+  color: var(--text-soft);
 }
 
 .intake-form {
