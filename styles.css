@@ -484,6 +484,21 @@ h3 {
   background: var(--surface-strong);
 }
 
+.fit-card__inner {
+  margin-top: 28px;
+  padding: 24px 24px 10px;
+  border: 1px solid rgba(13, 23, 38, 0.08);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.52)),
+    linear-gradient(135deg, rgba(13, 23, 38, 0.02), transparent 60%);
+}
+
+.fit-card__inner--muted {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .fit-card--muted {
   background: var(--surface-muted);
   color: #f5f7fb;
