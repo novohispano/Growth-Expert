@@ -2,6 +2,8 @@
   --bg: #eef2f4;
   --surface: rgba(255, 255, 255, 0.7);
   --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-soft: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.56)),
+    linear-gradient(135deg, rgba(13, 23, 38, 0.02), transparent 60%);
   --surface-muted: rgba(15, 23, 42, 0.86);
   --text: #0d1726;
   --text-soft: #526071;
@@ -32,6 +34,7 @@ body {
     radial-gradient(circle at top right, rgba(13, 23, 38, 0.08), transparent 30%),
     linear-gradient(180deg, #f7f8fa 0%, var(--bg) 100%);
   min-height: 100vh;
+  position: relative;
 }
 
 body::before {
@@ -39,6 +42,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: -1;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
@@ -474,6 +478,18 @@ h3 {
   background: var(--surface);
 }
 
+.section--testimonials {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.68)),
+    radial-gradient(circle at top right, rgba(13, 23, 38, 0.035), transparent 26%);
+}
+
+.section--about {
+  background:
+    linear-gradient(180deg, rgba(255, 249, 247, 0.8), rgba(255, 255, 255, 0.7)),
+    radial-gradient(circle at top left, rgba(255, 77, 61, 0.045), transparent 24%);
+}
+
 .section--split {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -557,9 +573,7 @@ h3 {
   padding: 24px 26px;
   border: 1px solid rgba(13, 23, 38, 0.08);
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.56)),
-    linear-gradient(135deg, rgba(255, 77, 61, 0.03), transparent 60%);
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .about-proof__lead {
@@ -605,9 +619,7 @@ h3 {
 .testimonial-card {
   padding: 28px;
   border: 1px solid rgba(13, 23, 38, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82)),
-    linear-gradient(135deg, rgba(255, 77, 61, 0.03), transparent 58%);
+  background: var(--surface-strong);
   box-shadow: none;
 }
 
@@ -756,9 +768,7 @@ h3 {
   padding: 24px 24px 10px;
   border: 1px solid rgba(13, 23, 38, 0.08);
   border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.52)),
-    linear-gradient(135deg, rgba(13, 23, 38, 0.02), transparent 60%);
+  background: rgba(255, 255, 255, 0.76);
   flex: 1;
 }
 
@@ -782,6 +792,9 @@ h3 {
   grid-template-columns: 0.92fr 1.08fr;
   gap: 24px;
   align-items: start;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 248, 0.88), rgba(255, 255, 255, 0.76)),
+    radial-gradient(circle at top right, rgba(255, 77, 61, 0.08), transparent 24%);
 }
 
 .form-copy {
@@ -793,9 +806,7 @@ h3 {
   padding: 22px 24px;
   border: 1px solid rgba(13, 23, 38, 0.08);
   border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.52)),
-    linear-gradient(135deg, rgba(13, 23, 38, 0.02), transparent 60%);
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .form-copy__inner p {
