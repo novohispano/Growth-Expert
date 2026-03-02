@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="40" x2="1110" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7F8FA"/>
+      <stop offset="1" stop-color="#E9EEF1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="156" y1="120" x2="990" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6654" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#FF3B29" stop-opacity=".04"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="100" y1="72" x2="1080" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity=".96"/>
+      <stop offset="1" stop-color="white" stop-opacity=".82"/>
+    </linearGradient>
+    <filter id="shadow" x="50" y="50" width="1100" height="540" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#0D1726" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="140" cy="80" r="180" fill="#FF4D3D" fill-opacity=".08"/>
+  <circle cx="1080" cy="120" r="160" fill="#0D1726" fill-opacity=".05"/>
+  <g filter="url(#shadow)">
+    <rect x="76" y="64" width="1048" height="502" rx="36" fill="url(#panel)"/>
+    <rect x="76" y="64" width="1048" height="502" rx="36" stroke="rgba(13,23,38,0.08)"/>
+  </g>
+
+  <rect x="124" y="114" width="76" height="76" rx="38" fill="#FF4D3D"/>
+  <rect x="124" y="114" width="76" height="76" rx="38" stroke="#121212" stroke-width="5"/>
+  <text x="162" y="164" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#121212">G</text>
+
+  <text x="228" y="146" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#D92F21">GROWTH EXPERT</text>
+  <text x="124" y="270" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="-3" fill="#0D1726">Revenue Unlock</text>
+  <text x="124" y="344" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="-3" fill="#0D1726">Program</text>
+  <text x="124" y="406" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="31" font-weight="500" fill="#526071">Revenue audits and hands-on GTM execution</text>
+  <text x="124" y="448" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="31" font-weight="500" fill="#526071">for Seed and Series A B2B startups with traction.</text>
+
+  <rect x="124" y="486" width="320" height="58" rx="29" fill="#FF4D3D"/>
+  <text x="284" y="524" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="white">Get My Revenue Audit</text>
+
+  <g opacity=".95">
+    <rect x="802" y="154" width="240" height="90" rx="24" fill="white" fill-opacity=".8" stroke="rgba(13,23,38,0.08)"/>
+    <text x="832" y="192" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#0D1726">$10k-$200k</text>
+    <text x="832" y="225" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" fill="#526071">Ideal MRR range</text>
+    <rect x="802" y="262" width="240" height="90" rx="24" fill="white" fill-opacity=".8" stroke="rgba(13,23,38,0.08)"/>
+    <text x="832" y="300" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#0D1726">Weekly</text>
+    <text x="832" y="333" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" fill="#526071">Revenue problem-solving rhythm</text>
+    <rect x="802" y="370" width="240" height="116" rx="24" fill="white" fill-opacity=".8" stroke="rgba(13,23,38,0.08)"/>
+    <text x="832" y="408" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#0D1726">Execution-first</text>
+    <text x="832" y="441" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" fill="#526071">Close, pricing, and</text>
+    <text x="832" y="468" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" fill="#526071">expansion workstreams</text>
+  </g>
+</svg>
