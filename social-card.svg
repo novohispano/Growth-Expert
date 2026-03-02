@@ -33,9 +33,9 @@
   <rect x="120" y="96" width="74" height="74" rx="37" stroke="#121212" stroke-width="5"/>
   <text x="157" y="147" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#121212">G</text>
 
-  <text x="220" y="138" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing=".2" fill="#0D1726">Growth Expert</text>
-  <text x="120" y="262" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-3" fill="#0D1726">Revenue Unlock</text>
-  <text x="120" y="338" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-3" fill="#0D1726">Program</text>
+  <text x="220" y="144" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing=".2" fill="#0D1726">Growth Expert</text>
+  <text x="120" y="292" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-3" fill="#0D1726">Revenue Unlock</text>
+  <text x="120" y="368" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-3" fill="#0D1726">Program</text>
 
   <rect x="120" y="430" width="390" height="82" rx="41" fill="url(#button)"/>
   <text x="315" y="482" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#FFFFFF">Start Now</text>

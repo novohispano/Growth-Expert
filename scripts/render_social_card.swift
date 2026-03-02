@@ -157,16 +157,16 @@ drawLine(
 
 drawLine(
     "Growth Expert",
-    in: CGRect(x: 220, y: 104, width: 420, height: 48),
+    in: CGRect(x: 220, y: 100, width: 460, height: 56),
     context: context,
     fontName: "HelveticaNeue-Bold",
-    fontSize: 36,
+    fontSize: 42,
     color: rgba(13, 23, 38)
 )
 
 drawLine(
     "Revenue Unlock",
-    in: CGRect(x: 120, y: 176, width: 620, height: 88),
+    in: CGRect(x: 120, y: 206, width: 620, height: 88),
     context: context,
     fontName: "HelveticaNeue-Bold",
     fontSize: 82,
@@ -175,7 +175,7 @@ drawLine(
 )
 drawLine(
     "Program",
-    in: CGRect(x: 120, y: 252, width: 620, height: 88),
+    in: CGRect(x: 120, y: 282, width: 620, height: 88),
     context: context,
     fontName: "HelveticaNeue-Bold",
     fontSize: 82,
