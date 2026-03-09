@@ -102,27 +102,18 @@ const translations = {
     "fields.monthlyRevenue": "Monthly Revenue",
     "fields.ticketSize": "Average Ticket Size",
     "fields.breakpoint": "Sales Process Breakdown",
-    "fields.implementer": "Who implements changes?",
-    "fields.context": "Context",
     "placeholders.name": "Jane Founder",
     "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
     "placeholders.monthlyRevenue": "$35,000 MRR",
     "placeholders.ticketSize": "$4,500 ACV",
-    "placeholders.context": "Add any useful context: ICP, sales cycle length, current bottleneck, recent experiments, or why growth feels stuck.",
     "options.breakpointDefault": "Select the main issue",
-    "options.breakpoint1": "Pipeline quality",
-    "options.breakpoint2": "Discovery and qualification",
-    "options.breakpoint3": "Demo to proposal conversion",
-    "options.breakpoint4": "Closing enterprise deals",
-    "options.breakpoint5": "Pricing and packaging",
-    "options.breakpoint6": "Upsell and expansion",
-    "options.implementerDefault": "Choose an owner",
-    "options.implementer1": "Founder",
-    "options.implementer2": "Head of Sales",
-    "options.implementer3": "Revenue / Growth lead",
-    "options.implementer4": "Sales team",
-    "options.implementer5": "Cross-functional team",
+    "options.breakpoint1": "Blocked pipeline",
+    "options.breakpoint2": "Founder-led sales",
+    "options.breakpoint3": "Extended sales cycles",
+    "options.breakpoint4": "Underperforming pricing",
+    "options.breakpoint5": "No upselling",
+    "options.breakpoint6": "Other",
     "form.disclaimer": "WhatsApp opens with the configured consulting number and the prospect's intake summary.",
     "form.submit": "Get My Revenue Audit",
     "message.intro": "Hi, I want a Revenue Unlock diagnostic.",
@@ -132,8 +123,6 @@ const translations = {
     "message.monthlyRevenue": "Monthly Revenue",
     "message.ticketSize": "Average Ticket Size",
     "message.breakpoint": "Sales Process Breakdown",
-    "message.implementer": "Who implements changes",
-    "message.context": "Context",
   },
   es: {
     "header.cta": "Quiero Mi Auditoría",
@@ -235,27 +224,18 @@ const translations = {
     "fields.monthlyRevenue": "Revenue mensual",
     "fields.ticketSize": "Ticket promedio",
     "fields.breakpoint": "Dónde se rompe el proceso comercial",
-    "fields.implementer": "Quién implementaría los cambios",
-    "fields.context": "Contexto",
     "placeholders.name": "Jane Founder",
     "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
     "placeholders.monthlyRevenue": "$35,000 MRR",
     "placeholders.ticketSize": "$4,500 ACV",
-    "placeholders.context": "Agrega contexto útil: ICP, duración del ciclo comercial, cuello de botella actual, experimentos recientes o por qué sientes que el crecimiento se frenó.",
     "options.breakpointDefault": "Selecciona el problema principal",
-    "options.breakpoint1": "Calidad del pipeline",
-    "options.breakpoint2": "Discovery y calificación",
-    "options.breakpoint3": "Conversión de demo a propuesta",
-    "options.breakpoint4": "Cierre de deals enterprise",
-    "options.breakpoint5": "Pricing y packaging",
-    "options.breakpoint6": "Upsell y expansión",
-    "options.implementerDefault": "Elige un owner",
-    "options.implementer1": "Founder",
-    "options.implementer2": "Head of Sales",
-    "options.implementer3": "Líder de Revenue / Growth",
-    "options.implementer4": "Equipo comercial",
-    "options.implementer5": "Equipo cross-functional",
+    "options.breakpoint1": "Pipeline bloqueado",
+    "options.breakpoint2": "Ventas lideradas por el founder",
+    "options.breakpoint3": "Ciclos de venta extendidos",
+    "options.breakpoint4": "Pricing subóptimo",
+    "options.breakpoint5": "Sin upselling",
+    "options.breakpoint6": "Otro",
     "form.disclaimer": "WhatsApp se abre con el número configurado y el resumen del intake del prospecto.",
     "form.submit": "Quiero Mi Auditoría",
     "message.intro": "Hola, quiero un diagnóstico de Revenue Unlock.",
@@ -265,8 +245,6 @@ const translations = {
     "message.monthlyRevenue": "Revenue mensual",
     "message.ticketSize": "Ticket promedio",
     "message.breakpoint": "Dónde se rompe el proceso comercial",
-    "message.implementer": "Quién implementaría los cambios",
-    "message.context": "Contexto",
   },
 };
 
@@ -319,8 +297,6 @@ if (form) {
       monthlyRevenue: (data.get("monthlyRevenue") || "").toString().trim(),
       ticketSize: (data.get("ticketSize") || "").toString().trim(),
       breakpoint: (data.get("breakpoint") || "").toString().trim(),
-      implementer: (data.get("implementer") || "").toString().trim(),
-      context: (data.get("context") || "").toString().trim(),
     };
 
     const requiredFields = [
@@ -330,7 +306,6 @@ if (form) {
       payload.monthlyRevenue,
       payload.ticketSize,
       payload.breakpoint,
-      payload.implementer,
     ];
 
     if (requiredFields.some((value) => !value)) {
@@ -348,12 +323,7 @@ if (form) {
       `${dictionary["message.monthlyRevenue"]}: ${payload.monthlyRevenue}`,
       `${dictionary["message.ticketSize"]}: ${payload.ticketSize}`,
       `${dictionary["message.breakpoint"]}: ${payload.breakpoint}`,
-      `${dictionary["message.implementer"]}: ${payload.implementer}`,
     ];
-
-    if (payload.context) {
-      lines.push(`${dictionary["message.context"]}: ${payload.context}`);
-    }
 
     const message = encodeURIComponent(lines.join("\n"));
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
