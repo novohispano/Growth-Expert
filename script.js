@@ -1,5 +1,6 @@
 const WHATSAPP_NUMBER = "528125678257";
 const DEFAULT_LANGUAGE = navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+const PAGE_TRANSLATIONS = window.PAGE_TRANSLATIONS || {};
 
 const translations = {
   en: {
@@ -254,8 +255,18 @@ const placeholderNodes = document.querySelectorAll("[data-i18n-placeholder]");
 const languageButtons = document.querySelectorAll("[data-lang-toggle]");
 let currentLanguage = DEFAULT_LANGUAGE;
 
+function getDictionary(lang) {
+  const baseDictionary = translations[lang] || translations.en;
+  const pageDictionary = PAGE_TRANSLATIONS[lang] || {};
+
+  return {
+    ...baseDictionary,
+    ...pageDictionary,
+  };
+}
+
 function translate(lang) {
-  const dictionary = translations[lang] || translations.en;
+  const dictionary = getDictionary(lang);
   currentLanguage = lang;
   document.documentElement.lang = lang;
 
@@ -314,7 +325,7 @@ if (form) {
       return;
     }
 
-    const dictionary = translations[currentLanguage] || translations.en;
+    const dictionary = getDictionary(currentLanguage);
     const customIntro =
       currentLanguage === "es"
         ? form.dataset.messageIntroEs || form.dataset.messageIntro
