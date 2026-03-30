@@ -297,7 +297,8 @@ const form = document.querySelector("#whatsapp-form");
 const translationNodes = document.querySelectorAll("[data-i18n]");
 const placeholderNodes = document.querySelectorAll("[data-i18n-placeholder]");
 const languageButtons = document.querySelectorAll("[data-lang-toggle]");
-let currentLanguage = DEFAULT_LANGUAGE;
+const forcedFormLanguage = form?.dataset.formLanguage || "";
+let currentLanguage = forcedFormLanguage || DEFAULT_LANGUAGE;
 
 function getDictionary(lang) {
   const baseDictionary = translations[lang] || translations.en;
@@ -338,7 +339,7 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => translate(button.dataset.langToggle));
 });
 
-translate(DEFAULT_LANGUAGE);
+translate(currentLanguage);
 
 if (form) {
   form.addEventListener("submit", (event) => {
@@ -369,13 +370,14 @@ if (form) {
       return;
     }
 
-    const dictionary = getDictionary(currentLanguage);
+    const submissionLanguage = forcedFormLanguage || currentLanguage;
+    const dictionary = getDictionary(submissionLanguage);
     const customIntro =
-      currentLanguage === "es"
+      submissionLanguage === "es"
         ? form.dataset.messageIntroEs || form.dataset.messageIntro
         : form.dataset.messageIntroEn || form.dataset.messageIntro;
     const revenueLabel =
-      currentLanguage === "es"
+      submissionLanguage === "es"
         ? form.dataset.messageMonthlyRevenueEs || dictionary["message.monthlyRevenue"]
         : form.dataset.messageMonthlyRevenueEn || dictionary["message.monthlyRevenue"];
     const lines = [
