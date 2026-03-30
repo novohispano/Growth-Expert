@@ -353,11 +353,57 @@
             <span>Fill the fields, send the audit on WhatsApp, then Jorge reviews the bottleneck and replies.</span>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:3rem 2rem;">
-          <a class="button button--primary" href="/#diagnostic" style="font-size:1.05rem;padding:1rem 2.5rem;">
-            Get My Free Revenue Audit →
-          </a>
-        </div>
+
+        <form class="intake-form" id="whatsapp-form">
+          <div class="field-grid">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Jane Founder" required />
+            </label>
+
+            <label class="field">
+              <span>Startup</span>
+              <input type="text" name="startup" placeholder="Acme AI" required />
+            </label>
+
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="jane@acme.ai" required />
+            </label>
+
+            <label class="field">
+              <span>Monthly Revenue</span>
+              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" required />
+            </label>
+
+            <label class="field">
+              <span>Average Ticket Size</span>
+              <input type="text" name="ticketSize" placeholder="$4,500 ACV" required />
+            </label>
+
+            <label class="field">
+              <span>Sales Process Breakdown</span>
+              <select name="breakpoint" required>
+                <option value="">Select the main issue</option>
+                <option value="Blocked pipeline">Blocked pipeline</option>
+                <option value="Founder-led sales">Founder-led sales</option>
+                <option value="Extended sales cycles">Extended sales cycles</option>
+                <option value="Underperforming pricing">Underperforming pricing</option>
+                <option value="No upselling">No upselling</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <p class="disclaimer">
+              WhatsApp opens with the configured consulting number and the prospect's intake summary.
+            </p>
+            <button class="button button--primary button--wide" type="submit">
+              Get My Free Revenue Audit
+            </button>
+          </div>
+        </form>
       </section>
 
     </main>
@@ -376,5 +422,6 @@
     </footer>
 
   </div>
+  <script src="../script.js"></script>
 </body>
 </html>
