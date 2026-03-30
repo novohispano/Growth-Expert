@@ -81,12 +81,34 @@
         <span class="brand__mark">G</span>
         <span class="brand__text">
           <strong>Growth Expert</strong>
+          <span>Argentina</span>
         </span>
       </a>
       <div class="header-controls">
-        <a href="/#diagnostic" class="header-cta button button--primary">Get My Revenue Audit</a>
+        <a href="#country-paths" class="header-cta button button--primary">Elegir programa</a>
       </div>
     </header>
+
+    <div class="page-context anchor-target">
+      <div class="page-context__trail" aria-label="Breadcrumb">
+        <a href="/">Inicio</a>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <span>Países</span>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <span class="page-context__current">Argentina</span>
+      </div>
+      <div class="page-context__siblings" aria-label="Páginas por país">
+        <a class="page-context__sibling" href="/mexico/">
+          <span>México</span>
+        </a>
+        <a class="page-context__sibling" href="/colombia/">
+          <span>Colombia</span>
+        </a>
+        <a class="page-context__sibling is-active" href="/argentina/" aria-current="page">
+          <span>Argentina</span>
+        </a>
+      </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -105,7 +127,7 @@
             <span>MRR ideal</span>
           </li>
           <li>
-            <strong>Weekly</strong>
+            <strong>Semanal</strong>
             <span>Sesiones de ejecución</span>
           </li>
           <li>
@@ -113,11 +135,22 @@
             <span>Acceso directo a Jorge</span>
           </li>
         </ul>
-
-        <div class="hero__actions">
-          <a href="/#diagnostic" class="button button--primary">Solicitar Diagnóstico</a>
-        </div>
       </div>
+      <aside class="hero-card path-selector anchor-target" id="country-paths">
+        <p class="hero-card__label">Elige tu siguiente paso</p>
+        <div class="path-selector__grid">
+          <a class="path-selector__card" href="/revenue-unlock/#whatsapp-form">
+            <span class="path-selector__title">Revenue Unlock Program</span>
+            <span class="path-selector__copy">Para destrabar pricing, pipeline y expansión.</span>
+            <span class="path-selector__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="path-selector__card" href="/series-a-fundraising/#whatsapp-form">
+            <span class="path-selector__title">Series A Fundraising</span>
+            <span class="path-selector__copy">Para preparar métricas, narrativa y proceso con inversionistas.</span>
+            <span class="path-selector__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </aside>
     </section>
 
     <!-- Program Section -->
@@ -225,36 +258,88 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section section--form">
-      <div class="form-copy">
-        <div class="form-copy__inner">
-          <h2>Listo para crecer?</h2>
-          <p>Obtén un diagnóstico gratuito de 30 minutos por WhatsApp. Sin compromiso. Solo claridad sobre qué está frenando tu crecimiento.</p>
-          <a href="/#diagnostic" class="button button--primary">Solicitar Diagnóstico Gratuito</a>
-          <p class="form-note">Responden en menos de 24 horas</p>
-        </div>
+    <section class="section section--related-nav">
+      <p class="eyebrow">Lectura recomendada</p>
+      <div class="related-grid related-grid--single">
+        <article class="related-card">
+          <h3 class="related-card__title">Empieza por la guía que explica cómo escalar ventas B2B en LATAM.</h3>
+          <p class="related-card__copy">Si quieres contexto antes de entrar a un programa, esta lectura aterriza los problemas de pipeline, pricing y expansión que más vemos en founders de la región.</p>
+          <div class="related-links">
+            <a class="related-link related-link--feature" href="/blog/ventas-b2b-startups-latam/">
+              <span>Cómo construir un proceso de ventas B2B para startups en LATAM</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section explore-hub anchor-target" id="explore-growth-expert">
+      <p class="eyebrow">Explora Growth Expert</p>
+      <div class="explore-hub__grid">
+        <article class="explore-card">
+          <h3 class="explore-card__title">Programas</h3>
+          <p class="explore-card__copy">Dos formas de trabajar juntos, según el cuello de botella principal.</p>
+          <div class="explore-list">
+            <a class="explore-link" href="/revenue-unlock/">
+              <span class="explore-link__label">Revenue Unlock Program</span>
+              <span class="explore-link__status" aria-hidden="true">→</span>
+            </a>
+            <a class="explore-link" href="/series-a-fundraising/">
+              <span class="explore-link__label">Series A Fundraising</span>
+              <span class="explore-link__status" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+        <article class="explore-card is-active">
+          <h3 class="explore-card__title">Países</h3>
+          <p class="explore-card__copy">Contexto local para ecosistemas clave donde ya trabajamos con founders B2B.</p>
+          <div class="explore-list">
+            <a class="explore-link" href="/mexico/">
+              <span class="explore-link__label">México</span>
+              <span class="explore-link__status" aria-hidden="true">→</span>
+            </a>
+            <a class="explore-link" href="/colombia/">
+              <span class="explore-link__label">Colombia</span>
+              <span class="explore-link__status" aria-hidden="true">→</span>
+            </a>
+            <span class="explore-link is-current" aria-current="page">
+              <span class="explore-link__label">Argentina</span>
+            </span>
+          </div>
+        </article>
+        <article class="explore-card">
+          <h3 class="explore-card__title">Artículos</h3>
+          <p class="explore-card__copy">Desgloses prácticos sobre GTM, ventas y fundraising para founders en LATAM.</p>
+          <div class="explore-list">
+            <a class="explore-link" href="/blog/ventas-b2b-startups-latam/">
+              <span class="explore-link__label">Cómo construir un proceso de ventas B2B para startups en LATAM</span>
+              <span class="explore-link__status" aria-hidden="true">→</span>
+            </a>
+            <span class="explore-link explore-link--placeholder">Más artículos pronto</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer site-footer--expanded">
       <div class="site-footer__identity">
-        <div class="brand">
-          <a href="/" class="brand__mark">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" fill="currentColor"/>
-            </svg>
-          </a>
-          <span class="brand__text">Growth Expert</span>
-        </div>
+        <strong>Jorge Tellez</strong>
+        <span>Growth Expert</span>
       </div>
       <nav class="site-footer__links">
-        <a href="/">← Homepage</a>
+        <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
+        <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/revenue-unlock/">Revenue Unlock Program</a>
+        <a href="/series-a-fundraising/">Series A Fundraising</a>
+        <a href="/mexico/">México</a>
+        <a href="/colombia/">Colombia</a>
+        <a href="/argentina/">Argentina</a>
+        <a href="/blog/ventas-b2b-startups-latam/">Blog</a>
+        <a href="/">Inicio</a>
       </nav>
-      <div class="site-footer__meta">
-        <p>&copy; 2026 Growth Expert. Consultoría B2B para startups en LATAM.</p>
-      </div>
+      <p class="site-footer__meta">&copy; 2026 Growth Expert. Consultoría B2B para startups en LATAM.</p>
     </footer>
   </div>
 </body>

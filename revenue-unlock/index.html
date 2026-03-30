@@ -85,6 +85,24 @@
       </div>
     </header>
 
+    <div class="page-context anchor-target">
+      <div class="page-context__trail" aria-label="Breadcrumb">
+        <a href="/" data-i18n="context.home">Home</a>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <span data-i18n="context.programs">Programs</span>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <span class="page-context__current" data-i18n="brand.program">Revenue Unlock Program</span>
+      </div>
+      <div class="page-context__siblings" aria-label="Program pages">
+        <a class="page-context__sibling is-active" href="/revenue-unlock/" aria-current="page">
+          <span data-i18n="services.unlock.title">Revenue Unlock Program</span>
+        </a>
+        <a class="page-context__sibling" href="/series-a-fundraising/">
+          <span data-i18n="services.fundraising.title">Series A Fundraising</span>
+        </a>
+      </div>
+    </div>
+
     <main>
 
       <!-- HERO -->
@@ -343,6 +361,31 @@
         </div>
       </section>
 
+      <section class="section section--related-nav">
+        <p class="eyebrow" data-i18n="related.eyebrow">Keep exploring</p>
+        <div class="related-grid">
+          <article class="related-card">
+            <h3 class="related-card__title" data-i18n="related.countries.title">Available across LATAM</h3>
+            <p class="related-card__copy" data-i18n="related.countries.copy">See the country pages with local market context.</p>
+            <div class="related-links">
+              <a class="related-link" href="/mexico/">Mexico</a>
+              <a class="related-link" href="/colombia/">Colombia</a>
+              <a class="related-link" href="/argentina/">Argentina</a>
+            </div>
+          </article>
+          <article class="related-card">
+            <h3 class="related-card__title" data-i18n="related.reading.title">Related reading</h3>
+            <p class="related-card__copy" data-i18n="related.reading.copy">Start with the article on building a scalable B2B sales process in LATAM.</p>
+            <div class="related-links">
+              <a class="related-link related-link--feature" href="/blog/ventas-b2b-startups-latam/">
+                <span data-i18n="related.article">How to build a scalable B2B sales process in LATAM</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <!-- CTA -->
       <section class="section section--form" id="audit">
         <div class="form-copy">
@@ -414,9 +457,48 @@
         </form>
       </section>
 
+      <section class="section explore-hub anchor-target" id="explore-growth-expert">
+        <p class="eyebrow" data-i18n="explore.eyebrow">Explore Growth Expert</p>
+        <div class="explore-hub__grid">
+          <article class="explore-card is-active">
+            <h3 class="explore-card__title" data-i18n="context.programs">Programs</h3>
+            <p class="explore-card__copy" data-i18n="explore.programs.copy">Two ways to work together, depending on the bottleneck.</p>
+            <div class="explore-list">
+              <span class="explore-link is-current" aria-current="page">
+                <span class="explore-link__label" data-i18n="services.unlock.title">Revenue Unlock Program</span>
+              </span>
+              <a class="explore-link" href="/series-a-fundraising/">
+                <span class="explore-link__label" data-i18n="services.fundraising.title">Series A Fundraising</span>
+                <span class="explore-link__status" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+          <article class="explore-card">
+            <h3 class="explore-card__title" data-i18n="context.countries">Countries</h3>
+            <p class="explore-card__copy" data-i18n="explore.countries.copy">Local market context across key LATAM ecosystems.</p>
+            <div class="explore-list">
+              <a class="explore-link" href="/mexico/"><span class="explore-link__label">Mexico</span><span class="explore-link__status" aria-hidden="true">→</span></a>
+              <a class="explore-link" href="/colombia/"><span class="explore-link__label">Colombia</span><span class="explore-link__status" aria-hidden="true">→</span></a>
+              <a class="explore-link" href="/argentina/"><span class="explore-link__label">Argentina</span><span class="explore-link__status" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="explore-card">
+            <h3 class="explore-card__title" data-i18n="explore.blog.title">Insights</h3>
+            <p class="explore-card__copy" data-i18n="explore.blog.copy">Practical breakdowns on GTM, sales, and fundraising.</p>
+            <div class="explore-list">
+              <a class="explore-link" href="/blog/ventas-b2b-startups-latam/">
+                <span class="explore-link__label" data-i18n="related.article">How to build a scalable B2B sales process in LATAM</span>
+                <span class="explore-link__status" aria-hidden="true">→</span>
+              </a>
+              <span class="explore-link explore-link--placeholder" data-i18n="explore.placeholder">More articles coming soon</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer site-footer--expanded">
       <div class="site-footer__identity">
         <strong>Jorge Tellez</strong>
         <span>Growth Expert</span>
@@ -424,6 +506,12 @@
       <div class="site-footer__links">
         <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
         <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/revenue-unlock/" data-i18n="services.unlock.title">Revenue Unlock Program</a>
+        <a href="/series-a-fundraising/" data-i18n="services.fundraising.title">Series A Fundraising</a>
+        <a href="/mexico/">Mexico</a>
+        <a href="/colombia/">Colombia</a>
+        <a href="/argentina/">Argentina</a>
+        <a href="/blog/ventas-b2b-startups-latam/" data-i18n="footer.blog">Blog</a>
         <a href="/" data-i18n="footer.back">← Back to homepage</a>
       </div>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
