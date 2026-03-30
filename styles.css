@@ -810,6 +810,10 @@ h3 {
     radial-gradient(circle at top right, rgba(255, 77, 61, 0.08), transparent 24%);
 }
 
+.section--form--balanced {
+  align-items: stretch;
+}
+
 .form-copy {
   padding: 8px 4px 0 4px;
 }
@@ -874,6 +878,12 @@ h3 {
   background: rgba(255, 255, 255, 0.88);
 }
 
+.section--form--balanced .intake-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -922,6 +932,11 @@ textarea {
   display: grid;
   gap: 16px;
   margin-top: 20px;
+}
+
+.section--form--balanced .form-footer {
+  margin-top: auto;
+  padding-top: 24px;
 }
 
 .disclaimer {

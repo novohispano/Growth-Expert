@@ -73,7 +73,7 @@
         </span>
       </a>
       <div class="header-controls">
-        <a class="header-cta button button--primary" href="/#diagnostic">Get My Revenue Audit</a>
+        <a class="header-cta button button--primary" href="#whatsapp-form">Get My Fundraising Audit</a>
       </div>
     </header>
 
@@ -88,7 +88,7 @@
             A focused program for B2B founders in Mexico, Colombia, Argentina and Latin America who are preparing to raise their Series A. Build the investor narrative, commercial proof points, and GTM story that LATAM VCs fund.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="/#diagnostic">Start with a Free Revenue Audit</a>
+            <a class="button button--primary" href="#whatsapp-form">Get My Fundraising Audit</a>
           </div>
           <ul class="hero__stats" aria-label="Program details">
             <li>
@@ -175,7 +175,7 @@
         <div class="signal-grid">
           <article class="signal-card">
             <h3>Audit</h3>
-            <p>Start with a revenue audit to map commercial gaps — the same questions a Series A investor will ask in diligence.</p>
+            <p>Start with a fundraising audit to map commercial gaps — the same questions a Series A investor will ask in diligence.</p>
           </article>
           <article class="signal-card">
             <h3>Fix the foundation</h3>
@@ -336,12 +336,12 @@
       </section>
 
       <!-- CTA -->
-      <section class="section section--form" id="audit">
+      <section class="section section--form section--form--balanced" id="audit">
         <div class="form-copy">
           <p class="eyebrow">Start here — it's free</p>
-          <h2>Send your commercial numbers. I'll tell you where you stand for Series A.</h2>
+          <h2>Send your metrics. I'll tell you where you stand for Series A.</h2>
           <div class="form-copy__inner">
-            <p>The fastest way to start is a revenue audit. Share your core commercial inputs — MRR, ticket size, and biggest bottleneck — on WhatsApp and Jorge will reply with an honest read on where you stand.</p>
+            <p>The fastest way to start is a fundraising audit. Share a few core metrics on WhatsApp and Jorge will reply with an honest read on where you stand for Series A.</p>
           </div>
           <div class="form-tags" aria-label="Audit benefits">
             <span class="form-tag">Takes under 2 minutes</span>
@@ -350,14 +350,49 @@
           </div>
           <div class="form-note">
             <strong>Flow:</strong>
-            <span>Fill the fields, send the audit on WhatsApp, Jorge reviews and replies with where GTM is likely breaking.</span>
+            <span>Fill the short form, send your metrics on WhatsApp, and Jorge replies with an honest read on where you stand for Series A.</span>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:3rem 2rem;">
-          <a class="button button--primary" href="/#diagnostic" style="font-size:1.05rem;padding:1rem 2.5rem;">
-            Get My Free Revenue Audit →
-          </a>
-        </div>
+
+        <form
+          class="intake-form"
+          id="whatsapp-form"
+          data-message-intro-en="Hi, I want a Fundraising Audit."
+          data-message-intro-es="Hola, quiero una auditoría de fundraising."
+          data-message-monthly-revenue-en="Annual Revenue"
+          data-message-monthly-revenue-es="Revenue anual"
+        >
+          <div class="field-grid">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Jane Founder" required />
+            </label>
+
+            <label class="field">
+              <span>Startup</span>
+              <input type="text" name="startup" placeholder="Acme AI" required />
+            </label>
+
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="jane@acme.ai" required />
+            </label>
+
+            <label class="field">
+              <span>Annual Revenue</span>
+              <input type="text" name="monthlyRevenue" placeholder="$420,000 ARR" required />
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <p class="disclaimer">
+              WhatsApp opens with the configured consulting number and the prospect's intake summary.
+            </p>
+            <button class="button button--primary button--wide" type="submit">
+              Get My Fundraising Audit
+            </button>
+          </div>
+        </form>
       </section>
 
     </main>
@@ -376,5 +411,6 @@
     </footer>
 
   </div>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -290,6 +290,7 @@ if (form) {
     event.preventDefault();
 
     const data = new FormData(form);
+    const hasField = (name) => Boolean(form.elements.namedItem(name));
     const payload = {
       name: (data.get("name") || "").toString().trim(),
       startup: (data.get("startup") || "").toString().trim(),
@@ -304,8 +305,8 @@ if (form) {
       payload.startup,
       payload.email,
       payload.monthlyRevenue,
-      payload.ticketSize,
-      payload.breakpoint,
+      ...(hasField("ticketSize") ? [payload.ticketSize] : []),
+      ...(hasField("breakpoint") ? [payload.breakpoint] : []),
     ];
 
     if (requiredFields.some((value) => !value)) {
@@ -314,15 +315,23 @@ if (form) {
     }
 
     const dictionary = translations[currentLanguage] || translations.en;
+    const customIntro =
+      currentLanguage === "es"
+        ? form.dataset.messageIntroEs || form.dataset.messageIntro
+        : form.dataset.messageIntroEn || form.dataset.messageIntro;
+    const revenueLabel =
+      currentLanguage === "es"
+        ? form.dataset.messageMonthlyRevenueEs || dictionary["message.monthlyRevenue"]
+        : form.dataset.messageMonthlyRevenueEn || dictionary["message.monthlyRevenue"];
     const lines = [
-      dictionary["message.intro"],
+      customIntro || dictionary["message.intro"],
       "",
       `${dictionary["message.name"]}: ${payload.name}`,
       `${dictionary["message.startup"]}: ${payload.startup}`,
       `${dictionary["message.email"]}: ${payload.email}`,
-      `${dictionary["message.monthlyRevenue"]}: ${payload.monthlyRevenue}`,
-      `${dictionary["message.ticketSize"]}: ${payload.ticketSize}`,
-      `${dictionary["message.breakpoint"]}: ${payload.breakpoint}`,
+      `${revenueLabel}: ${payload.monthlyRevenue}`,
+      ...(payload.ticketSize ? [`${dictionary["message.ticketSize"]}: ${payload.ticketSize}`] : []),
+      ...(payload.breakpoint ? [`${dictionary["message.breakpoint"]}: ${payload.breakpoint}`] : []),
     ];
 
     const message = encodeURIComponent(lines.join("\n"));
