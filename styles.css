@@ -1092,16 +1092,16 @@ h3 {
   gap: 24px;
   align-items: start;
   max-width: 1080px;
-  margin: 18px auto 0;
+  margin: 24px auto 0;
 }
 
 .blog-sidebar {
-  position: relative;
+  position: sticky;
+  top: 120px;
+  align-self: start;
 }
 
 .blog-sidebar__nav {
-  position: sticky;
-  top: 102px;
   display: grid;
   gap: 14px;
   padding: 20px;
@@ -1770,7 +1770,7 @@ code {
   .blog-layout {
     grid-template-columns: 1fr;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 20px;
   }
 
   .blog-post {
@@ -1783,9 +1783,13 @@ code {
 
   .blog-sidebar__nav {
     position: static;
-    top: auto;
     gap: 12px;
     padding: 18px;
+  }
+
+  .blog-sidebar {
+    position: static;
+    top: auto;
   }
 
   .blog-sidebar__item,
