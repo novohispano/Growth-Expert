@@ -1227,7 +1227,7 @@ h3 {
 }
 
 .blog-post h2 {
-  margin: 2.8rem 0 1rem;
+  margin: 2.8rem 0 1.35rem;
   color: var(--text);
   font-size: 1.6rem;
   line-height: 1.08;
@@ -1235,7 +1235,12 @@ h3 {
 }
 
 .blog-post h3 {
+  margin: 1.45rem 0 0.8rem;
   color: var(--text);
+}
+
+.blog-post h2 + h3 {
+  margin-top: 0.2rem;
 }
 
 .blog-post ul {
