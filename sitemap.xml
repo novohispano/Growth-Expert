@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://thegrowth.expert/blog/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -63,6 +63,12 @@
   <url>
     <loc>https://thegrowth.expert/blog/objeciones-ventas-b2b/</loc>
     <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thegrowth.expert/blog/categorizar-leads-b2b/</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
