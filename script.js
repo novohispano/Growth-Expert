@@ -206,7 +206,7 @@ const translations = {
     "about.card3.item2": "Correr experimentos semanales conectados a revenue, CAC y LTV",
     "about.card3.item3": "Mejorar distribución y fortalecer el modelo de negocio",
     "about.card3.item4": "No hago teatro de optimización de websites",
-    "about.proof": "He construido partnerships multimillonarios con empresas, gobiernos y non-profits, armado equipos B2B de ventas end-to-end, estudiado en Harvard, UNC Chapel Hill y Tec de Monterrey, y hoy mentoreo founders a través de Techstars.",
+    "about.proof": "He construido alianzas multimillonarias con empresas, gobiernos y organizaciones sin fines de lucro, y he formado equipos de crecimiento B2B de principio a fin. Tengo licenciatura y maestría con honores del Tec de Monterrey, además de educación ejecutiva en Harvard Kennedy School. También soy mentor de founders en Techstars.",
     "program.eyebrow": "De qué se trata",
     "program.title": "Un programa operativo mensual para detectar y remover cuellos de botella en GTM.",
     "program.copy": "No es consultoría teórica. El trabajo es práctico, iterativo y conectado directamente con movimiento real de revenue.",
