@@ -59,7 +59,7 @@ const translations = {
     "about.card3.item2": "Run weekly experiments tied to revenue, CAC, and LTV",
     "about.card3.item3": "Improve distribution and sharpen the business model",
     "about.card3.item4": "No website optimization theatre",
-    "about.proof": "I have built multi-million-dollar partnerships across companies, governments, and non-profits, built B2B sales teams end-to-end, studied at Harvard, UNC Chapel Hill, and Tec de Monterrey, and mentor founders through Techstars.",
+    "about.proof": "I have built multi-million-dollar partnerships across companies, governments, and non-profits, and built B2B growth teams end-to-end. BA and Master's with honors from Tec de Monterrey, executive education at Harvard Kennedy School. Mentor founders through Techstars.",
     "program.eyebrow": "What this is",
     "program.title": "A monthly operating program to identify and remove GTM bottlenecks.",
     "program.copy": "This is not advisory theatre. The work is practical, iterative, and tied directly to revenue movement inside a real sales process.",
