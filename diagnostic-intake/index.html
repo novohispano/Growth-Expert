@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="description"
+    content="Intake del Diagnóstico — comparte tus números y contexto antes de la sesión de 90 minutos con Jorge." />
+  <link rel="canonical" href="https://thegrowth.expert/diagnostic-intake/" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../styles.css" />
+  <title>Intake del Diagnóstico | Growth Expert</title>
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Growth Expert home">
+        <span class="brand__mark">G</span>
+        <span class="brand__text">
+          <strong>Growth Expert</strong>
+          <span data-i18n="brand.context">Diagnóstico Pagado</span>
+        </span>
+      </a>
+      <div class="header-controls">
+        <div class="language-toggle" role="group" aria-label="Language selector">
+          <button class="language-toggle__button is-active" type="button" data-lang-toggle="es">ES</button>
+          <button class="language-toggle__button" type="button" data-lang-toggle="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-context anchor-target">
+      <div class="page-context__trail" aria-label="Breadcrumb">
+        <a href="/" data-i18n="context.home">Inicio</a>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <a href="/diagnostic/" data-i18n="context.diagnostic">Diagnóstico</a>
+        <span class="page-context__divider" aria-hidden="true">/</span>
+        <span class="page-context__current" data-i18n="context.intake">Intake</span>
+      </div>
+    </div>
+
+    <main id="top">
+
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Intake del Diagnóstico</p>
+          <h1 data-i18n="hero.title">Mándame tus números antes de la sesión.</h1>
+          <p class="hero__lede" data-i18n="hero.lede">
+            Te tomará 5 minutos. Yo dedico 2 horas a revisar esto antes de nuestra llamada para que los 90 minutos
+            juntos rindan al máximo. Sin contexto, la sesión rinde la mitad.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--form" id="intake">
+        <div class="form-copy">
+          <p class="eyebrow" data-i18n="form.eyebrow">Lo que necesito de ti</p>
+          <h2 data-i18n="form.title">Números, dolores y resultado deseado.</h2>
+          <div class="form-copy__inner">
+            <p data-i18n="form.copy">
+              Llena con honestidad. Si no sabes una métrica exacta, pon tu mejor estimado. No estoy aquí para juzgar
+              — estoy aquí para ayudarte a ver dónde se está fugando el revenue y qué arreglar primero.
+            </p>
+          </div>
+          <div class="form-tags" aria-label="Detalles del intake">
+            <span class="form-tag" data-i18n="form.tag1">5 minutos</span>
+            <span class="form-tag" data-i18n="form.tag2">Confidencial</span>
+            <span class="form-tag" data-i18n="form.tag3">Te llega confirmación al email</span>
+          </div>
+          <div class="form-note">
+            <strong data-i18n="form.flowLabel">Flujo:</strong>
+            <span data-i18n="form.flowCopy">llenas el form, le doy submit, recibo tu intake en mi email y arranco la
+              prep antes de nuestra sesión.</span>
+          </div>
+        </div>
+
+        <form class="intake-form" id="diagnostic-intake-form" novalidate>
+          <!-- Web3Forms access key — replace with your real key after sign-up at https://web3forms.com -->
+          <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="Intake del Diagnóstico — Growth Expert" />
+          <input type="hidden" name="from_name" value="Growth Expert · Diagnostic Intake" />
+          <!-- Honeypot anti-spam -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="field-grid">
+            <label class="field">
+              <span data-i18n="fields.name">Nombre</span>
+              <input type="text" name="name" placeholder="Jane Founder"
+                data-i18n-placeholder="placeholders.name" required />
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.company">Empresa</span>
+              <input type="text" name="company" placeholder="Acme AI"
+                data-i18n-placeholder="placeholders.company" required />
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="fields.email">Email</span>
+              <input type="email" name="email" placeholder="jane@acme.ai"
+                data-i18n-placeholder="placeholders.email" required />
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.arr">ARR actual</span>
+              <input type="text" name="arr" placeholder="$1.4M ARR"
+                data-i18n-placeholder="placeholders.arr" required />
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.growth">Crecimiento MRR (últimos 6 meses)</span>
+              <input type="text" name="growth" placeholder="+8% MoM"
+                data-i18n-placeholder="placeholders.growth" required />
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="fields.pains">Top 3 dolores principales de GTM</span>
+              <textarea name="pains" rows="4"
+                placeholder="1. ... &#10;2. ... &#10;3. ..."
+                data-i18n-placeholder="placeholders.pains" required></textarea>
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="fields.outcome">¿Qué resultado quieres de esta sesión?</span>
+              <textarea name="outcome" rows="4"
+                placeholder="Quiero salir con claridad sobre…"
+                data-i18n-placeholder="placeholders.outcome" required></textarea>
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="fields.context">Link a Notion o Google Doc con contexto adicional <em data-i18n="fields.optional">(opcional)</em></span>
+              <input type="url" name="contextLink" placeholder="https://"
+                data-i18n-placeholder="placeholders.url" />
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="fields.deck">Link al deck, si aplica <em data-i18n="fields.optional">(opcional)</em></span>
+              <input type="url" name="deckLink" placeholder="https://"
+                data-i18n-placeholder="placeholders.url" />
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <p class="disclaimer" data-i18n="form.disclaimer">
+              Tu información se manda directo al email de Jorge. No se almacena en ningún CRM ni se comparte con
+              terceros.
+            </p>
+            <p class="form-status" id="intake-status" role="status" aria-live="polite"></p>
+            <button class="button button--primary button--wide" type="submit">
+              <span data-i18n="form.submit">Mandar intake</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="form-success" id="intake-success" hidden>
+          <p class="eyebrow" data-i18n="success.eyebrow">Intake recibido</p>
+          <h2 data-i18n="success.title">Listo. Lo tengo.</h2>
+          <p data-i18n="success.copy">
+            Voy a revisar tus respuestas antes de nuestra sesión. Si necesito algo más, te escribo directo. Nos
+            vemos en el horario que reservaste.
+          </p>
+          <a class="button button--primary" href="/" data-i18n="success.cta">Volver al inicio</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer site-footer--expanded">
+      <div class="site-footer__identity">
+        <strong>Jorge Tellez</strong>
+        <span>Growth Expert</span>
+      </div>
+      <nav class="site-footer__links" aria-label="Footer">
+        <div class="site-footer__group">
+          <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
+          <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="site-footer__group">
+          <a href="/revenue-unlock/">Revenue Unlock Program</a>
+          <a href="/series-a-fundraising/">Series A Fundraising</a>
+        </div>
+        <div class="site-footer__group">
+          <a href="/mexico/">México</a>
+          <a href="/colombia/">Colombia</a>
+          <a href="/argentina/">Argentina</a>
+        </div>
+        <div class="site-footer__group">
+          <a href="/blog/">Blog</a>
+          <a href="/">Inicio</a>
+        </div>
+      </nav>
+      <p class="site-footer__meta">© 2026 Growth Expert</p>
+    </footer>
+
+  </div>
+
+  <script>
+    window.PAGE_TRANSLATIONS = {
+      es: {
+        "brand.context": "Diagnóstico Pagado",
+        "context.home": "Inicio",
+        "context.diagnostic": "Diagnóstico",
+        "context.intake": "Intake",
+        "hero.eyebrow": "Intake del Diagnóstico",
+        "hero.title": "Mándame tus números antes de la sesión.",
+        "hero.lede": "Te tomará 5 minutos. Yo dedico 2 horas a revisar esto antes de nuestra llamada para que los 90 minutos juntos rindan al máximo. Sin contexto, la sesión rinde la mitad.",
+        "form.eyebrow": "Lo que necesito de ti",
+        "form.title": "Números, dolores y resultado deseado.",
+        "form.copy": "Llena con honestidad. Si no sabes una métrica exacta, pon tu mejor estimado. No estoy aquí para juzgar — estoy aquí para ayudarte a ver dónde se está fugando el revenue y qué arreglar primero.",
+        "form.tag1": "5 minutos",
+        "form.tag2": "Confidencial",
+        "form.tag3": "Te llega confirmación al email",
+        "form.flowLabel": "Flujo:",
+        "form.flowCopy": "llenas el form, le doy submit, recibo tu intake en mi email y arranco la prep antes de nuestra sesión.",
+        "fields.name": "Nombre",
+        "fields.company": "Empresa",
+        "fields.email": "Email",
+        "fields.arr": "ARR actual",
+        "fields.growth": "Crecimiento MRR (últimos 6 meses)",
+        "fields.pains": "Top 3 dolores principales de GTM",
+        "fields.outcome": "¿Qué resultado quieres de esta sesión?",
+        "fields.context": "Link a Notion o Google Doc con contexto adicional",
+        "fields.deck": "Link al deck, si aplica",
+        "fields.optional": "(opcional)",
+        "placeholders.name": "Jane Founder",
+        "placeholders.company": "Acme AI",
+        "placeholders.email": "jane@acme.ai",
+        "placeholders.arr": "$1.4M ARR",
+        "placeholders.growth": "+8% MoM",
+        "placeholders.pains": "1. ...\n2. ...\n3. ...",
+        "placeholders.outcome": "Quiero salir con claridad sobre…",
+        "placeholders.url": "https://",
+        "form.disclaimer": "Tu información se manda directo al email de Jorge. No se almacena en ningún CRM ni se comparte con terceros.",
+        "form.submit": "Mandar intake",
+        "form.sending": "Enviando…",
+        "form.error": "Hubo un error. Intenta de nuevo o escríbeme directo a jorge@thegrowth.expert.",
+        "success.eyebrow": "Intake recibido",
+        "success.title": "Listo. Lo tengo.",
+        "success.copy": "Voy a revisar tus respuestas antes de nuestra sesión. Si necesito algo más, te escribo directo. Nos vemos en el horario que reservaste.",
+        "success.cta": "Volver al inicio"
+      },
+      en: {
+        "brand.context": "Paid Diagnostic",
+        "context.home": "Home",
+        "context.diagnostic": "Diagnostic",
+        "context.intake": "Intake",
+        "hero.eyebrow": "Diagnostic Intake",
+        "hero.title": "Send me your numbers before the session.",
+        "hero.lede": "Takes 5 minutes. I spend 2 hours reviewing this before our call so the 90 minutes together return their full value. Without context, the session is worth half.",
+        "form.eyebrow": "What I need from you",
+        "form.title": "Numbers, pain points, and target outcome.",
+        "form.copy": "Fill it honestly. If you don't know an exact metric, give your best estimate. I'm not here to judge — I'm here to help you see where revenue is leaking and what to fix first.",
+        "form.tag1": "5 minutes",
+        "form.tag2": "Confidential",
+        "form.tag3": "Confirmation lands in your inbox",
+        "form.flowLabel": "Flow:",
+        "form.flowCopy": "fill the form, hit submit, your intake lands in my inbox, and I start prep before our session.",
+        "fields.name": "Name",
+        "fields.company": "Company",
+        "fields.email": "Email",
+        "fields.arr": "Current ARR",
+        "fields.growth": "MRR growth (last 6 months)",
+        "fields.pains": "Top 3 GTM pain points",
+        "fields.outcome": "What outcome do you want from this session?",
+        "fields.context": "Link to Notion or Google Doc with extra context",
+        "fields.deck": "Link to your deck, if relevant",
+        "fields.optional": "(optional)",
+        "placeholders.name": "Jane Founder",
+        "placeholders.company": "Acme AI",
+        "placeholders.email": "jane@acme.ai",
+        "placeholders.arr": "$1.4M ARR",
+        "placeholders.growth": "+8% MoM",
+        "placeholders.pains": "1. ...\n2. ...\n3. ...",
+        "placeholders.outcome": "I want to leave with clarity on…",
+        "placeholders.url": "https://",
+        "form.disclaimer": "Your information goes directly to Jorge's inbox. Nothing is stored in a CRM or shared with third parties.",
+        "form.submit": "Send intake",
+        "form.sending": "Sending…",
+        "form.error": "Something went wrong. Try again or email me directly at jorge@thegrowth.expert.",
+        "success.eyebrow": "Intake received",
+        "success.title": "Got it.",
+        "success.copy": "I'll review your answers before our session. If I need anything else, I'll write to you directly. See you at the time you booked.",
+        "success.cta": "Back to home"
+      }
+    };
+  </script>
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("diagnostic-intake-form");
+      const successPanel = document.getElementById("intake-success");
+      const status = document.getElementById("intake-status");
+      const submitButton = form.querySelector('button[type="submit"]');
+      const submitLabel = submitButton.querySelector("span");
+
+      function getCopy(key) {
+        const lang = document.documentElement.lang === "en" ? "en" : "es";
+        return window.PAGE_TRANSLATIONS[lang][key] || "";
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // Honeypot — if filled, silently drop
+        if (form.botcheck && form.botcheck.checked) return;
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const originalLabel = submitLabel.textContent;
+        submitButton.disabled = true;
+        submitLabel.textContent = getCopy("form.sending") || "Enviando…";
+        status.textContent = "";
+        status.classList.remove("form-status--error");
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: formData,
+          });
+
+          const result = await response.json().catch(() => ({}));
+
+          if (response.ok && result.success !== false) {
+            form.hidden = true;
+            successPanel.hidden = false;
+            successPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            throw new Error(result.message || "Submission failed");
+          }
+        } catch (error) {
+          status.textContent = getCopy("form.error");
+          status.classList.add("form-status--error");
+          submitButton.disabled = false;
+          submitLabel.textContent = originalLabel;
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
