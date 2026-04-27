@@ -1728,6 +1728,60 @@ textarea {
   color: var(--text-soft);
 }
 
+/* Mid-page CTA — inline strip pattern matching the secondary CTA voice */
+.section--midcta {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  max-width: 920px;
+  padding: 24px 28px;
+  border-top: 1px solid rgba(13, 23, 38, 0.08);
+  border-bottom: 1px solid rgba(13, 23, 38, 0.08);
+}
+
+.cta-inline__copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.cta-inline__label {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.cta-inline__subtext {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.cta-inline .button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .cta-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 20px;
+  }
+  .cta-inline .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* LinkedIn helper text below input */
 .field-help {
   display: block;
