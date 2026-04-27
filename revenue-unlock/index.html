@@ -81,7 +81,7 @@
             ES
           </button>
         </div>
-        <a class="header-cta button button--primary" href="#whatsapp-form" data-i18n="header.cta">Get My Revenue Audit</a>
+        <a class="header-cta button button--primary" href="/diagnostic/" data-i18n="header.cta">Book — $1,500</a>
       </div>
     </header>
 
@@ -114,8 +114,9 @@
             A hands-on monthly program for Seed and Series A B2B founders in Latin America who have traction but know the sales machine is underperforming. No 50-slide decks. Just weekly execution against the real constraint.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="#whatsapp-form" data-i18n="hero.primaryCta">Get My Free Revenue Audit</a>
+            <a class="button button--primary" href="/diagnostic/" data-i18n="hero.primaryCta">Book a Paid Diagnostic — $1,500</a>
           </div>
+          <p class="hero__subtext" data-i18n="hero.primarySubtext">90-minute deep dive. Written recommendation. Credited toward engagement.</p>
           <ul class="hero__stats" aria-label="Program details">
             <li>
               <strong>$1M–$5M ARR</strong>
@@ -211,6 +212,19 @@
             <h3 data-i18n="engagement.review.title">Review</h3>
             <p data-i18n="engagement.review.copy">Work week to week against actual commercial feedback. Adjust the approach based on what the market tells you.</p>
           </article>
+        </div>
+      </section>
+
+      <!-- MID-PAGE CTA: Paid Diagnostic -->
+      <section class="section section--cta" id="diagnostic-cta">
+        <div class="cta-card">
+          <p class="eyebrow" data-i18n="midcta.eyebrow">The next step</p>
+          <h2 data-i18n="midcta.title">$1,500. 90 minutes. Written recommendation.</h2>
+          <p data-i18n="midcta.copy">If you decide to proceed with an engagement within 30 days, the full $1,500 is credited.</p>
+          <div class="cta-card__actions">
+            <a class="button button--primary button--wide" href="/diagnostic/" data-i18n="midcta.button">Book the Paid Diagnostic — $1,500</a>
+          </div>
+          <p class="cta-card__note" data-i18n="midcta.note">Secure payment via Stripe. After paying, you pick a slot directly on Jorge's calendar.</p>
         </div>
       </section>
 
@@ -382,6 +396,14 @@
         </div>
       </section>
 
+      <!-- SECONDARY CTA: WhatsApp Diagnosis intro -->
+      <section class="section section--secondary-cta" id="whatsapp-diagnosis-intro">
+        <div class="cta-secondary">
+          <p class="cta-secondary__label" data-i18n="secondary.label">Or send your numbers for a WhatsApp Revenue Diagnosis →</p>
+          <p class="cta-secondary__subtext" data-i18n="secondary.subtext">2 minutes. Best if you want a quick read before deciding.</p>
+        </div>
+      </section>
+
       <!-- CTA -->
       <section class="section section--form" id="audit">
         <div class="form-copy">
@@ -541,11 +563,19 @@
     window.PAGE_TRANSLATIONS = {
       en: {
         "brand.program": "Revenue Unlock Program",
-        "header.cta": "Get My Revenue Audit",
+        "header.cta": "Book — $1,500",
         "hero.eyebrow": "B2B Revenue Consulting · Latin America",
         "hero.title": "Fix your GTM bottlenecks and unlock stalled revenue.",
         "hero.lede": "A hands-on monthly program for Seed and Series A B2B founders in Latin America who have traction but know the sales machine is underperforming. No 50-slide decks. Just weekly execution against the real constraint.",
-        "hero.primaryCta": "Get My Free Revenue Audit",
+        "hero.primaryCta": "Book a Paid Diagnostic — $1,500",
+        "hero.primarySubtext": "90-minute deep dive. Written recommendation. Credited toward engagement.",
+        "midcta.eyebrow": "The next step",
+        "midcta.title": "$1,500. 90 minutes. Written recommendation.",
+        "midcta.copy": "If you decide to proceed with an engagement within 30 days, the full $1,500 is credited.",
+        "midcta.button": "Book the Paid Diagnostic — $1,500",
+        "midcta.note": "Secure payment via Stripe. After paying, you pick a slot directly on Jorge's calendar.",
+        "secondary.label": "Or send your numbers for a WhatsApp Revenue Diagnosis →",
+        "secondary.subtext": "2 minutes. Best if you want a quick read before deciding.",
         "hero.stats.range": "Ideal company stage",
         "hero.stats.weeklyLabel": "Weekly",
         "hero.stats.weeklyCopy": "Execution sessions",
@@ -632,11 +662,19 @@
       },
       es: {
         "brand.program": "Programa Revenue Unlock",
-        "header.cta": "Quiero Mi Auditoría",
+        "header.cta": "Reservar — $1,500 USD",
         "hero.eyebrow": "Consultoría de revenue B2B · Latinoamérica",
         "hero.title": "Corrige tus cuellos de botella de GTM y destraba ingresos estancados.",
         "hero.lede": "Un programa mensual, práctico y directo para founders B2B Seed y Series A en Latinoamérica con tracción, pero con un proceso comercial que no está rindiendo. Sin decks de 50 slides. Solo ejecución semanal sobre la restricción real.",
-        "hero.primaryCta": "Quiero Mi Auditoría Gratuita",
+        "hero.primaryCta": "Reservar Diagnóstico Pagado — $1,500 USD",
+        "hero.primarySubtext": "90 minutos. Recomendación escrita. Acreditable al engagement.",
+        "midcta.eyebrow": "El siguiente paso",
+        "midcta.title": "$1,500 USD. 90 minutos. Recomendación escrita.",
+        "midcta.copy": "Si decides proceder con un engagement en 30 días, los $1,500 USD se acreditan completos.",
+        "midcta.button": "Reservar Diagnóstico Pagado — $1,500 USD",
+        "midcta.note": "Pago seguro vía Stripe. Después de pagar, eliges slot directo en el calendario de Jorge.",
+        "secondary.label": "O envía tus números para un Diagnóstico WhatsApp →",
+        "secondary.subtext": "2 minutos. Ideal si quieres una lectura rápida antes de decidir.",
         "hero.stats.range": "Etapa ideal de la compañía",
         "hero.stats.weeklyLabel": "Semanal",
         "hero.stats.weeklyCopy": "Sesiones de ejecución",
