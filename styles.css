@@ -546,6 +546,7 @@ h3 {
 
 .hero__stats li {
   padding: 18px;
+  border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(13, 23, 38, 0.04);
 }
@@ -832,6 +833,7 @@ h3 {
 
 .principle-card {
   padding: 28px;
+  border: 1px solid var(--line);
   background: var(--surface-strong);
 }
 
