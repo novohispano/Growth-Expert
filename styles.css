@@ -1627,48 +1627,83 @@ textarea {
 }
 
 .section--cta {
-  display: flex;
-  justify-content: center;
+  scroll-margin-top: 120px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 248, 0.82), rgba(255, 255, 255, 0.7)),
+    radial-gradient(circle at top right, rgba(255, 77, 61, 0.08), transparent 30%);
 }
 
 .cta-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+  grid-template-areas:
+    "eyebrow aside"
+    "title aside"
+    "copy aside";
+  gap: 12px 42px;
+  align-items: center;
   width: 100%;
-  max-width: 720px;
-  padding: 44px 40px;
-  border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, rgba(255, 250, 248, 0.96), rgba(255, 255, 255, 0.88)),
-    radial-gradient(circle at top right, rgba(255, 77, 61, 0.12), transparent 36%);
-  border: 1px solid var(--line);
-  text-align: center;
 }
 
 .cta-card .eyebrow {
-  margin-bottom: 12px;
+  grid-area: eyebrow;
+  margin-bottom: 6px;
 }
 
 .cta-card h2 {
-  margin-bottom: 14px;
+  grid-area: title;
+  margin-bottom: 2px;
+  max-width: 650px;
+  text-wrap: balance;
 }
 
 .cta-card > p {
+  grid-area: copy;
   color: var(--text-soft);
-  margin-bottom: 28px;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+.cta-card__aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  justify-self: end;
 }
 
 .cta-card__actions {
   display: flex;
-  justify-content: center;
-  margin-bottom: 18px;
 }
 
 .cta-card__note {
   font-size: 0.92rem;
+  line-height: 1.5;
   color: var(--text-soft);
   margin-bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "copy"
+      "aside";
+    gap: 14px;
+  }
+
+  .cta-card__aside {
+    width: min(100%, 460px);
+    justify-self: start;
+    margin-top: 8px;
+  }
 }
 
 .hero__subtext {
@@ -1993,6 +2028,32 @@ code {
   .intake-form {
     padding: 24px;
     border-radius: 24px;
+  }
+
+  .cta-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "copy"
+      "aside";
+    gap: 14px;
+  }
+
+  .cta-card__aside {
+    justify-self: stretch;
+    margin-top: 8px;
+  }
+
+  .cta-card .button {
+    white-space: normal;
+    min-height: 56px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .cta-card__note {
+    text-align: center;
   }
 
   h1 {
