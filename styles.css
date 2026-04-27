@@ -2074,7 +2074,7 @@ code {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-left: auto;
+  margin-left: 24px;
   margin-right: auto;
 }
 
