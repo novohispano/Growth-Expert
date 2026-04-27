@@ -1697,38 +1697,7 @@ textarea {
   line-height: 1.5;
 }
 
-.section--secondary-cta {
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.cta-secondary {
-  width: 100%;
-  max-width: 720px;
-  padding: 18px 24px;
-  border-radius: 16px;
-  border: 1px solid rgba(13, 23, 38, 0.1);
-  background: rgba(255, 255, 255, 0.6);
-  text-align: center;
-}
-
-.cta-secondary__label {
-  margin: 0 0 4px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-.cta-secondary__subtext {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--text-soft);
-}
-
-/* Mid-page CTA — inline strip pattern matching the secondary CTA voice */
+/* Mid-page CTA — inline strip pattern */
 .section--midcta {
   display: flex;
   justify-content: center;
@@ -1742,31 +1711,56 @@ textarea {
   width: 100%;
   max-width: 920px;
   padding: 24px 28px;
-  border-top: 1px solid rgba(13, 23, 38, 0.08);
-  border-bottom: 1px solid rgba(13, 23, 38, 0.08);
+  border-top: 0;
+  border-bottom: 0;
 }
 
-.cta-inline__copy {
-  flex: 1;
-  min-width: 0;
+.cta-inline__copy { flex: 1; min-width: 0; }
+
+.cta-inline__copy .eyebrow { margin-bottom: 6px; }
+
+.cta-inline__title {
+  margin: 0 0 6px 0;
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
-.cta-inline__label {
+.cta-inline__props {
   margin: 0 0 4px 0;
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--text);
-  letter-spacing: -0.01em;
 }
 
 .cta-inline__subtext {
   margin: 0;
   font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--text-soft);
 }
 
 .cta-inline .button {
   flex-shrink: 0;
+}
+
+.form-intro {
+  margin: 0 0 18px 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+.form-copy h2,
+.section-heading h2,
+.cta-inline__title {
+  text-wrap: balance;
 }
 
 @media (max-width: 720px) {
