@@ -4,6 +4,9 @@ const PAGE_TRANSLATIONS = window.PAGE_TRANSLATIONS || {};
 
 const translations = {
   en: {
+    "nav.programs": "Programs",
+    "nav.blog": "Blog",
+    "nav.menu": "Menu",
     "header.cta": "Get My Revenue Audit",
     "hero.eyebrow": "For Seed and Series A B2B startups with traction",
     "hero.title": "Unlock stalled revenue with hands-on GTM execution.",
@@ -164,6 +167,9 @@ const translations = {
     "message.breakpoint": "Sales Process Breakdown",
   },
   es: {
+    "nav.programs": "Programas",
+    "nav.blog": "Blog",
+    "nav.menu": "Menú",
     "header.cta": "Quiero Mi Auditoría",
     "hero.eyebrow": "Para startups B2B Seed y Series A con tracción",
     "hero.title": "Destraba ingresos con ejecución GTM práctica y directa.",
@@ -461,3 +467,52 @@ if (form) {
     window.open(url, "_blank", "noopener,noreferrer");
   });
 }
+
+// Header navigation: dropdown click-outside-to-close + Escape + mobile burger sheet
+(function () {
+  const dropdowns = document.querySelectorAll(".nav-dropdown");
+  dropdowns.forEach((details) => {
+    document.addEventListener("click", (event) => {
+      if (details.open && !details.contains(event.target)) {
+        details.open = false;
+      }
+    });
+    details.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && details.open) {
+        details.open = false;
+        const summary = details.querySelector("summary");
+        if (summary) summary.focus();
+      }
+    });
+  });
+
+  const burger = document.querySelector(".nav-burger");
+  const sheet = document.getElementById("mobile-nav-sheet");
+  if (burger && sheet) {
+    const closeSheet = () => {
+      sheet.hidden = true;
+      burger.setAttribute("aria-expanded", "false");
+    };
+    burger.addEventListener("click", () => {
+      const expanded = burger.getAttribute("aria-expanded") === "true";
+      if (expanded) {
+        closeSheet();
+      } else {
+        sheet.hidden = false;
+        burger.setAttribute("aria-expanded", "true");
+      }
+    });
+    sheet.addEventListener("click", (event) => {
+      if (event.target === sheet) closeSheet();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !sheet.hidden) {
+        closeSheet();
+        burger.focus();
+      }
+    });
+    sheet.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeSheet);
+    });
+  }
+})();
