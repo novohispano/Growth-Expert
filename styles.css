@@ -1686,11 +1686,11 @@ textarea {
 .cta-inline__copy .eyebrow { margin-bottom: 6px; }
 
 .cta-inline__title {
-  margin: 0 0 6px 0;
-  font-size: 1.06rem;
+  margin: 0 0 8px 0;
+  font-size: 1.35rem;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
   color: var(--text);
 }
 
