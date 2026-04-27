@@ -412,59 +412,60 @@
 
       <section class="section section--form" id="diagnostic">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">Free revenue audit</p>
-          <h2 data-i18n="form.title">Send your numbers. I’ll tell you where revenue is leaking.</h2>
-          <div class="form-copy__inner">
-            <p data-i18n="form.copy">
-              This is a low-friction founder audit for tech startups with traction. Share the core commercial inputs,
-              send them over WhatsApp, and I’ll reply with where GTM is likely breaking.
-            </p>
-          </div>
-          <div class="form-tags" aria-label="Audit benefits">
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Gut Check</p>
+          <h2 data-i18n="form.title">Send your numbers. I'll tell you what jumps out.</h2>
+          <p data-i18n="form.copy">Free gut reaction on your numbers — no call, no deck, no written plan. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.</p>
+          <div class="form-tags" aria-label="Diagnosis benefits">
             <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
             <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
             <span class="form-tag" data-i18n="form.tag3">No deck, no prep</span>
-          </div>
-          <div class="form-note">
-            <strong data-i18n="form.flowLabel">Flow:</strong>
-            <span data-i18n="form.flowCopy">fill the fields, send the audit on WhatsApp, then I review the bottleneck
-              and reply.</span>
           </div>
         </div>
 
         <form class="intake-form" id="whatsapp-form">
           <div class="field-grid">
+            <label class="field field--full">
+              <span data-i18n="fields.stage">Stage of your company</span>
+              <select name="stage" required>
+                <option value="" data-i18n="stage.placeholder">Select your stage</option>
+                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
+                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
+                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
+                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              </select>
+            </label>
+
             <label class="field">
               <span data-i18n="fields.name">Name</span>
-              <input type="text" name="name" placeholder="Jane Founder" data-i18n-placeholder="placeholders.name"
-                required />
+              <input type="text" name="name" placeholder="Jane Founder" data-i18n-placeholder="placeholders.name" required />
             </label>
 
             <label class="field">
               <span data-i18n="fields.startup">Startup</span>
-              <input type="text" name="startup" placeholder="Acme AI" data-i18n-placeholder="placeholders.startup"
-                required />
+              <input type="text" name="startup" placeholder="Acme AI" data-i18n-placeholder="placeholders.startup" required />
             </label>
 
             <label class="field">
               <span data-i18n="fields.email">Email</span>
-              <input type="email" name="email" placeholder="jane@acme.ai" data-i18n-placeholder="placeholders.email"
-                required />
+              <input type="email" name="email" placeholder="jane@acme.ai" data-i18n-placeholder="placeholders.email" required />
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
+              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname" data-i18n-placeholder="placeholders.linkedin" />
             </label>
 
             <label class="field">
               <span data-i18n="fields.monthlyRevenue">Monthly Revenue</span>
-              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR"
-                data-i18n-placeholder="placeholders.monthlyRevenue" required />
+              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" data-i18n-placeholder="placeholders.monthlyRevenue" required />
             </label>
 
             <label class="field">
               <span data-i18n="fields.ticketSize">Average Ticket Size</span>
-              <input type="text" name="ticketSize" placeholder="$4,500 ACV"
-                data-i18n-placeholder="placeholders.ticketSize" required />
+              <input type="text" name="ticketSize" placeholder="$4,500 ACV" data-i18n-placeholder="placeholders.ticketSize" required />
             </label>
 
-            <label class="field">
+            <label class="field field--full">
               <span data-i18n="fields.breakpoint">Sales Process Breakdown</span>
               <select name="breakpoint" required>
                 <option value="" data-i18n="options.breakpointDefault">Select the main issue</option>
@@ -476,7 +477,6 @@
                 <option value="Other" data-i18n="options.breakpoint6">Other</option>
               </select>
             </label>
-
           </div>
 
           <div class="form-footer">
@@ -484,10 +484,21 @@
               WhatsApp opens with the configured consulting number and the prospect's intake summary.
             </p>
             <button class="button button--primary button--wide" type="submit">
-              <span data-i18n="form.submit">Get My Revenue Audit</span>
+              <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
+            <p class="form-response-time">
+              <svg class="form-response-time__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span data-i18n="form.responseTime">Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.</span>
+            </p>
           </div>
         </form>
+
+        <div class="prerevenue-notice" id="prerevenue-notice" role="status" aria-live="polite">
+          <p class="eyebrow" data-i18n="prerevenue.eyebrow">Not yet</p>
+          <h2 data-i18n="prerevenue.title">Thanks — Growth Expert works with companies that already have paying customers.</h2>
+          <p data-i18n="prerevenue.copy">You're not there yet, but these might help while you get there.</p>
+          <a class="button button--primary" href="/blog/" data-i18n="prerevenue.cta">Read the blog</a>
+        </div>
       </section>
     </main>
 
