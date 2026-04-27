@@ -198,7 +198,7 @@
         <div class="signal-grid">
           <article class="signal-card">
             <h3 data-i18n="engagement.diagnose.title">Diagnose</h3>
-            <p data-i18n="engagement.diagnose.copy">Map where revenue is leaking across funnel, pricing, and account expansion. Start with the free WhatsApp audit.</p>
+            <p data-i18n="engagement.diagnose.copy">Map where revenue is leaking across funnel, pricing, and account expansion. Start with the WhatsApp diagnosis.</p>
           </article>
           <article class="signal-card">
             <h3 data-i18n="engagement.prioritize.title">Prioritize</h3>
@@ -407,24 +407,35 @@
       <!-- CTA -->
       <section class="section section--form" id="audit">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">Start here — it's free</p>
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Revenue Diagnosis</p>
           <h2 data-i18n="form.title">Send your numbers. I'll tell you where revenue is leaking.</h2>
           <div class="form-copy__inner">
-            <p data-i18n="form.copy">This is a low-friction founder audit for B2B startups with traction across Latin America. Share your core commercial inputs on WhatsApp and Jorge will reply with where GTM is likely breaking.</p>
+            <p data-i18n="form.copy">This is a low-friction founder diagnosis for B2B startups with traction across Latin America. Share your core commercial inputs on WhatsApp and Jorge will reply with where GTM is likely breaking.</p>
           </div>
-          <div class="form-tags" aria-label="Audit benefits">
+          <div class="form-tags" aria-label="Diagnosis benefits">
             <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
-            <span class="form-tag" data-i18n="form.tag2">Free for founders</span>
+            <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
             <span class="form-tag" data-i18n="form.tag3">No deck, no prep</span>
           </div>
           <div class="form-note">
             <strong data-i18n="form.flowLabel">Flow:</strong>
-            <span data-i18n="form.flowCopy">Fill the fields, send the audit on WhatsApp, then Jorge reviews the bottleneck and replies.</span>
+            <span data-i18n="form.flowCopy">Fill the fields, send the diagnosis on WhatsApp, then Jorge reviews the bottleneck and replies.</span>
           </div>
         </div>
 
         <form class="intake-form" id="whatsapp-form">
           <div class="field-grid">
+            <label class="field field--full">
+              <span data-i18n="fields.stage">Stage of your company</span>
+              <select name="stage" required>
+                <option value="" data-i18n="stage.placeholder">Select your stage</option>
+                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
+                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
+                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
+                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              </select>
+            </label>
+
             <label class="field">
               <span data-i18n="fields.name">Name</span>
               <input type="text" name="name" placeholder="Jane Founder" data-i18n-placeholder="placeholders.name" required />
@@ -441,6 +452,12 @@
             </label>
 
             <label class="field">
+              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
+              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname" data-i18n-placeholder="placeholders.linkedin" aria-describedby="linkedin-help-ru" />
+              <small class="field-help" id="linkedin-help-ru" data-i18n="fields.linkedinHelper">Helps me prepare faster</small>
+            </label>
+
+            <label class="field">
               <span data-i18n="fields.monthlyRevenue">Monthly Revenue</span>
               <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" data-i18n-placeholder="placeholders.monthlyRevenue" required />
             </label>
@@ -450,7 +467,7 @@
               <input type="text" name="ticketSize" placeholder="$4,500 ACV" data-i18n-placeholder="placeholders.ticketSize" required />
             </label>
 
-            <label class="field">
+            <label class="field field--full">
               <span data-i18n="fields.breakpoint">Sales Process Breakdown</span>
               <select name="breakpoint" required>
                 <option value="" data-i18n="options.breakpointDefault">Select the main issue</option>
@@ -469,10 +486,21 @@
               WhatsApp opens with the configured consulting number and the prospect's intake summary.
             </p>
             <button class="button button--primary button--wide" type="submit">
-              <span data-i18n="form.submit">Get My Free Revenue Audit</span>
+              <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
+            <p class="form-response-time">
+              <svg class="form-response-time__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span data-i18n="form.responseTime">Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.</span>
+            </p>
           </div>
         </form>
+
+        <div class="prerevenue-notice" id="prerevenue-notice" role="status" aria-live="polite">
+          <p class="eyebrow" data-i18n="prerevenue.eyebrow">Not yet</p>
+          <h2 data-i18n="prerevenue.title">Thanks — Growth Expert works with companies that already have paying customers.</h2>
+          <p data-i18n="prerevenue.copy">You're not there yet, but these might help while you get there.</p>
+          <a class="button button--primary" href="/blog/" data-i18n="prerevenue.cta">Read the blog</a>
+        </div>
       </section>
 
       <section class="section explore-hub anchor-target" id="explore-growth-expert">
@@ -602,7 +630,7 @@
         "engagement.eyebrow": "How the engagement works",
         "engagement.title": "Structured enough to create momentum, lean enough to move fast.",
         "engagement.diagnose.title": "Diagnose",
-        "engagement.diagnose.copy": "Map where revenue is leaking across funnel, pricing, and account expansion. Start with the free WhatsApp audit.",
+        "engagement.diagnose.copy": "Map where revenue is leaking across funnel, pricing, and account expansion. Start with the WhatsApp diagnosis.",
         "engagement.prioritize.title": "Prioritize",
         "engagement.prioritize.copy": "Focus on the highest-leverage change instead of chasing scattered optimizations across 10 fronts.",
         "engagement.implement.title": "Implement",
@@ -649,15 +677,20 @@
         "testimonials.quote2": "\"Jorge Téllez delivers an exceptional mentoring skillset. His mentorship has been impactful across growth, branding, capital raising, and strategic execution.\"",
         "testimonials.quote3": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
         "testimonials.quote4": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
-        "form.eyebrow": "Start here — it's free",
+        "form.eyebrow": "WhatsApp Revenue Diagnosis",
         "form.title": "Send your numbers. I'll tell you where revenue is leaking.",
-        "form.copy": "This is a low-friction founder audit for B2B startups with traction across Latin America. Share your core commercial inputs on WhatsApp and Jorge will reply with where GTM is likely breaking.",
+        "form.copy": "This is a low-friction founder diagnosis for B2B startups with traction across Latin America. Share your core commercial inputs on WhatsApp and Jorge will reply with where GTM is likely breaking.",
         "form.tag1": "Takes under 2 minutes",
-        "form.tag2": "Free for founders",
+        "form.tag2": "Founder-friendly",
         "form.tag3": "No deck, no prep",
         "form.flowLabel": "Flow:",
-        "form.flowCopy": "Fill the fields, send the audit on WhatsApp, then Jorge reviews the bottleneck and replies.",
-        "form.submit": "Get My Free Revenue Audit",
+        "form.flowCopy": "Fill the fields, send the diagnosis on WhatsApp, then Jorge reviews the bottleneck and replies.",
+        "form.submit": "Send on WhatsApp",
+        "form.responseTime": "Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.",
+        "prerevenue.eyebrow": "Not yet",
+        "prerevenue.title": "Thanks — Growth Expert works with companies that already have paying customers.",
+        "prerevenue.copy": "You're not there yet, but these might help while you get there.",
+        "prerevenue.cta": "Read the blog",
         "footer.back": "← Back to homepage"
       },
       es: {
@@ -701,7 +734,7 @@
         "engagement.eyebrow": "Cómo funciona el engagement",
         "engagement.title": "Lo bastante estructurado para generar momentum, lo bastante ligero para moverse rápido.",
         "engagement.diagnose.title": "Diagnosticar",
-        "engagement.diagnose.copy": "Mapear dónde se está fugando revenue entre funnel, pricing y expansión de cuentas. Todo empieza con la auditoría gratuita por WhatsApp.",
+        "engagement.diagnose.copy": "Mapear dónde se está fugando revenue entre funnel, pricing y expansión de cuentas. Todo empieza con el diagnóstico por WhatsApp.",
         "engagement.prioritize.title": "Priorizar",
         "engagement.prioritize.copy": "Enfocarse en el cambio de mayor apalancamiento en lugar de perseguir optimizaciones dispersas en 10 frentes.",
         "engagement.implement.title": "Implementar",
@@ -748,15 +781,20 @@
         "testimonials.quote2": "\"Jorge Téllez tiene una capacidad excepcional de mentoría. Su acompañamiento ha sido muy valioso en growth, branding, levantamiento de capital y ejecución estratégica.\"",
         "testimonials.quote3": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
         "testimonials.quote4": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
-        "form.eyebrow": "Empieza aquí — es gratis",
+        "form.eyebrow": "Diagnóstico WhatsApp de Ingresos",
         "form.title": "Mándame tus números. Te digo dónde se está fugando el revenue.",
-        "form.copy": "Esta es una auditoría de baja fricción para startups B2B con tracción en Latinoamérica. Comparte tus inputs comerciales clave por WhatsApp y Jorge te responderá con dónde es más probable que GTM se esté rompiendo.",
+        "form.copy": "Este es un diagnóstico de baja fricción para startups B2B con tracción en Latinoamérica. Comparte tus inputs comerciales clave por WhatsApp y Jorge te responderá con dónde es más probable que GTM se esté rompiendo.",
         "form.tag1": "Toma menos de 2 minutos",
-        "form.tag2": "Gratis para founders",
+        "form.tag2": "Founder-friendly",
         "form.tag3": "Sin deck, sin preparación",
         "form.flowLabel": "Flujo:",
-        "form.flowCopy": "Llena los campos, envía la auditoría por WhatsApp y luego Jorge revisa el cuello de botella y te responde.",
-        "form.submit": "Quiero Mi Auditoría Gratuita",
+        "form.flowCopy": "Llena los campos, envía el diagnóstico por WhatsApp y luego Jorge revisa el cuello de botella y te responde.",
+        "form.submit": "Mandar por WhatsApp",
+        "form.responseTime": "Jorge revisa personalmente cada diagnóstico y responde en menos de 24 horas en días hábiles.",
+        "prerevenue.eyebrow": "Todavía no",
+        "prerevenue.title": "Gracias — Growth Expert trabaja con compañías que ya tienen clientes pagando.",
+        "prerevenue.copy": "Mientras llegas a ese punto, aquí hay algunos recursos que pueden ayudarte.",
+        "prerevenue.cta": "Leer el blog",
         "footer.back": "← Volver al inicio"
       }
     };

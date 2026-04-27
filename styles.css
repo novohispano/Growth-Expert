@@ -1728,6 +1728,94 @@ textarea {
   color: var(--text-soft);
 }
 
+/* LinkedIn helper text below input */
+.field-help {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* Response-time line below submit button with clock glyph */
+.form-response-time {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding-top: 4px;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.form-response-time__icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--text-soft);
+  opacity: 0.85;
+}
+
+/* Pre-revenue redirect notice — cream card, fade in place */
+.prerevenue-notice {
+  grid-column: 1 / -1;
+  display: none;
+  padding: 32px 28px;
+  border-radius: var(--radius-xl);
+  background: #fff8f3;
+  border: 1px solid #f0d9c8;
+}
+
+.prerevenue-notice.is-visible {
+  display: block;
+  animation: prerevenue-fade-in 200ms ease-out;
+}
+
+.prerevenue-notice .eyebrow {
+  margin-bottom: 12px;
+}
+
+.prerevenue-notice h2 {
+  margin-bottom: 14px;
+}
+
+.prerevenue-notice > p {
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  line-height: 1.55;
+}
+
+@keyframes prerevenue-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Mobile fixes for the WhatsApp form */
+@media (max-width: 600px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .intake-form input,
+  .intake-form select,
+  .intake-form textarea {
+    font-size: 16px;
+  }
+  .field-help {
+    font-size: 0.78rem;
+  }
+}
+
 code {
   padding: 0.18em 0.45em;
   border-radius: 999px;

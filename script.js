@@ -113,23 +113,37 @@ const translations = {
     "engagement.implement.copy": "Ship concrete fixes with the founder or operator who owns the outcome.",
     "engagement.review.title": "Review",
     "engagement.review.copy": "Work week to week against actual commercial feedback, not assumptions.",
-    "form.eyebrow": "Free revenue audit",
+    "form.eyebrow": "WhatsApp Revenue Diagnosis",
     "form.title": "Send your numbers. I'll tell you where revenue is leaking.",
-    "form.copy": "This is a low-friction founder audit for tech startups with traction. Share the core commercial inputs, send them over WhatsApp, and I'll reply with where GTM is likely breaking.",
+    "form.copy": "This is a low-friction founder diagnosis for tech startups with traction. Share the core commercial inputs, send them over WhatsApp, and I'll reply with where GTM is likely breaking.",
     "form.tag1": "Takes under 2 minutes",
     "form.tag2": "Founder-friendly",
     "form.tag3": "No deck, no prep",
     "form.flowLabel": "Flow:",
-    "form.flowCopy": "fill the fields, send the audit on WhatsApp, then I review the bottleneck and reply.",
+    "form.flowCopy": "fill the fields, send the diagnosis on WhatsApp, then I review the bottleneck and reply.",
+    "fields.stage": "Stage of your company",
     "fields.name": "Name",
     "fields.startup": "Startup",
     "fields.email": "Email",
+    "fields.linkedin": "LinkedIn (optional)",
+    "fields.linkedinHelper": "Helps me prepare faster",
     "fields.monthlyRevenue": "Monthly Revenue",
     "fields.ticketSize": "Average Ticket Size",
     "fields.breakpoint": "Sales Process Breakdown",
+    "stage.placeholder": "Select your stage",
+    "stage.option1": "Pre-revenue / no paying customers",
+    "stage.option2": "Early traction (under $50K MRR)",
+    "stage.option3": "Growth ($50K–$300K MRR)",
+    "stage.option4": "Series A-ready ($300K+ MRR)",
+    "form.responseTime": "Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.",
+    "prerevenue.eyebrow": "Not yet",
+    "prerevenue.title": "Thanks — Growth Expert works with companies that already have paying customers.",
+    "prerevenue.copy": "You're not there yet, but these might help while you get there.",
+    "prerevenue.cta": "Read the blog",
     "placeholders.name": "Jane Founder",
     "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
+    "placeholders.linkedin": "https://linkedin.com/in/yourname",
     "placeholders.monthlyRevenue": "$35,000 MRR",
     "placeholders.ticketSize": "$4,500 ACV",
     "options.breakpointDefault": "Select the main issue",
@@ -140,12 +154,14 @@ const translations = {
     "options.breakpoint5": "No upselling",
     "options.breakpoint6": "Other",
     "form.disclaimer": "WhatsApp opens with the configured consulting number and the prospect's intake summary.",
-    "form.submit": "Get My Revenue Audit",
+    "form.submit": "Send on WhatsApp",
     "footer.blog": "Blog",
     "message.intro": "Hi, I want a Revenue Unlock diagnostic.",
+    "message.stage": "Stage",
     "message.name": "Name",
     "message.startup": "Startup",
     "message.email": "Email",
+    "message.linkedin": "LinkedIn",
     "message.monthlyRevenue": "Monthly Revenue",
     "message.ticketSize": "Average Ticket Size",
     "message.breakpoint": "Sales Process Breakdown",
@@ -260,23 +276,37 @@ const translations = {
     "engagement.implement.copy": "Ejecutar fixes concretos con el founder u operador responsable del resultado.",
     "engagement.review.title": "Revisar",
     "engagement.review.copy": "Trabajar semana a semana sobre feedback comercial real, no sobre supuestos.",
-    "form.eyebrow": "Auditoría gratuita de revenue",
+    "form.eyebrow": "Diagnóstico WhatsApp de Ingresos",
     "form.title": "Mándame tus números. Te digo dónde se está fugando el revenue.",
-    "form.copy": "Esta es una auditoría de baja fricción para founders de startups tech con tracción. Comparte los inputs comerciales clave, envíalos por WhatsApp y te respondo con dónde es más probable que GTM se esté rompiendo.",
+    "form.copy": "Este es un diagnóstico de baja fricción para founders de startups tech con tracción. Comparte los inputs comerciales clave, envíalos por WhatsApp y te respondo con dónde es más probable que GTM se esté rompiendo.",
     "form.tag1": "Toma menos de 2 minutos",
-    "form.tag2": "Pensado para founders",
+    "form.tag2": "Founder-friendly",
     "form.tag3": "Sin deck, sin preparación",
     "form.flowLabel": "Flujo:",
-    "form.flowCopy": "llena los campos, envía la auditoría por WhatsApp y luego reviso el cuello de botella y te respondo.",
+    "form.flowCopy": "llena los campos, envía el diagnóstico por WhatsApp y luego reviso el cuello de botella y te respondo.",
+    "fields.stage": "Etapa de tu compañía",
     "fields.name": "Nombre",
     "fields.startup": "Startup",
     "fields.email": "Email",
+    "fields.linkedin": "LinkedIn (opcional)",
+    "fields.linkedinHelper": "Me ayuda a preparar más rápido",
     "fields.monthlyRevenue": "Revenue mensual",
     "fields.ticketSize": "Ticket promedio",
     "fields.breakpoint": "Dónde se rompe el proceso comercial",
+    "stage.placeholder": "Selecciona tu etapa",
+    "stage.option1": "Pre-ingresos / sin clientes pagando",
+    "stage.option2": "Tracción temprana (menos de $50K MRR)",
+    "stage.option3": "Crecimiento ($50K–$300K MRR)",
+    "stage.option4": "Listo para Series A ($300K+ MRR)",
+    "form.responseTime": "Jorge revisa personalmente cada diagnóstico y responde en menos de 24 horas en días hábiles.",
+    "prerevenue.eyebrow": "Todavía no",
+    "prerevenue.title": "Gracias — Growth Expert trabaja con compañías que ya tienen clientes pagando.",
+    "prerevenue.copy": "Mientras llegas a ese punto, aquí hay algunos recursos que pueden ayudarte.",
+    "prerevenue.cta": "Leer el blog",
     "placeholders.name": "Jane Founder",
     "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
+    "placeholders.linkedin": "https://linkedin.com/in/tunombre",
     "placeholders.monthlyRevenue": "$35,000 MRR",
     "placeholders.ticketSize": "$4,500 ACV",
     "options.breakpointDefault": "Selecciona el problema principal",
@@ -287,12 +317,14 @@ const translations = {
     "options.breakpoint5": "Sin upselling",
     "options.breakpoint6": "Otro",
     "form.disclaimer": "WhatsApp se abre con el número configurado y el resumen del intake del prospecto.",
-    "form.submit": "Quiero Mi Auditoría",
+    "form.submit": "Mandar por WhatsApp",
     "footer.blog": "Blog",
     "message.intro": "Hola, quiero un diagnóstico de Revenue Unlock.",
+    "message.stage": "Etapa",
     "message.name": "Nombre",
     "message.startup": "Startup",
     "message.email": "Email",
+    "message.linkedin": "LinkedIn",
     "message.monthlyRevenue": "Revenue mensual",
     "message.ticketSize": "Ticket promedio",
     "message.breakpoint": "Dónde se rompe el proceso comercial",
@@ -348,21 +380,41 @@ languageButtons.forEach((button) => {
 translate(currentLanguage);
 
 if (form) {
+  const preRevenueNotice = document.getElementById("prerevenue-notice");
+  const formSection = form.closest(".section--form");
+  const formCopyBlock = formSection ? formSection.querySelector(".form-copy") : null;
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
     const hasField = (name) => Boolean(form.elements.namedItem(name));
+
+    // Stage qualification gate — pre-revenue prospects don't go to WhatsApp
+    if (hasField("stage")) {
+      const stageValue = (data.get("stage") || "").toString();
+      if (stageValue === "pre-revenue" && preRevenueNotice) {
+        form.hidden = true;
+        if (formCopyBlock) formCopyBlock.hidden = true;
+        preRevenueNotice.classList.add("is-visible");
+        preRevenueNotice.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
     const payload = {
+      stage: (data.get("stage") || "").toString().trim(),
       name: (data.get("name") || "").toString().trim(),
       startup: (data.get("startup") || "").toString().trim(),
       email: (data.get("email") || "").toString().trim(),
+      linkedin: (data.get("linkedin") || "").toString().trim(),
       monthlyRevenue: (data.get("monthlyRevenue") || "").toString().trim(),
       ticketSize: (data.get("ticketSize") || "").toString().trim(),
       breakpoint: (data.get("breakpoint") || "").toString().trim(),
     };
 
     const requiredFields = [
+      ...(hasField("stage") ? [payload.stage] : []),
       payload.name,
       payload.startup,
       payload.email,
@@ -386,12 +438,24 @@ if (form) {
       submissionLanguage === "es"
         ? form.dataset.messageMonthlyRevenueEs || dictionary["message.monthlyRevenue"]
         : form.dataset.messageMonthlyRevenueEn || dictionary["message.monthlyRevenue"];
+
+    // Map stage value back to localized label for the message
+    const stageLabelMap = {
+      "pre-revenue": dictionary["stage.option1"],
+      "early-traction": dictionary["stage.option2"],
+      "growth": dictionary["stage.option3"],
+      "series-a-ready": dictionary["stage.option4"],
+    };
+    const stageLabel = payload.stage ? (stageLabelMap[payload.stage] || payload.stage) : "";
+
     const lines = [
       customIntro || dictionary["message.intro"],
       "",
+      ...(stageLabel ? [`${dictionary["message.stage"]}: ${stageLabel}`] : []),
       `${dictionary["message.name"]}: ${payload.name}`,
       `${dictionary["message.startup"]}: ${payload.startup}`,
       `${dictionary["message.email"]}: ${payload.email}`,
+      ...(payload.linkedin ? [`${dictionary["message.linkedin"]}: ${payload.linkedin}`] : []),
       `${revenueLabel}: ${payload.monthlyRevenue}`,
       ...(payload.ticketSize ? [`${dictionary["message.ticketSize"]}: ${payload.ticketSize}`] : []),
       ...(payload.breakpoint ? [`${dictionary["message.breakpoint"]}: ${payload.breakpoint}`] : []),

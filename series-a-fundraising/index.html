@@ -457,15 +457,15 @@
       <!-- CTA -->
       <section class="section section--form section--form--balanced" id="audit">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">Start here — it's free</p>
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Fundraising Diagnosis</p>
           <h2 data-i18n="form.title">Send your metrics. I'll tell you where you stand for Series A.</h2>
           <div class="form-copy__inner">
-            <p data-i18n="form.copy">The fastest way to start is a fundraising audit. Share a few core metrics on
+            <p data-i18n="form.copy">The fastest way to start is a fundraising diagnosis. Share a few core metrics on
               WhatsApp and Jorge will reply with an honest read on where you stand for Series A.</p>
           </div>
-          <div class="form-tags" aria-label="Audit benefits">
+          <div class="form-tags" aria-label="Diagnosis benefits">
             <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
-            <span class="form-tag" data-i18n="form.tag2">Free for founders</span>
+            <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
             <span class="form-tag" data-i18n="form.tag3">No deck, no prep needed</span>
           </div>
           <div class="form-note">
@@ -475,10 +475,21 @@
           </div>
         </div>
 
-        <form class="intake-form" id="whatsapp-form" data-message-intro-en="Hi, I want a Fundraising Audit."
-          data-message-intro-es="Hola, quiero una auditoría de fundraising."
+        <form class="intake-form" id="whatsapp-form" data-message-intro-en="Hi, I want a Fundraising Diagnosis."
+          data-message-intro-es="Hola, quiero un diagnóstico de fundraising."
           data-message-monthly-revenue-en="Annual Revenue" data-message-monthly-revenue-es="Revenue anual">
           <div class="field-grid">
+            <label class="field field--full">
+              <span data-i18n="fields.stage">Stage of your company</span>
+              <select name="stage" required>
+                <option value="" data-i18n="stage.placeholder">Select your stage</option>
+                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
+                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
+                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
+                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              </select>
+            </label>
+
             <label class="field">
               <span data-i18n="fields.name">Name</span>
               <input type="text" name="name" placeholder="Jane Founder" data-i18n-placeholder="placeholders.name"
@@ -498,6 +509,13 @@
             </label>
 
             <label class="field">
+              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
+              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname"
+                data-i18n-placeholder="placeholders.linkedin" aria-describedby="linkedin-help-seriesa" />
+              <small class="field-help" id="linkedin-help-seriesa" data-i18n="fields.linkedinHelper">Helps me prepare faster</small>
+            </label>
+
+            <label class="field">
               <span data-i18n="fields.monthlyRevenue">Annual Revenue</span>
               <input type="text" name="monthlyRevenue" placeholder="$420,000 ARR"
                 data-i18n-placeholder="placeholders.monthlyRevenue" required />
@@ -509,10 +527,21 @@
               WhatsApp opens with the configured consulting number and the prospect's intake summary.
             </p>
             <button class="button button--primary button--wide" type="submit">
-              <span data-i18n="form.submit">Get My Fundraising Audit</span>
+              <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
+            <p class="form-response-time">
+              <svg class="form-response-time__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span data-i18n="form.responseTime">Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.</span>
+            </p>
           </div>
         </form>
+
+        <div class="prerevenue-notice" id="prerevenue-notice" role="status" aria-live="polite">
+          <p class="eyebrow" data-i18n="prerevenue.eyebrow">Not yet</p>
+          <h2 data-i18n="prerevenue.title">Thanks — Growth Expert works with companies that already have paying customers.</h2>
+          <p data-i18n="prerevenue.copy">You're not there yet, but these might help while you get there.</p>
+          <a class="button button--primary" href="/blog/" data-i18n="prerevenue.cta">Read the blog</a>
+        </div>
       </section>
 
       <section class="section explore-hub anchor-target" id="explore-growth-expert">
@@ -690,15 +719,20 @@
         "testimonials.quote2": "\"With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results and drive measurable execution.\"",
         "testimonials.quote3": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
         "testimonials.quote4": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
-        "form.eyebrow": "Start here — it's free",
+        "form.eyebrow": "WhatsApp Fundraising Diagnosis",
         "form.title": "Send your metrics. I'll tell you where you stand for Series A.",
-        "form.copy": "The fastest way to start is a fundraising audit. Share a few core metrics on WhatsApp and Jorge will reply with an honest read on where you stand for Series A.",
+        "form.copy": "The fastest way to start is a fundraising diagnosis. Share a few core metrics on WhatsApp and Jorge will reply with an honest read on where you stand for Series A.",
         "form.tag1": "Takes under 2 minutes",
-        "form.tag2": "Free for founders",
+        "form.tag2": "Founder-friendly",
         "form.tag3": "No deck, no prep needed",
         "form.flowLabel": "Flow:",
         "form.flowCopy": "Fill the short form, send your metrics on WhatsApp, and Jorge replies with an honest read on where you stand for Series A.",
-        "form.submit": "Get My Fundraising Audit",
+        "form.submit": "Send on WhatsApp",
+        "form.responseTime": "Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.",
+        "prerevenue.eyebrow": "Not yet",
+        "prerevenue.title": "Thanks — Growth Expert works with companies that already have paying customers.",
+        "prerevenue.copy": "You're not there yet, but these might help while you get there.",
+        "prerevenue.cta": "Read the blog",
         "fields.monthlyRevenue": "Annual Revenue",
         "placeholders.monthlyRevenue": "$420,000 ARR",
         "footer.back": "← Back to homepage"
@@ -792,15 +826,20 @@
         "testimonials.quote2": "\"Con Jorge logramos poner nuestra estructura comercial en orden en cuatro semanas. Las bases que aplicamos podrían llevarnos a triplicar resultados y ejecutar con más claridad.\"",
         "testimonials.quote3": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
         "testimonials.quote4": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
-        "form.eyebrow": "Empieza aquí — es gratis",
+        "form.eyebrow": "Diagnóstico WhatsApp de Fundraising",
         "form.title": "Mándame tus métricas. Te digo dónde estás parado para Serie A.",
-        "form.copy": "La forma más rápida de empezar es con una auditoría de fundraising. Comparte algunas métricas clave por WhatsApp y Jorge te responderá con una lectura honesta sobre dónde estás parado para Serie A.",
+        "form.copy": "La forma más rápida de empezar es con un diagnóstico de fundraising. Comparte algunas métricas clave por WhatsApp y Jorge te responderá con una lectura honesta sobre dónde estás parado para Serie A.",
         "form.tag1": "Toma menos de 2 minutos",
-        "form.tag2": "Gratis para founders",
+        "form.tag2": "Founder-friendly",
         "form.tag3": "Sin deck, sin preparación previa",
         "form.flowLabel": "Flujo:",
         "form.flowCopy": "Llena el formulario corto, envía tus métricas por WhatsApp y Jorge te responde con una lectura honesta de dónde estás parado para Serie A.",
-        "form.submit": "Quiero Mi Auditoría de Fundraising",
+        "form.submit": "Mandar por WhatsApp",
+        "form.responseTime": "Jorge revisa personalmente cada diagnóstico y responde en menos de 24 horas en días hábiles.",
+        "prerevenue.eyebrow": "Todavía no",
+        "prerevenue.title": "Gracias — Growth Expert trabaja con compañías que ya tienen clientes pagando.",
+        "prerevenue.copy": "Mientras llegas a ese punto, aquí hay algunos recursos que pueden ayudarte.",
+        "prerevenue.cta": "Leer el blog",
         "fields.monthlyRevenue": "Revenue anual",
         "placeholders.monthlyRevenue": "$420,000 ARR",
         "footer.back": "← Volver al inicio"
