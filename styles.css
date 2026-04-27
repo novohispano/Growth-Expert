@@ -126,6 +126,7 @@ body::before {
 .section-heading p,
 .principle-card p,
 .signal-card p,
+.form-copy > p:not(.eyebrow),
 .check-list,
 .disclaimer,
 .field span,
@@ -330,6 +331,7 @@ h3 {
 .section-heading p,
 .signal-card p,
 .principle-card p,
+.form-copy > p:not(.eyebrow),
 .field,
 .disclaimer {
   font-size: 1rem;
@@ -1485,7 +1487,7 @@ h3 {
 }
 
 .form-copy {
-  padding: 8px 4px 0 4px;
+  padding-top: 8px;
 }
 
 .form-tags {
