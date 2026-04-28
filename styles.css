@@ -300,6 +300,10 @@ textarea {
   text-transform: uppercase;
 }
 
+.eyebrow--small {
+  font-size: 0.72rem;
+}
+
 h1,
 h2,
 h3,
@@ -588,9 +592,9 @@ h3 {
 
 .hero-card__label {
   margin-bottom: 16px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-deep);
 }
@@ -627,7 +631,7 @@ h3 {
 
 .pattern-item__body h3 {
   margin-bottom: 4px;
-  font-size: 1.06rem;
+  font-size: 1.15rem;
   line-height: 1.18;
   letter-spacing: -0.025em;
   color: var(--text);
@@ -901,9 +905,13 @@ h3 {
 }
 
 .signal-card {
-  padding: 26px;
+  padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.form-honeypot {
+  display: none;
 }
 
 .testimonial-card {
@@ -969,7 +977,7 @@ h3 {
 
 .testimonial-card h3 {
   margin-bottom: 4px;
-  font-size: 1.18rem;
+  font-size: 1.15rem;
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: var(--text);
@@ -1285,10 +1293,10 @@ h3 {
 }
 
 .blog-sidebar__cta-kicker {
-  color: var(--accent-deep) !important;
-  font-size: 0.72rem !important;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -1438,7 +1446,7 @@ h3 {
 
 .about-card h3 {
   margin-bottom: 10px;
-  font-size: 1.22rem;
+  font-size: 1.15rem;
   line-height: 1.14;
   letter-spacing: -0.03em;
   color: var(--text);
