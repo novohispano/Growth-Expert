@@ -70,15 +70,10 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <div class="brand">
-        <a href="#top" aria-label="Growth Expert home" style="color:inherit;text-decoration:none;">
-          <span class="brand__mark">G</span>
-        </a>
-        <span class="brand__text">
-          <a href="#top" aria-label="Growth Expert home" style="color:inherit;text-decoration:none;"><strong>Growth Expert</strong></a>
-          <a href="/revenue-unlock/" style="color:inherit;text-decoration:none;">Revenue Unlock Program</a>
-        </span>
-      </div>
+      <a class="brand" href="/" aria-label="Growth Expert home">
+        <span class="brand__mark">G</span>
+        <span class="brand__text"><strong>Growth Expert</strong></span>
+      </a>
       <nav class="site-nav" aria-label="Primary">
         <details class="nav-dropdown">
           <summary>
@@ -101,7 +96,7 @@
             ES
           </button>
         </div>
-        <a class="header-cta button button--primary" href="/diagnostic/" data-i18n="header.cta">Reservar Mi Diagnóstico</a>
+        <a class="header-cta button button--primary" href="/diagnostic/" data-i18n="header.cta">Book My Diagnostic</a>
         <button class="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav-sheet" aria-label="Menu" data-i18n-aria-label="nav.menu">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -119,70 +114,52 @@
     <main id="top">
       <section class="hero">
         <div class="hero__content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">For Seed and Series A B2B startups with traction</p>
-          <h1 data-i18n="hero.title">Unlock stalled revenue with hands-on GTM execution.</h1>
+          <p class="eyebrow" data-i18n="hero.eyebrow">B2B founders · $1M–$5M ARR · LATAM</p>
+          <h1 data-i18n="hero.title">Your pipeline isn't broken. Your sales motion is.</h1>
           <p class="hero__lede" data-i18n="hero.lede">
-            Built for founders already generating revenue who know the sales
-            machine is underperforming, but do not need another 50-slide deck.
+            Weekly, hands-on work with the founder to fix what's actually losing deals —
+            pricing, close rate, or expansion. Tied to revenue moved this month, not slides.
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#diagnostic" data-i18n="hero.primaryCta">Get a WhatsApp
-              diagnosis</a>
+            <a class="button button--primary" href="#diagnostic" data-i18n="hero.primaryCta">Send your numbers →</a>
           </div>
 
           <ul class="hero__stats" aria-label="Key fit details">
             <li>
-              <strong>$1M–$5M ARR</strong>
-              <span data-i18n="hero.stats.mrr">Ideal company stage</span>
-            </li>
-            <li>
               <strong data-i18n="hero.stats.weeklyLabel">Weekly</strong>
-              <span data-i18n="hero.stats.weekly">Revenue bottleneck fixing</span>
+              <span data-i18n="hero.stats.weekly">One bottleneck fixed at a time</span>
             </li>
             <li>
-              <strong data-i18n="hero.stats.executionLabel">Execution-first</strong>
-              <span data-i18n="hero.stats.execution">Close, pricing, expansion</span>
+              <strong data-i18n="hero.stats.executionLabel">No decks</strong>
+              <span data-i18n="hero.stats.execution">Ship fixes inside your sales motion</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.stats.outcomeLabel">Revenue</strong>
+              <span data-i18n="hero.stats.outcome">Close, pricing, expansion</span>
             </li>
           </ul>
         </div>
 
         <aside class="hero-card" id="common-patterns">
-          <p class="hero-card__label" data-i18n="patterns.label">Common patterns</p>
+          <p class="hero-card__label" data-i18n="patterns.label">Where revenue is leaking</p>
           <div class="pattern-stack">
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="patterns.title1">Blocked pipeline</h3>
-                <p data-i18n="patterns.text1">Deals are entering the funnel, but they are not converting into closed
-                  revenue.</p>
+                <h3 data-i18n="patterns.title1">Pipeline isn't converting</h3>
+                <p data-i18n="patterns.text1">Deals enter the funnel, but they don't close.</p>
               </div>
             </article>
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="patterns.title2">Founder-led sales</h3>
-                <p data-i18n="patterns.text2">The founder can still close deals, but the process does not scale beyond
-                  them.</p>
+                <h3 data-i18n="patterns.title2">Only the founder can close</h3>
+                <p data-i18n="patterns.text2">The motion doesn't scale beyond you.</p>
               </div>
             </article>
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="patterns.title3">Extended sales cycles</h3>
-                <p data-i18n="patterns.text3">Deals keep moving, but the cycle stretches too long and slows down revenue
-                  velocity.</p>
-              </div>
-            </article>
-            <article class="pattern-item">
-              <div class="pattern-item__body">
-                <h3 data-i18n="patterns.title4">Underperforming pricing</h3>
-                <p data-i18n="patterns.text4">Packaging and pricing are not helping maximize ACV, conversion, or
-                  expansion.</p>
-              </div>
-            </article>
-            <article class="pattern-item">
-              <div class="pattern-item__body">
-                <h3 data-i18n="patterns.title5">No upselling</h3>
-                <p data-i18n="patterns.text5">Existing accounts are not growing because there is no upsell or expansion
-                  motion.</p>
+                <h3 data-i18n="patterns.title3">Pricing leaves money on the table</h3>
+                <p data-i18n="patterns.text3">ACV, conversion, and expansion are all underperforming.</p>
               </div>
             </article>
           </div>
@@ -191,22 +168,18 @@
 
       <section class="section section--testimonials" id="testimonials">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="testimonials.eyebrow">Selected recommendations</p>
-          <h2 data-i18n="testimonials.title">Trusted by founders and operators who have worked closely with Jorge.</h2>
-          <p data-i18n="testimonials.copy">
-            A few short excerpts from recommendations, chosen for relevance and clarity.
-          </p>
+          <p class="eyebrow" data-i18n="testimonials.eyebrow">From founders who shipped the work</p>
+          <h2 data-i18n="testimonials.title">Founders who fixed their commercial structure with Jorge.</h2>
         </div>
 
         <div class="testimonial-grid">
-          <article class="testimonial-card">
+          <article class="testimonial-card testimonial-card--featured">
             <div class="testimonial-person">
               <img class="testimonial-avatar testimonial-avatar--image" src="./images/pablo_robles.jpg"
                 alt="Pablo Robles" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recommendation</p>
                 <h3>Pablo Robles</h3>
-                <p class="testimonial-role">CEO &amp; Co-Founder, efektiva</p>
+                <p class="testimonial-role">CEO &amp; Co-Founder, efektiva · 🇲🇽</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote4">
@@ -220,9 +193,8 @@
               <img class="testimonial-avatar testimonial-avatar--image" src="./images/alejandro_junco.jpg"
                 alt="Alejandro Salcedo Junco" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recommendation</p>
                 <h3>Alejandro Salcedo Junco</h3>
-                <p class="testimonial-role">Founder, DogDay &amp; Wiggly</p>
+                <p class="testimonial-role">Founder, DogDay &amp; Wiggly · 🇲🇽</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote2">
@@ -236,9 +208,8 @@
               <img class="testimonial-avatar testimonial-avatar--image" src="./images/valentina_rios.jpg"
                 alt="Valentina Rios" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recommendation</p>
                 <h3>Valentina Ríos</h3>
-                <p class="testimonial-role">Co-Founder, Docokids</p>
+                <p class="testimonial-role">Co-Founder, Docokids · 🇨🇴</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote3">
@@ -252,9 +223,8 @@
               <img class="testimonial-avatar testimonial-avatar--image" src="./images/rodrigo_perez.jpg"
                 alt="Rodrigo Perez Arzate" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recommendation</p>
                 <h3>Rodrigo Pérez Arzate</h3>
-                <p class="testimonial-role">CEO &amp; Founder, SuperMango</p>
+                <p class="testimonial-role">CEO &amp; Founder, SuperMango · 🇲🇽</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote1">
@@ -328,11 +298,11 @@
 
       <section class="section" id="program">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="program.eyebrow">What this is</p>
-          <h2 data-i18n="program.title">A monthly operating program to identify and remove GTM bottlenecks.</h2>
+          <p class="eyebrow" data-i18n="program.eyebrow">What you actually get</p>
+          <h2 data-i18n="program.title">Each month: one bottleneck identified, one fix shipped, measured against revenue.</h2>
           <p data-i18n="program.copy">
-            This is not advisory theatre. The work is practical, iterative,
-            and tied directly to revenue movement inside a real sales process.
+            No deck, no slides, no advisory theatre. The work happens inside your real sales
+            process — close, pricing, expansion — until the number moves.
           </p>
         </div>
 
@@ -406,8 +376,8 @@
 
       <section class="section section--signal">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="engagement.eyebrow">How the engagement feels</p>
-          <h2 data-i18n="engagement.title">Structured enough to create momentum, lean enough to move fast.</h2>
+          <p class="eyebrow" data-i18n="engagement.eyebrow">How the weekly cadence works</p>
+          <h2 data-i18n="engagement.title">Diagnose Monday. Ship by Thursday. Review against pipeline Friday.</h2>
         </div>
 
         <div class="signal-grid">

@@ -1,6 +1,39 @@
 const WHATSAPP_NUMBER = "528125678257";
-const DEFAULT_LANGUAGE = navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+const LANG_STORAGE_KEY = "growthexpert.lang";
+const BROWSER_LANGUAGE = navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
 const PAGE_TRANSLATIONS = window.PAGE_TRANSLATIONS || {};
+
+function pageSupportsLanguage(lang) {
+  if (window.PAGE_TRANSLATIONS && Object.keys(window.PAGE_TRANSLATIONS).length > 0) {
+    return Boolean(window.PAGE_TRANSLATIONS[lang]);
+  }
+  return true;
+}
+
+function readStoredLanguage() {
+  try {
+    return localStorage.getItem(LANG_STORAGE_KEY);
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeStoredLanguage(lang) {
+  try {
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch (e) {
+    /* storage unavailable — ignore */
+  }
+}
+
+function resolveInitialLanguage() {
+  const stored = readStoredLanguage();
+  if (stored && pageSupportsLanguage(stored)) return stored;
+  if (pageSupportsLanguage(BROWSER_LANGUAGE)) return BROWSER_LANGUAGE;
+  return BROWSER_LANGUAGE === "es" ? "en" : "es";
+}
+
+const DEFAULT_LANGUAGE = resolveInitialLanguage();
 
 const translations = {
   en: {
@@ -8,35 +41,25 @@ const translations = {
     "nav.blog": "Blog",
     "nav.menu": "Menu",
     "header.cta": "Book My Diagnostic",
-    "hero.eyebrow": "For Seed and Series A B2B startups with traction",
-    "hero.title": "Unlock stalled revenue with hands-on GTM execution.",
-    "hero.lede": "Built for founders already generating revenue who know the sales machine is underperforming, but do not need another 50-slide deck.",
-    "hero.primaryCta": "Get My Revenue Audit",
-    "hero.stats.mrr": "Ideal company stage",
+    "hero.eyebrow": "B2B founders · $1M–$5M ARR · LATAM",
+    "hero.title": "Your pipeline isn't broken. Your sales motion is.",
+    "hero.lede": "Weekly, hands-on work with the founder to fix what's actually losing deals — pricing, close rate, or expansion. Tied to revenue moved this month, not slides.",
+    "hero.primaryCta": "Send your numbers →",
     "hero.stats.weeklyLabel": "Weekly",
-    "hero.stats.weekly": "Revenue bottleneck fixing",
-    "hero.stats.executionLabel": "Execution-first",
-    "hero.stats.execution": "Close, pricing, expansion",
-    "patterns.label": "Common patterns",
-    "patterns.1": "Healthy pipeline, but revenue still stays flat.",
-    "patterns.2": "Founder-led sales stopped scaling.",
-    "patterns.3": "Enterprise deals stall or die late in the cycle.",
-    "patterns.4": "Pricing was set by instinct and never revisited.",
-    "patterns.5": "No structured upsell or expansion system.",
-    "patterns.title1": "Blocked pipeline",
-    "patterns.text1": "Deals are entering the funnel, but they are not converting into closed revenue.",
-    "patterns.title2": "Founder-led sales",
-    "patterns.text2": "The founder can still close deals, but the process does not scale beyond them.",
-    "patterns.title3": "Extended sales cycles",
-    "patterns.text3": "Deals keep moving, but the cycle stretches too long and slows down revenue velocity.",
-    "patterns.title4": "Underperforming pricing",
-    "patterns.text4": "Packaging and pricing are not helping maximize ACV, conversion, or expansion.",
-    "patterns.title5": "No upselling",
-    "patterns.text5": "Existing accounts are not growing because there is no upsell or expansion motion.",
-    "testimonials.eyebrow": "Selected recommendations",
-    "testimonials.kicker": "Recommendation",
-    "testimonials.title": "Trusted by founders and operators who have worked closely with Jorge.",
-    "testimonials.copy": "A few short excerpts from recommendations, chosen for relevance and clarity.",
+    "hero.stats.weekly": "One bottleneck fixed at a time",
+    "hero.stats.executionLabel": "No decks",
+    "hero.stats.execution": "Ship fixes inside your sales motion",
+    "hero.stats.outcomeLabel": "Revenue",
+    "hero.stats.outcome": "Close, pricing, expansion",
+    "patterns.label": "Where revenue is leaking",
+    "patterns.title1": "Pipeline isn't converting",
+    "patterns.text1": "Deals enter the funnel, but they don't close.",
+    "patterns.title2": "Only the founder can close",
+    "patterns.text2": "The motion doesn't scale beyond you.",
+    "patterns.title3": "Pricing leaves money on the table",
+    "patterns.text3": "ACV, conversion, and expansion are all underperforming.",
+    "testimonials.eyebrow": "From founders who shipped the work",
+    "testimonials.title": "Founders who fixed their commercial structure with Jorge.",
     "testimonials.quote1": "\"Jorge Tellez delivers an exceptional mentoring skillset. His mentorship has been impactful across growth, branding, capital raising, and strategic execution.\"",
     "testimonials.quote2": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
     "testimonials.quote3": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
@@ -63,9 +86,9 @@ const translations = {
     "about.card3.item3": "Improve distribution and sharpen the business model",
     "about.card3.item4": "No website optimization theatre",
     "about.proof": "I have built multi-million-dollar partnerships across companies, governments, and non-profits, and built B2B sales teams end-to-end. BA and Master's with honors from Tec de Monterrey, executive education at Harvard Kennedy School. Mentor founders through Techstars.",
-    "program.eyebrow": "What this is",
-    "program.title": "A monthly operating program to identify and remove GTM bottlenecks.",
-    "program.copy": "This is not advisory theatre. The work is practical, iterative, and tied directly to revenue movement inside a real sales process.",
+    "program.eyebrow": "What you actually get",
+    "program.title": "Each month: one bottleneck identified, one fix shipped, measured against revenue.",
+    "program.copy": "No deck, no slides, no advisory theatre. The work happens inside your real sales process — close, pricing, expansion — until the number moves.",
     "principles.close.title": "Close",
     "principles.close.copy": "Improve win rate, unblock objections, and shorten the path to signature.",
     "principles.pricing.title": "Pricing",
@@ -106,8 +129,8 @@ const translations = {
     "fit.not1": "Startups without active customers or a live sales motion.",
     "fit.not2": "Teams looking only for strategy decks without implementation.",
     "fit.not3": "Companies that cannot assign an owner to execute changes.",
-    "engagement.eyebrow": "How the engagement feels",
-    "engagement.title": "Structured enough to create momentum, lean enough to move fast.",
+    "engagement.eyebrow": "How the weekly cadence works",
+    "engagement.title": "Diagnose Monday. Ship by Thursday. Review against pipeline Friday.",
     "engagement.diagnose.title": "Diagnose",
     "engagement.diagnose.copy": "Map where revenue is leaking across funnel, pricing, and account expansion.",
     "engagement.prioritize.title": "Prioritize",
@@ -171,44 +194,34 @@ const translations = {
     "nav.blog": "Blog",
     "nav.menu": "Menú",
     "header.cta": "Reservar Mi Diagnóstico",
-    "hero.eyebrow": "Para startups B2B Seed y Series A con tracción",
-    "hero.title": "Destraba ingresos con ejecución GTM práctica y directa.",
-    "hero.lede": "Pensado para founders con revenue que saben que su proceso comercial no está rindiendo, pero no necesitan otra presentación de 50 slides.",
-    "hero.primaryCta": "Quiero Mi Auditoría",
-    "hero.stats.mrr": "Etapa ideal de la compañía",
+    "hero.eyebrow": "Founders B2B · $1M–$5M ARR · LATAM",
+    "hero.title": "Tu pipeline no está roto. Tu motion de ventas sí.",
+    "hero.lede": "Trabajo semanal, codo a codo con el founder, para arreglar lo que te está costando deals — pricing, cierre o expansión. Medido contra revenue que se mueve este mes, no contra slides.",
+    "hero.primaryCta": "Manda tus números →",
     "hero.stats.weeklyLabel": "Semanal",
-    "hero.stats.weekly": "Resolución semanal de cuellos de botella",
-    "hero.stats.executionLabel": "Ejecución primero",
-    "hero.stats.execution": "Cierre, pricing y expansión",
-    "patterns.label": "Situaciones comunes",
-    "patterns.1": "Hay pipeline sano, pero el revenue sigue estancado.",
-    "patterns.2": "Las ventas founder-led dejaron de escalar.",
-    "patterns.3": "Los deals enterprise se enfrían o se caen al final del ciclo.",
-    "patterns.4": "El pricing se definió por instinto y nunca se volvió a tocar.",
-    "patterns.5": "No existe un sistema claro de upsell o expansión.",
-    "patterns.title1": "Pipeline bloqueado",
-    "patterns.text1": "Los deals entran al funnel, pero no se convierten en revenue cerrado.",
-    "patterns.title2": "Ventas founder-led",
-    "patterns.text2": "El founder todavía puede cerrar deals, pero el proceso no escala más allá de esa persona.",
-    "patterns.title3": "Ciclos de venta extendidos",
-    "patterns.text3": "Los deals siguen avanzando, pero el ciclo se alarga demasiado y frena la velocidad de revenue.",
-    "patterns.title4": "Pricing subóptimo",
-    "patterns.text4": "El packaging y el pricing no están ayudando a maximizar ACV, conversión ni expansión.",
-    "patterns.title5": "Sin upselling",
-    "patterns.text5": "Las cuentas actuales no están creciendo porque no existe un motion de upsell o expansión.",
-    "testimonials.eyebrow": "Recomendaciones seleccionadas",
-    "testimonials.kicker": "Recomendación",
-    "testimonials.title": "Respaldado por founders y operadores que han trabajado de cerca con Jorge.",
-    "testimonials.copy": "Algunos extractos breves de recomendaciones, elegidos por relevancia y claridad.",
+    "hero.stats.weekly": "Un cuello de botella a la vez",
+    "hero.stats.executionLabel": "Sin decks",
+    "hero.stats.execution": "Fixes dentro de tu proceso de ventas",
+    "hero.stats.outcomeLabel": "Revenue",
+    "hero.stats.outcome": "Cierre, pricing, expansión",
+    "patterns.label": "Por dónde se te escapa el revenue",
+    "patterns.title1": "El pipeline no convierte",
+    "patterns.text1": "Entran deals al funnel, pero no cierran.",
+    "patterns.title2": "Solo el founder cierra",
+    "patterns.text2": "Las ventas no escalan sin ti.",
+    "patterns.title3": "El pricing deja dinero sobre la mesa",
+    "patterns.text3": "ACV, conversión y expansión rinden por debajo.",
+    "testimonials.eyebrow": "Founders que sí ejecutaron",
+    "testimonials.title": "Founders que ordenaron su estructura comercial con Jorge.",
     "testimonials.quote1": "\"Jorge Téllez tiene una capacidad excepcional de mentoría. Su acompañamiento ha sido muy valioso en growth, branding, levantamiento de capital y ejecución estratégica.\"",
     "testimonials.quote2": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
     "testimonials.quote3": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
     "testimonials.quote4": "\"Con Jorge logramos poner nuestra estructura comercial en orden en 4 semanas. Las bases que aplicamos podrían llevarnos a triplicar nuestros resultados.\"",
     "about.eyebrow": "Por qué Jorge",
-    "about.title": "Ayudo a startups early-stage a corregir cuellos de botella en GTM y crecer revenue.",
-    "about.copy": "Soy Jorge Tellez. Trabajo con founders para identificar dónde se está rompiendo GTM, corregir la restricción de mayor apalancamiento y correr experimentos semanales conectados directamente a revenue.",
+    "about.title": "Ayudo a startups early-stage a destrabar GTM y mover revenue.",
+    "about.copy": "Soy Jorge Tellez. Trabajo con founders para encontrar dónde se está rompiendo GTM, atacar el cuello de botella con más palanca y correr experimentos semanales atados a revenue.",
     "about.card1.title": "Track record",
-    "about.card1.lead": "He construido revenue desde cero, rediseñado monetización y originado actividad de capital a gran escala.",
+    "about.card1.lead": "He levantado revenue desde cero, rediseñado monetización y originado capital a gran escala.",
     "about.card1.item1": "~$2.5B en transacciones originadas al lanzar un brazo de VC",
     "about.card1.item2": "$0 a ~$6M de revenue en 2 años",
     "about.card1.item3": "~$250k ARR con un producto lanzado desde cero en 12 meses",
@@ -220,21 +233,21 @@ const translations = {
     "about.card2.item3": "350K+ de alcance en comunidad de developers",
     "about.card2.item4": "1M+ impresiones orgánicas mensuales y 70% menos CAC",
     "about.card3.title": "Lo que hago con founders",
-    "about.card3.lead": "Trabajo semanal de revenue enfocado en corregir la restricción real de GTM.",
+    "about.card3.lead": "Trabajo semanal de revenue, enfocado en el cuello de botella real de GTM.",
     "about.card3.item1": "Diagnosticar dónde se rompe: oferta, pricing, sales motion o expansión",
-    "about.card3.item2": "Correr experimentos semanales conectados a revenue, CAC y LTV",
-    "about.card3.item3": "Mejorar distribución y fortalecer el modelo de negocio",
-    "about.card3.item4": "No hago teatro de optimización de websites",
+    "about.card3.item2": "Correr experimentos semanales atados a revenue, CAC y LTV",
+    "about.card3.item3": "Mejorar distribución y afinar el modelo de negocio",
+    "about.card3.item4": "Nada de teatro optimizando websites",
     "about.proof": "He construido alianzas multimillonarias con empresas, gobiernos y organizaciones sin fines de lucro, y he formado equipos de ventas B2B de principio a fin. Licenciatura y maestría con mención honorífica del Tec de Monterrey, educación ejecutiva en Harvard Kennedy School. Mentor de founders en Techstars.",
-    "program.eyebrow": "De qué se trata",
-    "program.title": "Un programa operativo mensual para detectar y remover cuellos de botella en GTM.",
-    "program.copy": "No es consultoría teórica. El trabajo es práctico, iterativo y conectado directamente con movimiento real de revenue.",
+    "program.eyebrow": "Qué te llevas, concreto",
+    "program.title": "Cada mes: un cuello de botella detectado, un fix ejecutado, medido contra revenue.",
+    "program.copy": "Sin decks, sin slides, sin teatro de consultoría. El trabajo pasa adentro de tu proceso de ventas real — cierre, pricing, expansión — hasta que el número se mueve.",
     "principles.close.title": "Cierre",
-    "principles.close.copy": "Mejora el win rate, destraba objeciones y acorta el camino a la firma.",
+    "principles.close.copy": "Sube el win rate, destraba objeciones y acorta el tiempo a la firma.",
     "principles.pricing.title": "Pricing",
-    "principles.pricing.copy": "Optimiza packaging y pricing para que cada deal cierre con mejor ACV.",
+    "principles.pricing.copy": "Afina packaging y pricing para que cada deal cierre con mejor ACV.",
     "principles.expansion.title": "Expansión",
-    "principles.expansion.copy": "Crea motions repetibles de upsell, add-ons y crecimiento por cuenta.",
+    "principles.expansion.copy": "Arma motions repetibles de upsell, add-ons y crecimiento por cuenta.",
     "context.home": "Inicio",
     "context.programs": "Programas",
     "context.countries": "Países",
@@ -259,29 +272,29 @@ const translations = {
     "explore.blog.hiring": "Por qué fracasa tu primer vendedor B2B",
     "explore.blog.objections": "Las objeciones que matan tus deals",
     "explore.blog.categorization": "No todos los leads son leads: cómo ordenar tu pipeline B2B",
-    "fit.forEyebrow": "Para quién sí es",
-    "fit.forTitle": "Startups B2B con revenue actual y urgencia comercial real.",
+    "fit.forEyebrow": "Para quién es",
+    "fit.forTitle": "Startups B2B con revenue y urgencia comercial.",
     "fit.for1": "Compañías Seed o Series A vendiendo a un mercado B2B definido.",
-    "fit.for2": "Equipos con tracción, pipeline y suficiente señal para diagnosticar cuellos de botella.",
-    "fit.for3": "Founders que quieren apalancar revenue, no consejos genéricos de growth.",
-    "fit.notEyebrow": "Para quién no es",
-    "fit.notTitle": "Equipos pre-revenue que siguen buscando product-market fit.",
-    "fit.not1": "Startups sin clientes activos o sin proceso comercial en marcha.",
-    "fit.not2": "Equipos que solo buscan estrategia sin implementación.",
-    "fit.not3": "Compañías que no pueden asignar un owner para ejecutar cambios.",
-    "engagement.eyebrow": "Cómo se vive el programa",
-    "engagement.title": "Estructurado para generar momentum, ligero para moverse rápido.",
+    "fit.for2": "Equipos con tracción, pipeline y señal suficiente para diagnosticar cuellos de botella.",
+    "fit.for3": "Founders que quieren mover revenue, no recibir consejos genéricos de growth.",
+    "fit.notEyebrow": "Para quién NO es",
+    "fit.notTitle": "Equipos pre-revenue que todavía buscan product-market fit.",
+    "fit.not1": "Startups sin clientes activos ni proceso de ventas corriendo.",
+    "fit.not2": "Equipos que solo quieren estrategia, sin implementación.",
+    "fit.not3": "Compañías que no pueden poner un owner que ejecute cambios.",
+    "engagement.eyebrow": "Cómo funciona la cadencia semanal",
+    "engagement.title": "Diagnóstico el lunes. Fix antes del jueves. Revisión contra el pipeline el viernes.",
     "engagement.diagnose.title": "Diagnosticar",
-    "engagement.diagnose.copy": "Mapear dónde se fuga revenue en funnel, pricing y expansión de cuentas.",
+    "engagement.diagnose.copy": "Mapear por dónde se fuga revenue: funnel, pricing y expansión de cuentas.",
     "engagement.prioritize.title": "Priorizar",
-    "engagement.prioritize.copy": "Concentrarse en el cambio de mayor apalancamiento en vez de dispersarse.",
+    "engagement.prioritize.copy": "Atacar el cambio con más palanca, sin dispersarse en optimizaciones sueltas.",
     "engagement.implement.title": "Implementar",
-    "engagement.implement.copy": "Ejecutar fixes concretos con el founder u operador responsable del resultado.",
+    "engagement.implement.copy": "Ejecutar fixes concretos con el founder u operador que es dueño del resultado.",
     "engagement.review.title": "Revisar",
-    "engagement.review.copy": "Trabajar semana a semana sobre feedback comercial real, no sobre supuestos.",
+    "engagement.review.copy": "Trabajar semana a semana contra feedback comercial real, no contra suposiciones.",
     "form.eyebrow": "Reacción rápida por WhatsApp",
     "form.title": "Mándame tus números. Te digo qué me hace ruido.",
-    "form.copy": "Reacción gratis a tus números en un día hábil. Sin llamada, sin deck.",
+    "form.copy": "Reacción a tus números, gratis, en un día hábil. Sin llamada, sin deck.",
     "form.tag1": "Toma menos de 2 minutos",
     "form.tag2": "Founder-friendly",
     "form.tag3": "Sin deck, sin preparación",
@@ -374,7 +387,11 @@ function translate(lang) {
 }
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => translate(button.dataset.langToggle));
+  button.addEventListener("click", () => {
+    const lang = button.dataset.langToggle;
+    writeStoredLanguage(lang);
+    translate(lang);
+  });
 });
 
 translate(currentLanguage);
