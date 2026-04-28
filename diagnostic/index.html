@@ -96,8 +96,8 @@
       </nav>
       <div class="header-controls">
         <div class="language-toggle" role="group" aria-label="Language selector">
-          <button class="language-toggle__button is-active" type="button" data-lang-toggle="es">ES</button>
           <button class="language-toggle__button" type="button" data-lang-toggle="en">EN</button>
+          <button class="language-toggle__button is-active" type="button" data-lang-toggle="es">ES</button>
         </div>
         <a class="header-cta button button--primary"
           href="/diagnostic/"
@@ -128,10 +128,11 @@
 
       <section class="hero">
         <div class="hero__content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Diagnóstico · 90 minutos</p>
-          <h1 data-i18n="hero.title">Diagnóstico Pagado — $1,500 USD</h1>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Diagnóstico · 90 minutos · $1,500 USD</p>
+          <h1 data-i18n="hero.title">Encuentra qué te está costando deals. En 90 minutos.</h1>
           <p class="hero__lede" data-i18n="hero.lede">
-            Una sesión de trabajo de 90 minutos. No es una llamada de ventas.
+            Reviso tus números a fondo, encuentro las 3 cosas que más te están sangrando revenue, y te entrego un plan
+            escrito. Te llevas tus prioridades — el engagement es opcional.
           </p>
 
           <div class="hero__actions">
@@ -148,69 +149,38 @@
             </li>
             <li>
               <strong data-i18n="hero.stats.prepLabel">2 horas</strong>
-              <span data-i18n="hero.stats.prep">De prep antes de la llamada</span>
+              <span data-i18n="hero.stats.prep">Prep antes de la sesión</span>
             </li>
             <li>
               <strong data-i18n="hero.stats.creditLabel">$1,500</strong>
-              <span data-i18n="hero.stats.credit">Acreditables al engagement</span>
+              <span data-i18n="hero.stats.credit">Crédito al engagement</span>
             </li>
           </ul>
         </div>
 
         <aside class="hero-card">
-          <p class="hero-card__label" data-i18n="howitworks.label">Cómo funciona</p>
+          <p class="hero-card__label" data-i18n="howitworks.label">Lo que se va a mover</p>
           <div class="pattern-stack">
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="howitworks.step1.title">1. Pagas y reservas</h3>
-                <p data-i18n="howitworks.step1.copy">Pagas $1,500 USD por Stripe y eliges slot directo en mi calendario.</p>
+                <h3 data-i18n="howitworks.step1.title">Mandas tus números</h3>
+                <p data-i18n="howitworks.step1.copy">Llenas el intake — ARR, pipeline, pricing, dónde crees que se está rompiendo. Toma 5 minutos.</p>
               </div>
             </article>
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="howitworks.step2.title">2. Llenas el intake</h3>
-                <p data-i18n="howitworks.step2.copy">Mandas tus números y contexto por adelantado. Toma 5 minutos.</p>
+                <h3 data-i18n="howitworks.step2.title">Trabajamos 90 minutos</h3>
+                <p data-i18n="howitworks.step2.copy">Llego con tus números digeridos. Cavamos a fondo. Sales con claridad sobre qué te está costando deals.</p>
               </div>
             </article>
             <article class="pattern-item">
               <div class="pattern-item__body">
-                <h3 data-i18n="howitworks.step3.title">3. Yo me preparo</h3>
-                <p data-i18n="howitworks.step3.copy">Dedico 2 horas a revisar tu material antes de la sesión.</p>
-              </div>
-            </article>
-            <article class="pattern-item">
-              <div class="pattern-item__body">
-                <h3 data-i18n="howitworks.step4.title">4. Trabajamos juntos 90 min</h3>
-                <p data-i18n="howitworks.step4.copy">Yo hago preguntas precisas, tú obtienes respuestas específicas.</p>
-              </div>
-            </article>
-            <article class="pattern-item">
-              <div class="pattern-item__body">
-                <h3 data-i18n="howitworks.step5.title">5. Te llega tu plan</h3>
-                <p data-i18n="howitworks.step5.copy">Recomendación escrita con top 3 prioridades secuenciadas.</p>
+                <h3 data-i18n="howitworks.step3.title">Te llevas tu plan</h3>
+                <p data-i18n="howitworks.step3.copy">Top 3 prioridades, secuenciadas, por escrito. Las ejecutas conmigo o sin mí.</p>
               </div>
             </article>
           </div>
         </aside>
-      </section>
-
-      <section class="section" id="overview">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="overview.eyebrow">Qué pasa en la sesión</p>
-          <h2 data-i18n="overview.title">Una sesión de trabajo, no una llamada de ventas.</h2>
-          <p data-i18n="overview.copy">
-            Tú me envías tus números y contexto por adelantado. Yo dedico dos horas a revisarlos antes de reunirnos.
-            Luego pasamos 90 minutos juntos — yo haciendo preguntas precisas, tú obteniendo respuestas específicas
-            sobre dónde se está fugando el revenue y qué arreglar primero.
-          </p>
-          <p data-i18n="overview.copy2">
-            Te llevas una recomendación escrita: top 3 prioridades, secuenciadas, con acciones específicas.
-          </p>
-          <p data-i18n="overview.copy3">
-            Los $1,500 USD se acreditan al engagement de Revenue Unlock o Series A Fundraising si decides proceder
-            dentro de 30 días.
-          </p>
-        </div>
       </section>
 
       <section class="section" id="what-you-get">
@@ -219,7 +189,7 @@
           <h2 data-i18n="deliverables.title">Lo que te llevas el día de la sesión.</h2>
         </div>
 
-        <div class="principles">
+        <div class="principles principles--two-col">
           <article class="principle-card">
             <span>01</span>
             <h3 data-i18n="deliverables.item1.title">Sesión en vivo de 90 minutos</h3>
@@ -250,29 +220,26 @@
       <section class="section section--split">
         <div class="fit-card">
           <p class="eyebrow" data-i18n="fit.forEyebrow">Para quién es</p>
-          <h2 data-i18n="fit.forTitle">Founders con tracción real que necesitan input senior antes de comprometerse.</h2>
+          <h2 data-i18n="fit.forTitle">Founders con $1M+ ARR que necesitan claridad antes de comprometerse.</h2>
           <div class="fit-card__inner">
             <ul class="check-list">
-              <li data-icon="stage" data-i18n="fit.for1">Tienen $1M+ ARR.</li>
-              <li data-icon="signal" data-i18n="fit.for2">Saben que su GTM está roto pero no pueden identificar dónde
-                exactamente.</li>
-              <li data-icon="leverage" data-i18n="fit.for3">Quieren input senior antes de comprometerse a un engagement
-                completo.</li>
+              <li data-icon="stage" data-i18n="fit.for1">Tienes deals que estás perdiendo y quieres saber por qué.</li>
+              <li data-icon="signal" data-i18n="fit.for2">No sabes si es pricing, cierre o expansión lo que está
+                fallando.</li>
+              <li data-icon="leverage" data-i18n="fit.for3">Quieres input senior antes de meterte a un programa de
+                varios meses.</li>
             </ul>
           </div>
         </div>
 
         <div class="fit-card fit-card--muted">
-          <p class="eyebrow" data-i18n="fit.notEyebrow">Para quién no es</p>
-          <h2 data-i18n="fit.notTitle">Equipos sin revenue actual o sin claridad para implementar.</h2>
+          <p class="eyebrow" data-i18n="fit.notEyebrow">Para quién NO es</p>
+          <h2 data-i18n="fit.notTitle">Equipos sin revenue o sin un owner que ejecute.</h2>
           <div class="fit-card__inner fit-card__inner--muted">
             <ul class="check-list check-list--muted">
-              <li data-icon="customers" data-i18n="fit.not1">Compañías sin clientes pagando o sin proceso comercial en
-                marcha.</li>
-              <li data-icon="slides" data-i18n="fit.not2">Founders que solo buscan validar una hipótesis sin acción
-                posterior.</li>
-              <li data-icon="owner" data-i18n="fit.not3">Equipos sin owner claro que ejecute las prioridades resultantes.
-              </li>
+              <li data-icon="customers" data-i18n="fit.not1">No hay clientes pagando ni proceso de ventas corriendo.</li>
+              <li data-icon="slides" data-i18n="fit.not2">Quieres validar, no implementar un fix.</li>
+              <li data-icon="owner" data-i18n="fit.not3">Sin un owner que ejecute las prioridades resultantes.</li>
             </ul>
           </div>
         </div>
@@ -281,7 +248,7 @@
       <section class="section section--testimonials" id="testimonials">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="testimonials.eyebrow">Lo que dicen founders</p>
-          <h2 data-i18n="testimonials.title">Founders que han trabajado de cerca con Jorge.</h2>
+          <h2 data-i18n="testimonials.title">Founders que ordenaron su estructura comercial con Jorge.</h2>
         </div>
 
         <div class="testimonial-grid">
@@ -290,9 +257,8 @@
               <img class="testimonial-avatar testimonial-avatar--image" src="../images/pablo_robles.jpg"
                 alt="Pablo Robles, CEO efektiva" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recomendación</p>
                 <h3>Pablo Robles</h3>
-                <p class="testimonial-role">CEO &amp; Co-Founder, efektiva</p>
+                <p class="testimonial-role">CEO &amp; Co-Founder, efektiva · 🇲🇽</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote1">
@@ -306,14 +272,28 @@
               <img class="testimonial-avatar testimonial-avatar--image" src="../images/alejandro_junco.jpg"
                 alt="Alejandro Salcedo Junco, Founder DogDay" />
               <div class="testimonial-meta">
-                <p class="testimonial-kicker" data-i18n="testimonials.kicker">Recomendación</p>
                 <h3>Alejandro Salcedo Junco</h3>
-                <p class="testimonial-role">Founder, DogDay &amp; Wiggly</p>
+                <p class="testimonial-role">Founder, DogDay &amp; Wiggly · 🇲🇽</p>
               </div>
             </div>
             <p class="testimonial-quote" data-i18n="testimonials.quote2">
               "Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar
               decisiones con foco y velocidad."
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-person">
+              <img class="testimonial-avatar testimonial-avatar--image" src="../images/valentina_rios.jpg"
+                alt="Valentina Rios, Co-Founder Docokids" />
+              <div class="testimonial-meta">
+                <h3>Valentina Ríos</h3>
+                <p class="testimonial-role">Co-Founder, Docokids · 🇨🇴</p>
+              </div>
+            </div>
+            <p class="testimonial-quote" data-i18n="testimonials.quote3">
+              "He has consistently made himself available to provide guidance and support, going above and beyond to
+              help us navigate startup challenges."
             </p>
           </article>
         </div>
@@ -322,10 +302,10 @@
       <section class="section section--cta" id="book">
         <div class="cta-card">
           <p class="eyebrow" data-i18n="cta.eyebrow">Reserva tu sesión</p>
-          <h2 data-i18n="cta.title">$1,500 USD. 90 minutos. Recomendación escrita.</h2>
+          <h2 data-i18n="cta.title">Te llevas tu plan. Aunque no vuelvas.</h2>
           <p data-i18n="cta.copy">
-            Si decides proceder con un engagement en 30 días, los $1,500 se acreditan completos. Si no, te llevas tu
-            recomendación escrita igual y la implementas tú mismo.
+            Te quedas con tus 3 prioridades y las ejecutas tú mismo. Si vuelves a Revenue Unlock o Series A Fundraising
+            en 30 días, los $1,500 se descuentan del engagement.
           </p>
           <div class="cta-card__aside">
             <div class="cta-card__actions">
@@ -342,7 +322,10 @@
       </section>
 
       <section class="section explore-hub anchor-target" id="explore-growth-expert">
-        <p class="eyebrow" data-i18n="explore.eyebrow">Explora Growth Expert</p>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="explore.eyebrow">Explora Growth Expert</p>
+          <h2 data-i18n="explore.title">A dónde ir después.</h2>
+        </div>
         <div class="explore-hub__grid">
           <article class="explore-card">
             <h3 class="explore-card__title" data-i18n="context.programs">Programas</h3>
@@ -390,25 +373,26 @@
       <div class="site-footer__identity">
         <strong>Jorge Tellez</strong>
         <span>Growth Expert</span>
+        <p class="site-footer__tagline">B2B revenue consulting for LATAM founders.</p>
       </div>
       <nav class="site-footer__links" aria-label="Footer">
         <div class="site-footer__group">
-          <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
-          <a href="https://www.linkedin.com/in/novohispano" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
-        </div>
-        <div class="site-footer__group">
-          <a href="/revenue-unlock/" data-i18n="services.unlock.title">Revenue Unlock Program</a>
+          <p class="site-footer__group-label">Programs</p>
+          <a href="/revenue-unlock/" data-i18n="services.unlock.title">Revenue Unlock</a>
           <a href="/series-a-fundraising/" data-i18n="services.fundraising.title">Series A Fundraising</a>
+          <a href="/diagnostic/">Diagnostic</a>
         </div>
         <div class="site-footer__group">
+          <p class="site-footer__group-label">LATAM</p>
           <a href="/mexico/">México</a>
           <a href="/colombia/">Colombia</a>
           <a href="/argentina/">Argentina</a>
         </div>
         <div class="site-footer__group">
+          <p class="site-footer__group-label">Connect</p>
+          <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
+          <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
-          <a href="/" data-i18n="footer.back">← Volver al inicio</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
@@ -425,32 +409,23 @@
         "context.programs": "Programas",
         "context.countries": "Países",
         "header.cta": "Reservar Mi Diagnóstico",
-        "hero.eyebrow": "Diagnóstico · 90 minutos",
-        "hero.title": "Diagnóstico Pagado — $1,500 USD",
-        "hero.lede": "Una sesión de trabajo de 90 minutos. No es una llamada de ventas.",
+        "hero.eyebrow": "Diagnóstico · 90 minutos · $1,500 USD",
+        "hero.title": "Encuentra qué te está costando deals. En 90 minutos.",
+        "hero.lede": "Reviso tus números a fondo, encuentro las 3 cosas que más te están sangrando revenue, y te entrego un plan escrito. Te llevas tus prioridades — el engagement es opcional.",
         "hero.primaryCta": "Reservar el Diagnóstico — $1,500 USD",
         "hero.stats.sessionLabel": "90 min",
         "hero.stats.session": "Sesión en vivo conmigo",
         "hero.stats.prepLabel": "2 horas",
-        "hero.stats.prep": "De prep antes de la llamada",
+        "hero.stats.prep": "Prep antes de la sesión",
         "hero.stats.creditLabel": "$1,500",
-        "hero.stats.credit": "Acreditables al engagement",
-        "howitworks.label": "Cómo funciona",
-        "howitworks.step1.title": "1. Pagas y reservas",
-        "howitworks.step1.copy": "Pagas $1,500 USD por Stripe y eliges slot directo en mi calendario.",
-        "howitworks.step2.title": "2. Llenas el intake",
-        "howitworks.step2.copy": "Mandas tus números y contexto por adelantado. Toma 5 minutos.",
-        "howitworks.step3.title": "3. Yo me preparo",
-        "howitworks.step3.copy": "Dedico 2 horas a revisar tu material antes de la sesión.",
-        "howitworks.step4.title": "4. Trabajamos juntos 90 min",
-        "howitworks.step4.copy": "Yo hago preguntas precisas, tú obtienes respuestas específicas.",
-        "howitworks.step5.title": "5. Te llega tu plan",
-        "howitworks.step5.copy": "Recomendación escrita con top 3 prioridades secuenciadas.",
-        "overview.eyebrow": "Qué pasa en la sesión",
-        "overview.title": "Una sesión de trabajo, no una llamada de ventas.",
-        "overview.copy": "Tú me envías tus números y contexto por adelantado. Yo dedico dos horas a revisarlos antes de reunirnos. Luego pasamos 90 minutos juntos — yo haciendo preguntas precisas, tú obteniendo respuestas específicas sobre dónde se está fugando el revenue y qué arreglar primero.",
-        "overview.copy2": "Te llevas una recomendación escrita: top 3 prioridades, secuenciadas, con acciones específicas.",
-        "overview.copy3": "Los $1,500 USD se acreditan al engagement de Revenue Unlock o Series A Fundraising si decides proceder dentro de 30 días.",
+        "hero.stats.credit": "Crédito al engagement",
+        "howitworks.label": "Lo que se va a mover",
+        "howitworks.step1.title": "Mandas tus números",
+        "howitworks.step1.copy": "Llenas el intake — ARR, pipeline, pricing, dónde crees que se está rompiendo. Toma 5 minutos.",
+        "howitworks.step2.title": "Trabajamos 90 minutos",
+        "howitworks.step2.copy": "Llego con tus números digeridos. Cavamos a fondo. Sales con claridad sobre qué te está costando deals.",
+        "howitworks.step3.title": "Te llevas tu plan",
+        "howitworks.step3.copy": "Top 3 prioridades, secuenciadas, por escrito. Las ejecutas conmigo o sin mí.",
         "deliverables.eyebrow": "Qué incluye",
         "deliverables.title": "Lo que te llevas el día de la sesión.",
         "deliverables.item1.title": "Sesión en vivo de 90 minutos",
@@ -462,26 +437,27 @@
         "deliverables.item4.title": "$1,500 USD de crédito al engagement",
         "deliverables.item4.copy": "Si decides proceder con Revenue Unlock o Series A Fundraising en los 30 días posteriores, los $1,500 se acreditan completos al precio del engagement.",
         "fit.forEyebrow": "Para quién es",
-        "fit.forTitle": "Founders con tracción real que necesitan input senior antes de comprometerse.",
-        "fit.for1": "Tienen $1M+ ARR.",
-        "fit.for2": "Saben que su GTM está roto pero no pueden identificar dónde exactamente.",
-        "fit.for3": "Quieren input senior antes de comprometerse a un engagement completo.",
-        "fit.notEyebrow": "Para quién no es",
-        "fit.notTitle": "Equipos sin revenue actual o sin claridad para implementar.",
-        "fit.not1": "Compañías sin clientes pagando o sin proceso comercial en marcha.",
-        "fit.not2": "Founders que solo buscan validar una hipótesis sin acción posterior.",
-        "fit.not3": "Equipos sin owner claro que ejecute las prioridades resultantes.",
+        "fit.forTitle": "Founders con $1M+ ARR que necesitan claridad antes de comprometerse.",
+        "fit.for1": "Tienes deals que estás perdiendo y quieres saber por qué.",
+        "fit.for2": "No sabes si es pricing, cierre o expansión lo que está fallando.",
+        "fit.for3": "Quieres input senior antes de meterte a un programa de varios meses.",
+        "fit.notEyebrow": "Para quién NO es",
+        "fit.notTitle": "Equipos sin revenue o sin un owner que ejecute.",
+        "fit.not1": "No hay clientes pagando ni proceso de ventas corriendo.",
+        "fit.not2": "Quieres validar, no implementar un fix.",
+        "fit.not3": "Sin un owner que ejecute las prioridades resultantes.",
         "testimonials.eyebrow": "Lo que dicen founders",
-        "testimonials.title": "Founders que han trabajado de cerca con Jorge.",
-        "testimonials.kicker": "Recomendación",
+        "testimonials.title": "Founders que ordenaron su estructura comercial con Jorge.",
         "testimonials.quote1": "\"Con Jorge logramos poner nuestra estructura comercial en orden en cuatro semanas. Las bases que implementamos podrían llevarnos a triplicar resultados.\"",
         "testimonials.quote2": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
+        "testimonials.quote3": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
         "cta.eyebrow": "Reserva tu sesión",
-        "cta.title": "$1,500 USD. 90 minutos. Recomendación escrita.",
-        "cta.copy": "Si decides proceder con un engagement en 30 días, los $1,500 se acreditan completos. Si no, te llevas tu recomendación escrita igual y la implementas tú mismo.",
+        "cta.title": "Te llevas tu plan. Aunque no vuelvas.",
+        "cta.copy": "Te quedas con tus 3 prioridades y las ejecutas tú mismo. Si vuelves a Revenue Unlock o Series A Fundraising en 30 días, los $1,500 se descuentan del engagement.",
         "cta.button": "Reservar el Diagnóstico — $1,500 USD",
         "cta.note": "Pago seguro vía Stripe. Después de pagar, eliges slot directo en mi calendario.",
         "explore.eyebrow": "Explora Growth Expert",
+        "explore.title": "A dónde ir después.",
         "explore.programs.copy": "Dos formas de trabajar juntos, según el cuello de botella.",
         "explore.countries.copy": "Contexto local para los ecosistemas clave de LATAM.",
         "explore.blog.title": "Artículos",
@@ -499,32 +475,23 @@
         "context.programs": "Programs",
         "context.countries": "Countries",
         "header.cta": "Book My Diagnostic",
-        "hero.eyebrow": "Diagnostic · 90 minutes",
-        "hero.title": "Paid Diagnostic — $1,500",
-        "hero.lede": "A 90-minute working session. Not a sales call.",
+        "hero.eyebrow": "Diagnostic · 90 minutes · $1,500 USD",
+        "hero.title": "Find what's costing you deals. In 90 minutes.",
+        "hero.lede": "I dig into your numbers, find the top 3 things bleeding revenue, and hand you a written plan. Walk away with priorities — engagement optional.",
         "hero.primaryCta": "Book the Diagnostic — $1,500",
         "hero.stats.sessionLabel": "90 min",
         "hero.stats.session": "Live session with me",
         "hero.stats.prepLabel": "2 hours",
-        "hero.stats.prep": "Of prep before the call",
+        "hero.stats.prep": "Prep before the session",
         "hero.stats.creditLabel": "$1,500",
-        "hero.stats.credit": "Credited toward engagement",
-        "howitworks.label": "How it works",
-        "howitworks.step1.title": "1. Pay and book",
-        "howitworks.step1.copy": "Pay $1,500 via Stripe and pick a slot directly on my calendar.",
-        "howitworks.step2.title": "2. Fill the intake",
-        "howitworks.step2.copy": "Send your numbers and context in advance. Takes 5 minutes.",
-        "howitworks.step3.title": "3. I prep",
-        "howitworks.step3.copy": "I spend 2 hours reviewing your material before the session.",
-        "howitworks.step4.title": "4. We work together 90 min",
-        "howitworks.step4.copy": "I ask sharp questions, you get specific answers.",
-        "howitworks.step5.title": "5. Your plan lands",
-        "howitworks.step5.copy": "Written recommendation with top 3 sequenced priorities.",
-        "overview.eyebrow": "What happens in the session",
-        "overview.title": "A working session, not a sales call.",
-        "overview.copy": "You send me your numbers and context in advance. I spend two hours reviewing before we meet. Then we spend 90 minutes together — me asking sharp questions, you getting specific answers about where your revenue is leaking and what to fix first.",
-        "overview.copy2": "You leave with a written recommendation: top 3 priorities, sequenced, with specific actions.",
-        "overview.copy3": "The full $1,500 is credited toward a Revenue Unlock or Series A Fundraising engagement if you decide to proceed within 30 days.",
+        "hero.stats.credit": "Credit toward engagement",
+        "howitworks.label": "What's about to move",
+        "howitworks.step1.title": "Send your numbers",
+        "howitworks.step1.copy": "Fill the intake — ARR, pipeline, pricing, where you think it's breaking. Takes 5 minutes.",
+        "howitworks.step2.title": "We work 90 minutes",
+        "howitworks.step2.copy": "I show up with your numbers digested. We dig in. You walk out with clarity on what's costing you deals.",
+        "howitworks.step3.title": "You leave with your plan",
+        "howitworks.step3.copy": "Top 3 priorities, sequenced, in writing. You execute them — with me or without me.",
         "deliverables.eyebrow": "What you get",
         "deliverables.title": "What you walk away with on session day.",
         "deliverables.item1.title": "90-minute live working session",
@@ -536,26 +503,27 @@
         "deliverables.item4.title": "$1,500 credit toward engagement",
         "deliverables.item4.copy": "If you decide to proceed with Revenue Unlock or Series A Fundraising within 30 days, the full $1,500 is credited to the engagement price.",
         "fit.forEyebrow": "Best for",
-        "fit.forTitle": "Founders with real traction who want senior input before committing.",
-        "fit.for1": "Have $1M+ ARR.",
-        "fit.for2": "Know their GTM is broken but can't pinpoint where exactly.",
-        "fit.for3": "Want senior input before committing to a full engagement.",
+        "fit.forTitle": "$1M+ ARR founders who need clarity before committing.",
+        "fit.for1": "You have deals you're losing and want to know why.",
+        "fit.for2": "You can't tell if it's pricing, close, or expansion.",
+        "fit.for3": "You want senior input before signing into a multi-month program.",
         "fit.notEyebrow": "Not for",
-        "fit.notTitle": "Teams without current revenue or without ownership to execute.",
-        "fit.not1": "Companies without paying customers or a live sales motion.",
-        "fit.not2": "Founders only validating a hypothesis without follow-through.",
-        "fit.not3": "Teams without a clear owner to execute the resulting priorities.",
+        "fit.notTitle": "Teams without revenue or an owner to execute.",
+        "fit.not1": "No paying customers or live sales motion yet.",
+        "fit.not2": "Looking for validation, not a fix to ship.",
+        "fit.not3": "No clear owner to execute the resulting priorities.",
         "testimonials.eyebrow": "What founders say",
-        "testimonials.title": "Founders who have worked closely with Jorge.",
-        "testimonials.kicker": "Recommendation",
+        "testimonials.title": "Founders who fixed their commercial structure with Jorge.",
         "testimonials.quote1": "\"With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results.\"",
         "testimonials.quote2": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
+        "testimonials.quote3": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
         "cta.eyebrow": "Book your session",
-        "cta.title": "$1,500. 90 minutes. Written recommendation.",
-        "cta.copy": "If you decide to proceed with an engagement within 30 days, the full $1,500 is credited. If not, you keep your written recommendation and execute it yourself.",
+        "cta.title": "Walk out with your plan. Even if you never come back.",
+        "cta.copy": "You keep your top 3 priorities and implement them yourself. If you come back to Revenue Unlock or Series A Fundraising within 30 days, the $1,500 disappears into the engagement.",
         "cta.button": "Book the Diagnostic — $1,500",
         "cta.note": "Secure payment via Stripe. After paying, you pick a slot directly on my calendar.",
         "explore.eyebrow": "Explore Growth Expert",
+        "explore.title": "Where to go next.",
         "explore.programs.copy": "Two ways to work together, depending on the bottleneck.",
         "explore.countries.copy": "Local market context across key LATAM ecosystems.",
         "explore.blog.title": "Insights",
