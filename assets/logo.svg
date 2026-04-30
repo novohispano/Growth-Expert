@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="Growth Expert">
+  <defs>
+    <linearGradient id="badge" x1="10" y1="8" x2="70" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6654" />
+      <stop offset="1" stop-color="#ff3b29" />
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="32" fill="url(#badge)" stroke="#121212" stroke-width="5" />
+  <text x="40" y="51" text-anchor="middle"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="36" font-weight="700" fill="#121212">G</text>
+  <text x="88" y="46"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="700" fill="#121212"
+        letter-spacing="-0.5">Growth</text>
+  <text x="200" y="46"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="400" fill="#121212"
+        letter-spacing="-0.5">Expert</text>
+  <rect x="89" y="54" width="118" height="3" fill="#ff3b29" />
+</svg>
