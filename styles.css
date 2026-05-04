@@ -698,6 +698,12 @@ h3 {
   filter: brightness(1.2);
 }
 
+.check-list li,
+.about-card__list li,
+.blog-post__body li {
+  line-height: 1.4;
+}
+
 .section {
   margin-top: 24px;
   padding: 40px;
