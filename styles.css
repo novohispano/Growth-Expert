@@ -234,7 +234,6 @@ textarea {
 
 .hero__content,
 .hero-card,
-.section,
 .fit-card,
 .intake-form {
   border: 1px solid var(--line);
@@ -616,23 +615,21 @@ h3 {
 }
 
 .section {
-  margin-top: 24px;
-  padding: 40px;
-  border-radius: var(--radius-xl);
-  background: #ffffff;
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
 }
 
 .section--split {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  padding: 0;
-  border: 0;
-  box-shadow: none;
-  background: transparent;
 }
 
 .section--signal {
+  padding: 64px 48px;
+  margin-top: 24px;
+  border-top: 0;
+  border-radius: var(--radius-xl);
   background:
     linear-gradient(135deg, rgba(13, 23, 38, 0.97), rgba(28, 37, 54, 0.94)),
     radial-gradient(circle at top right, rgba(229, 56, 44, 0.22), transparent 28%);
@@ -1388,7 +1385,6 @@ h3 {
   grid-template-columns: 0.92fr 1.08fr;
   gap: 24px;
   align-items: start;
-  background: #ffffff;
 }
 
 .section--form--balanced {
@@ -1523,7 +1519,6 @@ textarea {
 
 .section--cta {
   scroll-margin-top: 120px;
-  background: #ffffff;
 }
 
 .cta-card {
