@@ -676,16 +676,43 @@ h3 {
 
 .testimonial-card--featured {
   grid-column: 1 / -1;
-  padding: 16px 0;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 2fr;
+  gap: 56px;
+  align-items: center;
+  padding: 32px 0 72px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--line);
   border-left: 0;
 }
 
 .testimonial-card--featured .testimonial-quote {
-  font-size: 1.35rem;
-  line-height: 1.5;
+  margin: 0;
+  font-size: 1.65rem;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
   color: var(--text);
   font-weight: 500;
-  max-width: 56ch;
+  max-width: 38ch;
+}
+
+.testimonial-card--featured .testimonial-person {
+  align-self: center;
+}
+
+.testimonial-card--featured .testimonial-avatar {
+  width: 120px;
+  height: 120px;
+}
+
+.testimonial-card--featured + .testimonial-card {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.testimonial-card--featured + .testimonial-card + .testimonial-card {
+  padding-left: 40px;
+  border-left: 1px solid var(--line);
 }
 
 @media (max-width: 800px) {
