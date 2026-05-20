@@ -148,11 +148,9 @@ textarea {
 .page-context {
   display: grid;
   gap: 14px;
-  margin-top: 18px;
-  padding: 18px 22px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  background: transparent;
+  margin-top: 32px;
+  padding: 0 0 32px;
+  border-bottom: 1px solid var(--line);
 }
 
 .page-context__trail {
@@ -191,23 +189,19 @@ textarea {
 }
 
 .page-context__sibling {
-  display: grid;
-  gap: 3px;
-  min-width: 160px;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--text);
   text-decoration: none;
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 160ms ease;
 }
 
 .page-context__sibling:hover,
 .page-context__sibling:focus-visible {
-  border-color: rgba(229, 56, 44, 0.22);
+  color: var(--accent-deep);
 }
 
 .page-context__sibling small {
@@ -217,8 +211,7 @@ textarea {
 }
 
 .page-context__sibling.is-active {
-  border-color: rgba(229, 56, 44, 0.24);
-  background: #ffffff;
+  color: var(--text-soft);
   pointer-events: none;
 }
 
