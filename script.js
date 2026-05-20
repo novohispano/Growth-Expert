@@ -42,9 +42,9 @@ const translations = {
     "nav.menu": "Menu",
     "header.cta": "Book My Diagnostic",
     "hero.eyebrow": "B2B founders · $1M–$5M ARR · LATAM",
-    "hero.title": "Your pipeline isn't broken. Your sales motion is.",
-    "hero.lede": "Weekly, hands-on work with the founder to fix what's actually losing deals — pricing, close rate, or expansion. Tied to revenue moved this month, not slides.",
-    "hero.primaryCta": "Send your numbers →",
+    "hero.title": "Your sales motion is leaking revenue.",
+    "hero.lede": "Weekly work with you on the one fix moving revenue — pricing, close, or expansion — measured this month.",
+    "hero.primaryCta": "Send your numbers",
     "hero.stats.weeklyLabel": "Weekly",
     "hero.stats.weekly": "One bottleneck fixed at a time",
     "hero.stats.executionLabel": "No decks",
@@ -66,7 +66,7 @@ const translations = {
     "testimonials.quote4": "\"With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results and drive measurable execution.\"",
     "about.eyebrow": "Why Jorge",
     "about.title": "I help early-stage startups fix GTM bottlenecks and grow revenue.",
-    "about.copy": "I am Jorge Tellez. I work with founders to identify where GTM is breaking, fix the highest-leverage constraint, and run weekly experiments tied directly to revenue.",
+    "about.copy": "I find where your GTM is breaking and run weekly experiments tied to revenue until the number moves.",
     "about.card1.title": "Track record",
     "about.card1.lead": "Built revenue from zero, reworked monetization, and originated large-scale capital activity.",
     "about.card1.item1": "~$2.5B in originated transactions launching a VC arm",
@@ -100,6 +100,8 @@ const translations = {
     "context.countries": "Countries",
     "context.blog": "Blog",
     "services.eyebrow": "Explore the programs",
+    "services.diagnostic.title": "Diagnostic · 90 min · $1,500",
+    "services.diagnostic.copy": "Start here if you're not sure which program is for you",
     "services.unlock.title": "Revenue Unlock Program",
     "services.unlock.copy": "Fix pricing, pipeline, and GTM bottlenecks",
     "services.fundraising.title": "Series A Fundraising",
@@ -141,36 +143,29 @@ const translations = {
     "engagement.implement.copy": "We push the change into your real sales process — pricing, talk track, comp plan, whatever it takes.",
     "engagement.review.title": "Pipeline moves",
     "engagement.review.copy": "You see the move week by week against actual deals — not a quarterly report.",
-    "form.eyebrow": "WhatsApp Gut Check",
+    "form.eyebrow": "WhatsApp Triage",
     "form.title": "Send your numbers. I'll tell you what jumps out.",
-    "form.copy": "Free gut reaction on your numbers — no call, no deck, no written plan. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.",
+    "form.copy": "Free reaction to your numbers within one business day. No call, no deck.",
     "form.tag1": "Takes under 2 minutes",
     "form.tag2": "Founder-friendly",
     "form.tag3": "No deck, no prep",
-    "fields.stage": "Stage of your company",
+    "fields.arrBand": "Current ARR",
     "fields.name": "Name",
-    "fields.startup": "Startup",
     "fields.email": "Email",
-    "fields.linkedin": "LinkedIn (optional)",
-    "fields.monthlyRevenue": "Monthly Revenue",
-    "fields.ticketSize": "Average Ticket Size",
     "fields.breakpoint": "Sales Process Breakdown",
-    "stage.placeholder": "Select your stage",
-    "stage.option1": "Pre-revenue / no paying customers",
-    "stage.option2": "Early traction (under $50K MRR)",
-    "stage.option3": "Growth ($50K–$300K MRR)",
-    "stage.option4": "Series A-ready ($300K+ MRR)",
-    "form.responseTime": "Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.",
+    "arrBand.placeholder": "Select your ARR",
+    "arrBand.preRevenue": "Pre-revenue / no paying customers",
+    "arrBand.lt1m": "Under $1M ARR",
+    "arrBand.1m3m": "$1M – $3M ARR",
+    "arrBand.3m5m": "$3M – $5M ARR",
+    "arrBand.5mPlus": "$5M+ ARR",
+    "form.responseTime": "Jorge personally reviews each triage and replies within 24 hours on weekdays.",
     "prerevenue.eyebrow": "Not yet",
     "prerevenue.title": "Thanks — Growth Expert works with companies that already have paying customers.",
     "prerevenue.copy": "You're not there yet, but these might help while you get there.",
     "prerevenue.cta": "Read the blog",
     "placeholders.name": "Jane Founder",
-    "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
-    "placeholders.linkedin": "https://linkedin.com/in/yourname",
-    "placeholders.monthlyRevenue": "$35,000 MRR",
-    "placeholders.ticketSize": "$4,500 ACV",
     "options.breakpointDefault": "Select the main issue",
     "options.breakpoint1": "Blocked pipeline",
     "options.breakpoint2": "Founder-led sales",
@@ -178,18 +173,41 @@ const translations = {
     "options.breakpoint4": "Underperforming pricing",
     "options.breakpoint5": "No upselling",
     "options.breakpoint6": "Other",
-    "form.disclaimer": "WhatsApp opens with the configured consulting number and the prospect's intake summary.",
+    "form.disclaimer": "On submit, WhatsApp opens with your intake. It lives in your browser history and your chat with me — don't use a shared device.",
+    "form.privacyLink": "More on privacy →",
     "form.submit": "Send on WhatsApp",
     "footer.blog": "Blog",
-    "message.intro": "Hi, I want a Revenue Unlock diagnostic.",
-    "message.stage": "Stage",
+    "footer.privacy": "Privacy",
+    "message.intro": "Hi, I want a Revenue Unlock triage.",
+    "message.arrBand": "ARR",
     "message.name": "Name",
-    "message.startup": "Startup",
     "message.email": "Email",
-    "message.linkedin": "LinkedIn",
-    "message.monthlyRevenue": "Monthly Revenue",
-    "message.ticketSize": "Average Ticket Size",
     "message.breakpoint": "Sales Process Breakdown",
+    "privacy.eyebrow": "Privacy",
+    "privacy.title": "Privacy",
+    "privacy.metaDescription": "What I collect through this site, where it goes, how long I keep it, and how to get it deleted.",
+    "privacy.lede": "I'm Jorge Téllez, the only person who reads what you send through this site.",
+    "privacy.collect.title": "What I collect",
+    "privacy.collect.whatsapp": "The WhatsApp Triage form (on the home page, country pages, and service pages) collects your name, email, ARR band, and what you say is breaking in your sales process.",
+    "privacy.collect.intake": "The paid Diagnostic intake collects your name, company, email, ARR band, MRR growth band, pricing model, sales cycle, win rate, sales team size, primary lead source, and optionally a context link and a deck link.",
+    "privacy.collect.noTracking": "I don't collect IP addresses, cookies, or analytics. There is no tracking pixel on this site.",
+    "privacy.collect.purpose": "I use this data only to evaluate fit, prepare for our call, and run the engagement you booked. I don't repurpose it.",
+    "privacy.destination.title": "Where it goes",
+    "privacy.destination.whatsapp": "The WhatsApp Triage form builds a WhatsApp message that arrives in my chat with you. The data lives in your browser history and our chat thread.",
+    "privacy.destination.web3forms": "The paid Diagnostic intake is posted through Web3Forms, a US-based form-delivery service, which forwards it straight to my email. Web3Forms acts only as transit; they don't analyze the content. Their privacy policy is here:",
+    "privacy.destination.noTools": "Nothing goes to a CRM, marketing automation, or sales tool.",
+    "privacy.destination.crossBorder": "By submitting either form, you consent to your data being transmitted to and stored in the United States — Web3Forms for the paid intake, and my email provider for both forms.",
+    "privacy.retention.title": "How long I keep it",
+    "privacy.retention.body": "I keep your intake email while we're in active conversation and for 90 days afterward in case we re-engage. After that, I delete the thread. If you want it gone sooner, email me at",
+    "privacy.retention.bodyTail": " and I'll do it within 30 days.",
+    "privacy.access.title": "Who has access",
+    "privacy.access.body": "Just me. I don't share identifiable intake content with collaborators, contractors, or AI tools without your written consent.",
+    "privacy.rights.title": "Your rights",
+    "privacy.rights.body": "You can ask me at any time for a copy of what I have, a correction, or a deletion. Write to",
+    "privacy.rights.bodyTail": " and I'll respond within 30 days. This is consistent with LATAM data-protection law — LFPDPPP (Mexico), Ley 1581 (Colombia), Ley 25.326 (Argentina), Ley 19.628 (Chile), and LGPD-equivalent rights wherever you are.",
+    "privacy.rights.dpa": "You can also file a complaint with your local data-protection authority — INAI (México), SIC (Colombia), AAIP (Argentina), or the equivalent in your jurisdiction.",
+    "privacy.updates.title": "Updates",
+    "privacy.updates.body": "When this page changes, I'll re-date it at the top. Last updated: 2026-05-19.",
   },
   es: {
     "nav.programs": "Programas",
@@ -199,7 +217,7 @@ const translations = {
     "hero.eyebrow": "Founders B2B · $1M–$5M ARR · LATAM",
     "hero.title": "Tu pipeline no está roto. Tu motion de ventas sí.",
     "hero.lede": "Trabajo semanal, codo a codo con el founder, para arreglar lo que te está costando deals — pricing, cierre o expansión. Medido contra revenue que se mueve este mes, no contra slides.",
-    "hero.primaryCta": "Manda tus números →",
+    "hero.primaryCta": "Manda tus números",
     "hero.stats.weeklyLabel": "Semanal",
     "hero.stats.weekly": "Un cuello de botella a la vez",
     "hero.stats.executionLabel": "Sin decks",
@@ -255,6 +273,8 @@ const translations = {
     "context.countries": "Países",
     "context.blog": "Blog",
     "services.eyebrow": "Explora los programas",
+    "services.diagnostic.title": "Diagnóstico · 90 min · $1,500 USD",
+    "services.diagnostic.copy": "Empieza aquí si no sabes cuál programa es para ti",
     "services.unlock.title": "Revenue Unlock Program",
     "services.unlock.copy": "Corrige pricing, pipeline y cuellos de botella en GTM",
     "services.fundraising.title": "Series A Fundraising",
@@ -296,36 +316,29 @@ const translations = {
     "engagement.implement.copy": "Empujamos el cambio adentro de tu proceso de ventas real — pricing, talk track, comp plan, lo que toque.",
     "engagement.review.title": "El pipeline se mueve",
     "engagement.review.copy": "Ves el movimiento semana a semana contra deals reales, no contra un reporte trimestral.",
-    "form.eyebrow": "Reacción rápida por WhatsApp",
+    "form.eyebrow": "Triage por WhatsApp",
     "form.title": "Mándame tus números. Te digo qué me hace ruido.",
     "form.copy": "Reacción a tus números, gratis, en un día hábil. Sin llamada, sin deck.",
     "form.tag1": "Toma menos de 2 minutos",
     "form.tag2": "Founder-friendly",
     "form.tag3": "Sin deck, sin preparación",
-    "fields.stage": "Etapa de tu compañía",
+    "fields.arrBand": "ARR actual",
     "fields.name": "Nombre",
-    "fields.startup": "Startup",
     "fields.email": "Email",
-    "fields.linkedin": "LinkedIn (opcional)",
-    "fields.monthlyRevenue": "Revenue mensual",
-    "fields.ticketSize": "Ticket promedio",
     "fields.breakpoint": "Dónde se rompe el proceso comercial",
-    "stage.placeholder": "Selecciona tu etapa",
-    "stage.option1": "Pre-ingresos / sin clientes pagando",
-    "stage.option2": "Tracción temprana (menos de $50K MRR)",
-    "stage.option3": "Crecimiento ($50K–$300K MRR)",
-    "stage.option4": "Listo para Series A ($300K+ MRR)",
-    "form.responseTime": "Jorge revisa personalmente cada diagnóstico y responde en menos de 24 horas en días hábiles.",
+    "arrBand.placeholder": "Selecciona tu ARR",
+    "arrBand.preRevenue": "Pre-ingresos / sin clientes pagando",
+    "arrBand.lt1m": "Menos de $1M ARR",
+    "arrBand.1m3m": "$1M – $3M ARR",
+    "arrBand.3m5m": "$3M – $5M ARR",
+    "arrBand.5mPlus": "$5M+ ARR",
+    "form.responseTime": "Jorge revisa personalmente cada triage y responde en menos de 24 horas en días hábiles.",
     "prerevenue.eyebrow": "Todavía no",
     "prerevenue.title": "Gracias — Growth Expert trabaja con compañías que ya tienen clientes pagando.",
     "prerevenue.copy": "Mientras llegas a ese punto, aquí hay algunos recursos que pueden ayudarte.",
     "prerevenue.cta": "Leer el blog",
     "placeholders.name": "Jane Founder",
-    "placeholders.startup": "Acme AI",
     "placeholders.email": "jane@acme.ai",
-    "placeholders.linkedin": "https://linkedin.com/in/tunombre",
-    "placeholders.monthlyRevenue": "$35,000 MRR",
-    "placeholders.ticketSize": "$4,500 ACV",
     "options.breakpointDefault": "Selecciona el problema principal",
     "options.breakpoint1": "Pipeline bloqueado",
     "options.breakpoint2": "Ventas lideradas por el founder",
@@ -333,18 +346,41 @@ const translations = {
     "options.breakpoint4": "Pricing subóptimo",
     "options.breakpoint5": "Sin upselling",
     "options.breakpoint6": "Otro",
-    "form.disclaimer": "WhatsApp se abre con el número configurado y el resumen del intake del prospecto.",
+    "form.disclaimer": "Al enviar, WhatsApp se abre con tu intake. Queda en tu historial del navegador y en tu chat conmigo — no lo abras en un dispositivo compartido.",
+    "form.privacyLink": "Más sobre privacidad →",
     "form.submit": "Mandar por WhatsApp",
     "footer.blog": "Blog",
-    "message.intro": "Hola, quiero un diagnóstico de Revenue Unlock.",
-    "message.stage": "Etapa",
+    "footer.privacy": "Privacidad",
+    "message.intro": "Hola, quiero un triage de Revenue Unlock.",
+    "message.arrBand": "ARR",
     "message.name": "Nombre",
-    "message.startup": "Startup",
     "message.email": "Email",
-    "message.linkedin": "LinkedIn",
-    "message.monthlyRevenue": "Revenue mensual",
-    "message.ticketSize": "Ticket promedio",
     "message.breakpoint": "Dónde se rompe el proceso comercial",
+    "privacy.eyebrow": "Privacidad",
+    "privacy.title": "Privacidad",
+    "privacy.metaDescription": "Qué recolecto a través de este sitio, a dónde va, cuánto lo guardo y cómo pedir que lo borre.",
+    "privacy.lede": "Soy Jorge Téllez, la única persona que lee lo que mandas por este sitio.",
+    "privacy.collect.title": "Qué recolecto",
+    "privacy.collect.whatsapp": "El formulario de Triage por WhatsApp (en la página de inicio, las páginas de país y las páginas de servicio) recolecta tu nombre, email, banda de ARR y lo que dices que se está rompiendo en tu proceso comercial.",
+    "privacy.collect.intake": "El intake del Diagnóstico pagado recolecta tu nombre, empresa, email, banda de ARR, banda de crecimiento MRR, modelo de pricing, ciclo de venta, win rate, tamaño del equipo comercial, fuente principal de leads y, opcionalmente, un link de contexto y un link al deck.",
+    "privacy.collect.noTracking": "No recolecto direcciones IP, ni cookies, ni analytics. No hay pixel de tracking en este sitio.",
+    "privacy.collect.purpose": "Uso estos datos solo para evaluar fit, preparar nuestra llamada, y correr el engagement que reservaste. No los repurpose.",
+    "privacy.destination.title": "A dónde va",
+    "privacy.destination.whatsapp": "El formulario de Triage por WhatsApp arma un mensaje de WhatsApp que llega a mi chat contigo. Los datos viven en tu historial del navegador y en nuestro chat.",
+    "privacy.destination.web3forms": "El intake del Diagnóstico pagado se envía vía Web3Forms, un servicio de entrega de formularios con sede en EE.UU., que lo reenvía directo a mi inbox. Web3Forms actúa solo como tránsito; no analiza el contenido. Su política de privacidad está aquí:",
+    "privacy.destination.noTools": "Nada va a un CRM, a marketing automation ni a una herramienta de ventas.",
+    "privacy.destination.crossBorder": "Al enviar cualquier formulario, consientes que tus datos viajen y se almacenen en Estados Unidos — Web3Forms para el intake pagado, y mi proveedor de email para ambos formularios.",
+    "privacy.retention.title": "Cuánto lo guardo",
+    "privacy.retention.body": "Conservo tu intake mientras estamos en conversación activa y 90 días después, por si retomamos. Después borro el hilo. Si quieres que lo borre antes, escríbeme a",
+    "privacy.retention.bodyTail": " y lo hago en menos de 30 días.",
+    "privacy.access.title": "Quién tiene acceso",
+    "privacy.access.body": "Yo solo. No comparto contenido identificable del intake con colaboradores, contratistas, ni herramientas de IA sin tu consentimiento por escrito.",
+    "privacy.rights.title": "Tus derechos",
+    "privacy.rights.body": "Puedes pedirme en cualquier momento una copia de lo que tengo, que lo corrija o que lo borre. Escríbeme a",
+    "privacy.rights.bodyTail": " y respondo en menos de 30 días. Esto es consistente con la legislación de protección de datos en LATAM — LFPDPPP (México), Ley 1581 (Colombia), Ley 25.326 (Argentina), Ley 19.628 (Chile) y derechos equivalentes a LGPD donde estés.",
+    "privacy.rights.dpa": "También puedes presentar una queja ante tu autoridad local de protección de datos — INAI (México), SIC (Colombia), AAIP (Argentina), o el equivalente en tu jurisdicción.",
+    "privacy.updates.title": "Actualizaciones",
+    "privacy.updates.body": "Cuando esta página cambie, vuelvo a fechar arriba. Última actualización: 2026-05-19.",
   },
 };
 
@@ -409,39 +445,29 @@ if (form) {
     event.preventDefault();
 
     const data = new FormData(form);
-    const hasField = (name) => Boolean(form.elements.namedItem(name));
 
-    // Stage qualification gate — pre-revenue prospects don't go to WhatsApp
-    if (hasField("stage")) {
-      const stageValue = (data.get("stage") || "").toString();
-      if (stageValue === "pre-revenue" && preRevenueNotice) {
-        form.hidden = true;
-        if (formCopyBlock) formCopyBlock.hidden = true;
-        preRevenueNotice.classList.add("is-visible");
-        preRevenueNotice.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
+    // Pre-revenue qualification gate — pre-revenue prospects don't go to WhatsApp
+    const arrBandValue = (data.get("arrBand") || "").toString();
+    if (arrBandValue === "pre-revenue" && preRevenueNotice) {
+      form.hidden = true;
+      if (formCopyBlock) formCopyBlock.hidden = true;
+      preRevenueNotice.classList.add("is-visible");
+      preRevenueNotice.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
     }
 
     const payload = {
-      stage: (data.get("stage") || "").toString().trim(),
+      arrBand: arrBandValue.trim(),
       name: (data.get("name") || "").toString().trim(),
-      startup: (data.get("startup") || "").toString().trim(),
       email: (data.get("email") || "").toString().trim(),
-      linkedin: (data.get("linkedin") || "").toString().trim(),
-      monthlyRevenue: (data.get("monthlyRevenue") || "").toString().trim(),
-      ticketSize: (data.get("ticketSize") || "").toString().trim(),
       breakpoint: (data.get("breakpoint") || "").toString().trim(),
     };
 
     const requiredFields = [
-      ...(hasField("stage") ? [payload.stage] : []),
+      payload.arrBand,
       payload.name,
-      payload.startup,
       payload.email,
-      payload.monthlyRevenue,
-      ...(hasField("ticketSize") ? [payload.ticketSize] : []),
-      ...(hasField("breakpoint") ? [payload.breakpoint] : []),
+      payload.breakpoint,
     ];
 
     if (requiredFields.some((value) => !value)) {
@@ -455,31 +481,24 @@ if (form) {
       submissionLanguage === "es"
         ? form.dataset.messageIntroEs || form.dataset.messageIntro
         : form.dataset.messageIntroEn || form.dataset.messageIntro;
-    const revenueLabel =
-      submissionLanguage === "es"
-        ? form.dataset.messageMonthlyRevenueEs || dictionary["message.monthlyRevenue"]
-        : form.dataset.messageMonthlyRevenueEn || dictionary["message.monthlyRevenue"];
 
-    // Map stage value back to localized label for the message
-    const stageLabelMap = {
-      "pre-revenue": dictionary["stage.option1"],
-      "early-traction": dictionary["stage.option2"],
-      "growth": dictionary["stage.option3"],
-      "series-a-ready": dictionary["stage.option4"],
+    // Map arrBand value back to localized label for the message
+    const arrBandLabelMap = {
+      "pre-revenue": dictionary["arrBand.preRevenue"],
+      "<1m": dictionary["arrBand.lt1m"],
+      "1m-3m": dictionary["arrBand.1m3m"],
+      "3m-5m": dictionary["arrBand.3m5m"],
+      "5m+": dictionary["arrBand.5mPlus"],
     };
-    const stageLabel = payload.stage ? (stageLabelMap[payload.stage] || payload.stage) : "";
+    const arrBandLabel = arrBandLabelMap[payload.arrBand] || payload.arrBand;
 
     const lines = [
       customIntro || dictionary["message.intro"],
       "",
-      ...(stageLabel ? [`${dictionary["message.stage"]}: ${stageLabel}`] : []),
+      `${dictionary["message.arrBand"]}: ${arrBandLabel}`,
       `${dictionary["message.name"]}: ${payload.name}`,
-      `${dictionary["message.startup"]}: ${payload.startup}`,
       `${dictionary["message.email"]}: ${payload.email}`,
-      ...(payload.linkedin ? [`${dictionary["message.linkedin"]}: ${payload.linkedin}`] : []),
-      `${revenueLabel}: ${payload.monthlyRevenue}`,
-      ...(payload.ticketSize ? [`${dictionary["message.ticketSize"]}: ${payload.ticketSize}`] : []),
-      ...(payload.breakpoint ? [`${dictionary["message.breakpoint"]}: ${payload.breakpoint}`] : []),
+      `${dictionary["message.breakpoint"]}: ${payload.breakpoint}`,
     ];
 
     const message = encodeURIComponent(lines.join("\n"));
