@@ -226,22 +226,23 @@ textarea {
 .hero {
   display: grid;
   grid-template-columns: 1.35fr 0.95fr;
-  gap: 24px;
+  gap: 0;
   padding: 32px 0 24px;
   align-items: stretch;
 }
 
-.hero__content,
-.hero-card,
 .fit-card,
 .intake-form {
   border: 1px solid var(--line);
 }
 
 .hero__content {
-  padding: 48px;
-  border-radius: var(--radius-xl);
-  background: #ffffff;
+  padding: 16px 32px 16px 0;
+}
+
+.hero-card {
+  padding: 16px 0 16px 32px;
+  border-left: 1px solid var(--line);
 }
 
 .eyebrow {
@@ -529,9 +530,6 @@ h3 {
 }
 
 .hero-card {
-  padding: 32px;
-  border-radius: var(--radius-xl);
-  background: #ffffff;
   scroll-margin-top: 100px;
 }
 
@@ -637,7 +635,11 @@ h3 {
 .principles,
 .signal-grid,
 .testimonial-grid,
-.about-grid,
+.about-grid {
+  display: grid;
+  gap: 0;
+}
+
 .related-grid,
 .explore-hub__grid,
 .blog-rail__grid {
@@ -675,9 +677,8 @@ h3 {
 
 .testimonial-card--featured {
   grid-column: 1 / -1;
-  padding: 36px 40px;
-  background: #ffffff;
-  border-color: rgba(229, 56, 44, 0.18);
+  padding: 16px 0;
+  border-left: 0;
 }
 
 .testimonial-card--featured .testimonial-quote {
@@ -769,9 +770,12 @@ h3 {
 }
 
 .principle-card {
-  padding: 28px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
+  padding: 8px 24px 8px 0;
+}
+
+.principle-card + .principle-card {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
 }
 
 .principle-card span {
@@ -779,9 +783,12 @@ h3 {
 }
 
 .signal-card {
-  padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 24px 8px 0;
+}
+
+.signal-card + .signal-card {
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .form-honeypot {
@@ -789,10 +796,12 @@ h3 {
 }
 
 .testimonial-card {
-  padding: 28px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
-  box-shadow: none;
+  padding: 8px 24px 8px 0;
+}
+
+.testimonial-card + .testimonial-card {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
 }
 
 .testimonial-person {
@@ -862,9 +871,12 @@ h3 {
 }
 
 .about-card {
-  padding: 28px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
+  padding: 8px 24px 8px 0;
+}
+
+.about-card + .about-card {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
 }
 
 .related-card,
