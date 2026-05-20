@@ -135,10 +135,9 @@
       <section class="hero">
         <div class="hero__content">
           <p class="eyebrow" data-i18n="hero.eyebrow">B2B founders · Raising Series A · LATAM</p>
-          <h1 data-i18n="hero.title">Close your Series&nbsp;A. Stop guessing what investors want.</h1>
+          <h1 data-i18n="hero.title">Close your Series&nbsp;A.</h1>
           <p class="hero__lede" data-i18n="hero.lede">
-            LATAM founders lose rounds because their commercial proof, story, and timing don't line up. Weekly work to
-            fix all three before you walk into the first VC meeting.
+            Before your first VC meeting, weekly work to align your commercial proof, your story, and your timing.
           </p>
           <div class="hero__actions">
             <a class="button button--primary" href="/diagnostic/" data-i18n="hero.primaryCta">Book the Diagnostic — $1,500</a>
@@ -438,28 +437,24 @@
       <!-- CTA -->
       <section class="section section--form section--form--balanced" id="audit">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Gut Check</p>
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Triage</p>
           <h2 data-i18n="form.title">Send your numbers. I'll tell you what raises a flag.</h2>
-          <p data-i18n="form.copy">Free gut reaction before you start the raise — no call, no deck, no readiness verdict. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.</p>
-          <div class="form-tags" aria-label="Diagnosis benefits">
-            <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
-            <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
-            <span class="form-tag" data-i18n="form.tag3">No deck, no prep needed</span>
+          <p data-i18n="form.copy">Free reaction to your numbers within one business day. No call, no deck.</p>
           </div>
-        </div>
 
         <form class="intake-form" id="whatsapp-form" data-message-intro-en="Hi, I want a Fundraising Diagnosis."
           data-message-intro-es="Hola, quiero un diagnóstico de fundraising."
           data-message-monthly-revenue-en="Annual Revenue" data-message-monthly-revenue-es="Revenue anual">
           <div class="field-grid">
             <label class="field field--full">
-              <span data-i18n="fields.stage">Stage of your company</span>
-              <select name="stage" required>
-                <option value="" data-i18n="stage.placeholder">Select your stage</option>
-                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
-                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
-                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
-                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              <span data-i18n="fields.arrBand">Current ARR</span>
+              <select name="arrBand" required>
+                <option value="" data-i18n="arrBand.placeholder">Select your ARR</option>
+                <option value="pre-revenue" data-i18n="arrBand.preRevenue">Pre-revenue / no paying customers</option>
+                <option value="<1m" data-i18n="arrBand.lt1m">Under $1M ARR</option>
+                <option value="1m-3m" data-i18n="arrBand.1m3m">$1M – $3M ARR</option>
+                <option value="3m-5m" data-i18n="arrBand.3m5m">$3M – $5M ARR</option>
+                <option value="5m+" data-i18n="arrBand.5mPlus">$5M+ ARR</option>
               </select>
             </label>
 
@@ -470,27 +465,22 @@
             </label>
 
             <label class="field">
-              <span data-i18n="fields.startup">Startup</span>
-              <input type="text" name="startup" placeholder="Acme AI" data-i18n-placeholder="placeholders.startup"
-                required />
-            </label>
-
-            <label class="field">
               <span data-i18n="fields.email">Email</span>
               <input type="email" name="email" placeholder="jane@acme.ai" data-i18n-placeholder="placeholders.email"
                 required />
             </label>
 
-            <label class="field">
-              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
-              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname"
-                data-i18n-placeholder="placeholders.linkedin" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.monthlyRevenue">Annual Revenue</span>
-              <input type="text" name="monthlyRevenue" placeholder="$420,000 ARR"
-                data-i18n-placeholder="placeholders.monthlyRevenue" required />
+            <label class="field field--full">
+              <span data-i18n="fields.breakpoint">Sales Process Breakdown</span>
+              <select name="breakpoint" required>
+                <option value="" data-i18n="options.breakpointDefault">Select the main issue</option>
+                <option value="Blocked pipeline" data-i18n="options.breakpoint1">Blocked pipeline</option>
+                <option value="Founder-led sales" data-i18n="options.breakpoint2">Founder-led sales</option>
+                <option value="Extended sales cycles" data-i18n="options.breakpoint3">Extended sales cycles</option>
+                <option value="Underperforming pricing" data-i18n="options.breakpoint4">Underperforming pricing</option>
+                <option value="No upselling" data-i18n="options.breakpoint5">No upselling</option>
+                <option value="Other" data-i18n="options.breakpoint6">Other</option>
+              </select>
             </label>
           </div>
 
@@ -498,6 +488,7 @@
             <p class="disclaimer" data-i18n="form.disclaimer">
               WhatsApp opens with the configured consulting number and the prospect's intake summary.
             </p>
+            <p class="disclaimer"><a href="/privacy/" data-i18n="form.privacyLink">More on privacy →</a></p>
             <button class="button button--primary button--wide" type="submit">
               <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
@@ -607,6 +598,7 @@
           <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
           <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
+          <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
@@ -619,8 +611,8 @@
         "brand.program": "Series A Fundraising",
         "header.cta": "Book My Diagnostic",
         "hero.eyebrow": "B2B founders · Raising Series A · LATAM",
-        "hero.title": "Close your Series A. Stop guessing what investors want.",
-        "hero.lede": "LATAM founders lose rounds because their commercial proof, story, and timing don't line up. Weekly work to fix all three before you walk into the first VC meeting.",
+        "hero.title": "Close your Series A.",
+        "hero.lede": "Before your first VC meeting, weekly work to align your commercial proof, your story, and your timing.",
         "hero.primaryCta": "Book the Diagnostic — $1,500",
         "hero.primarySubtext": "90-minute deep dive. Written recommendation. Credited toward engagement.",
         "midcta.eyebrow": "Smaller first step",
@@ -702,9 +694,9 @@
         "testimonials.quote2": "\"With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results and drive measurable execution.\"",
         "testimonials.quote3": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
         "testimonials.quote4": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
-        "form.eyebrow": "WhatsApp Gut Check",
+        "form.eyebrow": "WhatsApp Triage",
         "form.title": "Send your numbers. I'll tell you what raises a flag.",
-        "form.copy": "Free gut reaction before you start the raise — no call, no deck, no readiness verdict. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.",
+        "form.copy": "Free reaction to your numbers within one business day. No call, no deck.",
         "form.tag1": "Takes under 2 minutes",
         "form.tag2": "Founder-friendly",
         "form.tag3": "No deck, no prep needed",
@@ -714,8 +706,6 @@
         "prerevenue.title": "Thanks — Growth Expert works with companies that already have paying customers.",
         "prerevenue.copy": "You're not there yet, but these might help while you get there.",
         "prerevenue.cta": "Read the blog",
-        "fields.monthlyRevenue": "Annual Revenue",
-        "placeholders.monthlyRevenue": "$420,000 ARR",
         "footer.back": "← Back to homepage"
       },
       es: {
@@ -805,7 +795,7 @@
         "testimonials.quote2": "\"Con Jorge logramos poner nuestra estructura comercial en orden en cuatro semanas. Las bases que aplicamos podrían llevarnos a triplicar resultados y ejecutar con más claridad.\"",
         "testimonials.quote3": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
         "testimonials.quote4": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
-        "form.eyebrow": "Reacción rápida por WhatsApp",
+        "form.eyebrow": "Triage por WhatsApp",
         "form.title": "Mándame tus números. Te digo qué me hace ruido.",
         "form.copy": "Reacción gratis a tus números antes de salir a levantar. Sin llamada, sin deck.",
         "form.tag1": "Toma menos de 2 minutos",
@@ -817,8 +807,6 @@
         "prerevenue.title": "Gracias — Growth Expert trabaja con compañías que ya tienen clientes pagando.",
         "prerevenue.copy": "Mientras llegas a ese punto, aquí hay algunos recursos que pueden ayudarte.",
         "prerevenue.cta": "Leer el blog",
-        "fields.monthlyRevenue": "Revenue anual",
-        "placeholders.monthlyRevenue": "$420,000 ARR",
         "footer.back": "← Volver al inicio"
       }
     };

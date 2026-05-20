@@ -392,26 +392,22 @@
       <!-- CTA -->
       <section class="section section--form" id="audit">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Gut Check</p>
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Triage</p>
           <h2 data-i18n="form.title">Send your numbers. I'll tell you what jumps out.</h2>
-          <p data-i18n="form.copy">Free gut reaction on your numbers — no call, no deck, no written plan. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.</p>
-          <div class="form-tags" aria-label="Diagnosis benefits">
-            <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
-            <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
-            <span class="form-tag" data-i18n="form.tag3">No deck, no prep</span>
+          <p data-i18n="form.copy">Free reaction to your numbers within one business day. No call, no deck.</p>
           </div>
-        </div>
 
         <form class="intake-form" id="whatsapp-form">
           <div class="field-grid">
             <label class="field field--full">
-              <span data-i18n="fields.stage">Stage of your company</span>
-              <select name="stage" required>
-                <option value="" data-i18n="stage.placeholder">Select your stage</option>
-                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
-                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
-                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
-                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              <span data-i18n="fields.arrBand">Current ARR</span>
+              <select name="arrBand" required>
+                <option value="" data-i18n="arrBand.placeholder">Select your ARR</option>
+                <option value="pre-revenue" data-i18n="arrBand.preRevenue">Pre-revenue / no paying customers</option>
+                <option value="<1m" data-i18n="arrBand.lt1m">Under $1M ARR</option>
+                <option value="1m-3m" data-i18n="arrBand.1m3m">$1M – $3M ARR</option>
+                <option value="3m-5m" data-i18n="arrBand.3m5m">$3M – $5M ARR</option>
+                <option value="5m+" data-i18n="arrBand.5mPlus">$5M+ ARR</option>
               </select>
             </label>
 
@@ -421,28 +417,8 @@
             </label>
 
             <label class="field">
-              <span data-i18n="fields.startup">Startup</span>
-              <input type="text" name="startup" placeholder="Acme AI" data-i18n-placeholder="placeholders.startup" required />
-            </label>
-
-            <label class="field">
               <span data-i18n="fields.email">Email</span>
               <input type="email" name="email" placeholder="jane@acme.ai" data-i18n-placeholder="placeholders.email" required />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
-              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname" data-i18n-placeholder="placeholders.linkedin" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.monthlyRevenue">Monthly Revenue</span>
-              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" data-i18n-placeholder="placeholders.monthlyRevenue" required />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.ticketSize">Average Ticket Size</span>
-              <input type="text" name="ticketSize" placeholder="$4,500 ACV" data-i18n-placeholder="placeholders.ticketSize" required />
             </label>
 
             <label class="field field--full">
@@ -463,6 +439,7 @@
             <p class="disclaimer" data-i18n="form.disclaimer">
               WhatsApp opens with the configured consulting number and the prospect's intake summary.
             </p>
+            <p class="disclaimer"><a href="/privacy/" data-i18n="form.privacyLink">More on privacy →</a></p>
             <button class="button button--primary button--wide" type="submit">
               <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
@@ -572,6 +549,7 @@
           <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
           <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
+          <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
@@ -666,9 +644,9 @@
         "testimonials.quote2": "\"Jorge Téllez delivers an exceptional mentoring skillset. His mentorship has been impactful across growth, branding, capital raising, and strategic execution.\"",
         "testimonials.quote3": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
         "testimonials.quote4": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
-        "form.eyebrow": "WhatsApp Gut Check",
+        "form.eyebrow": "WhatsApp Triage",
         "form.title": "Send your numbers. I'll tell you what jumps out.",
-        "form.copy": "Free gut reaction on your numbers — no call, no deck, no written plan. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.",
+        "form.copy": "Free reaction to your numbers within one business day. No call, no deck.",
         "form.tag1": "Takes under 2 minutes",
         "form.tag2": "Founder-friendly",
         "form.tag3": "No deck, no prep",
@@ -766,7 +744,7 @@
         "testimonials.quote2": "\"Jorge Téllez tiene una capacidad excepcional de mentoría. Su acompañamiento ha sido muy valioso en growth, branding, levantamiento de capital y ejecución estratégica.\"",
         "testimonials.quote3": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
         "testimonials.quote4": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
-        "form.eyebrow": "Reacción rápida por WhatsApp",
+        "form.eyebrow": "Triage por WhatsApp",
         "form.title": "Mándame tus números. Te digo qué me hace ruido.",
         "form.copy": "Reacción gratis a tus números en un día hábil. Sin llamada, sin deck.",
         "form.tag1": "Toma menos de 2 minutos",
