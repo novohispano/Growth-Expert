@@ -1213,7 +1213,6 @@ h3 {
   margin-top: 2px;
   background: #ffffff;
   border-color: rgba(229, 56, 44, 0.22);
-  border-top: 3px solid var(--accent);
 }
 
 .blog-sidebar__cta-kicker {
@@ -1292,7 +1291,6 @@ h3 {
   margin: 32px 0;
   padding: 24px;
   border: 1px solid var(--line);
-  border-top: 3px solid var(--accent);
   border-radius: 16px;
   background: #ffffff;
 }
@@ -1346,7 +1344,6 @@ h3 {
   margin: 32px 0;
   padding: 24px 26px;
   border: 1px solid var(--line);
-  border-top: 3px solid var(--accent);
   border-radius: 16px;
   background: #ffffff;
 }
@@ -1466,7 +1463,6 @@ h3 {
   gap: 24px;
   align-items: start;
   background: #ffffff;
-  border-top: 3px solid var(--accent);
 }
 
 .section--form--balanced {
@@ -1602,7 +1598,6 @@ textarea {
 .section--cta {
   scroll-margin-top: 120px;
   background: #ffffff;
-  border-top: 3px solid var(--accent);
 }
 
 .cta-card {

@@ -115,14 +115,13 @@
       <section class="hero">
         <div class="hero__content">
           <p class="eyebrow" data-i18n="hero.eyebrow">B2B founders · $1M–$5M ARR · LATAM</p>
-          <h1 data-i18n="hero.title">Your pipeline isn't broken. Your sales motion is.</h1>
+          <h1 data-i18n="hero.title">Your sales motion is leaking revenue.</h1>
           <p class="hero__lede" data-i18n="hero.lede">
-            Weekly, hands-on work with the founder to fix what's actually losing deals —
-            pricing, close rate, or expansion. Tied to revenue moved this month, not slides.
+            Weekly work with you on the one fix moving revenue — pricing, close, or expansion — measured this month.
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#diagnostic" data-i18n="hero.primaryCta">Send your numbers →</a>
+            <a class="button button--primary" href="#diagnostic" data-i18n="hero.primaryCta">Send your numbers</a>
           </div>
 
           <ul class="hero__stats" aria-label="Key fit details">
@@ -241,8 +240,7 @@
             <p class="eyebrow" data-i18n="about.eyebrow">Why Jorge</p>
             <h2 data-i18n="about.title">I help early-stage startups fix GTM bottlenecks and grow revenue.</h2>
             <p data-i18n="about.copy">
-              I am Jorge Tellez. I work with founders to identify where GTM is breaking, fix the highest-leverage
-              constraint, and run weekly experiments tied directly to revenue.
+              I find where your GTM is breaking and run weekly experiments tied to revenue until the number moves.
             </p>
           </div>
 
@@ -329,6 +327,11 @@
         <div class="service-switcher">
           <p class="service-switcher__eyebrow" data-i18n="services.eyebrow">Explore the programs</p>
           <div class="service-switcher__grid">
+            <a class="service-switcher__card" href="/diagnostic/">
+              <span class="service-switcher__title" data-i18n="services.diagnostic.title">Diagnostic · 90 min · $1,500</span>
+              <span class="service-switcher__copy" data-i18n="services.diagnostic.copy">Start here if you're not sure which program is for you</span>
+              <span class="service-switcher__arrow" aria-hidden="true">→</span>
+            </a>
             <a class="service-switcher__card" href="/revenue-unlock/">
               <span class="service-switcher__title" data-i18n="services.unlock.title">Revenue Unlock Program</span>
               <span class="service-switcher__copy" data-i18n="services.unlock.copy">Fix pricing, pipeline, and GTM bottlenecks</span>
@@ -406,9 +409,9 @@
 
       <section class="section section--form" id="diagnostic">
         <div class="form-copy">
-          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Gut Check</p>
+          <p class="eyebrow" data-i18n="form.eyebrow">WhatsApp Triage</p>
           <h2 data-i18n="form.title">Send your numbers. I'll tell you what jumps out.</h2>
-          <p data-i18n="form.copy">Free gut reaction on your numbers — no call, no deck, no written plan. Fill the 8 fields and I'll send a quick take on WhatsApp within a business day.</p>
+          <p data-i18n="form.copy">Free reaction to your numbers within one business day. No call, no deck.</p>
           <div class="form-tags" aria-label="Diagnosis benefits">
             <span class="form-tag" data-i18n="form.tag1">Takes under 2 minutes</span>
             <span class="form-tag" data-i18n="form.tag2">Founder-friendly</span>
@@ -419,13 +422,14 @@
         <form class="intake-form" id="whatsapp-form">
           <div class="field-grid">
             <label class="field field--full">
-              <span data-i18n="fields.stage">Stage of your company</span>
-              <select name="stage" required>
-                <option value="" data-i18n="stage.placeholder">Select your stage</option>
-                <option value="pre-revenue" data-i18n="stage.option1">Pre-revenue / no paying customers</option>
-                <option value="early-traction" data-i18n="stage.option2">Early traction (under $50K MRR)</option>
-                <option value="growth" data-i18n="stage.option3">Growth ($50K–$300K MRR)</option>
-                <option value="series-a-ready" data-i18n="stage.option4">Series A-ready ($300K+ MRR)</option>
+              <span data-i18n="fields.arrBand">Current ARR</span>
+              <select name="arrBand" required>
+                <option value="" data-i18n="arrBand.placeholder">Select your ARR</option>
+                <option value="pre-revenue" data-i18n="arrBand.preRevenue">Pre-revenue / no paying customers</option>
+                <option value="<1m" data-i18n="arrBand.lt1m">Under $1M ARR</option>
+                <option value="1m-3m" data-i18n="arrBand.1m3m">$1M – $3M ARR</option>
+                <option value="3m-5m" data-i18n="arrBand.3m5m">$3M – $5M ARR</option>
+                <option value="5m+" data-i18n="arrBand.5mPlus">$5M+ ARR</option>
               </select>
             </label>
 
@@ -435,28 +439,8 @@
             </label>
 
             <label class="field">
-              <span data-i18n="fields.startup">Startup</span>
-              <input type="text" name="startup" placeholder="Acme AI" data-i18n-placeholder="placeholders.startup" required />
-            </label>
-
-            <label class="field">
               <span data-i18n="fields.email">Email</span>
               <input type="email" name="email" placeholder="jane@acme.ai" data-i18n-placeholder="placeholders.email" required />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.linkedin">LinkedIn (optional)</span>
-              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourname" data-i18n-placeholder="placeholders.linkedin" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.monthlyRevenue">Monthly Revenue</span>
-              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" data-i18n-placeholder="placeholders.monthlyRevenue" required />
-            </label>
-
-            <label class="field">
-              <span data-i18n="fields.ticketSize">Average Ticket Size</span>
-              <input type="text" name="ticketSize" placeholder="$4,500 ACV" data-i18n-placeholder="placeholders.ticketSize" required />
             </label>
 
             <label class="field field--full">
@@ -475,14 +459,15 @@
 
           <div class="form-footer">
             <p class="disclaimer" data-i18n="form.disclaimer">
-              WhatsApp opens with the configured consulting number and the prospect's intake summary.
+              On submit, WhatsApp opens with your intake. It lives in your browser history and your chat with me — don't use a shared device.
             </p>
+            <p class="disclaimer"><a href="/privacy/" data-i18n="form.privacyLink">More on privacy →</a></p>
             <button class="button button--primary button--wide" type="submit">
               <span data-i18n="form.submit">Send on WhatsApp</span>
             </button>
             <p class="form-response-time">
               <svg class="form-response-time__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-              <span data-i18n="form.responseTime">Jorge personally reviews each diagnosis and replies within 24 hours on weekdays.</span>
+              <span data-i18n="form.responseTime">Jorge personally reviews each triage and replies within 24 hours on weekdays.</span>
             </p>
           </div>
         </form>
@@ -520,6 +505,7 @@
           <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
           <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
+          <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>

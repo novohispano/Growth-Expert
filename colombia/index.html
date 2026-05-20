@@ -62,7 +62,7 @@
         "serviceType": [
           "Consultoría de revenue B2B",
           "Consultoría GTM para startups",
-          "Diagnóstico comercial por WhatsApp"
+          "Triage comercial por WhatsApp"
         ],
         "audience": {
           "@type": "BusinessAudience",
@@ -78,7 +78,7 @@
         },
         "offers": {
           "@type": "Offer",
-          "name": "Diagnóstico comercial por WhatsApp",
+          "name": "Triage comercial por WhatsApp",
           "price": "0",
           "priceCurrency": "USD"
         }
@@ -155,7 +155,7 @@
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#diagnostic">Quiero Mi Diagnóstico</a>
+            <a class="button button--primary" href="#diagnostic">Quiero el Triage</a>
           </div>
 
           <ul class="hero__stats" aria-label="Detalles de encaje">
@@ -377,6 +377,11 @@
         <div class="service-switcher">
           <p class="service-switcher__eyebrow">Explora los programas</p>
           <div class="service-switcher__grid">
+            <a class="service-switcher__card" href="/diagnostic/">
+              <span class="service-switcher__title" data-i18n="services.diagnostic.title">Diagnostic · 90 min · $1,500</span>
+              <span class="service-switcher__copy" data-i18n="services.diagnostic.copy">Start here if you're not sure which program is for you</span>
+              <span class="service-switcher__arrow" aria-hidden="true">→</span>
+            </a>
             <a class="service-switcher__card" href="/revenue-unlock/">
               <span class="service-switcher__title">Revenue Unlock Program</span>
               <span class="service-switcher__copy">Corrige pricing, pipeline y cuellos de botella en GTM</span>
@@ -450,7 +455,7 @@
 
       <section class="section section--form" id="diagnostic">
         <div class="form-copy">
-          <p class="eyebrow">Diagnóstico gratuito para Colombia</p>
+          <p class="eyebrow">Triage por WhatsApp · gratis para Colombia</p>
           <h2>Mándame tus números y te digo dónde se está rompiendo el revenue en Colombia.</h2>
           <div class="form-copy__inner">
             <p>
@@ -458,14 +463,14 @@
               cuello de botella: cierre, pricing, seguimiento o expansión.
             </p>
           </div>
-          <div class="form-tags" aria-label="Beneficios del diagnóstico">
+          <div class="form-tags" aria-label="Beneficios del triage">
             <span class="form-tag">Toma menos de 2 minutos</span>
             <span class="form-tag">Pensado para founders</span>
             <span class="form-tag">Sin deck ni preparación</span>
           </div>
           <div class="form-note">
             <strong>Flujo:</strong>
-            <span>llenas el formulario, envías el diagnóstico por WhatsApp y te respondo con la parte del proceso comercial que más está frenando crecimiento en Colombia.</span>
+            <span>llenas el formulario, envías el triage por WhatsApp y te respondo con la parte del proceso comercial que más está frenando crecimiento en Colombia.</span>
           </div>
         </div>
 
@@ -473,16 +478,23 @@
           class="intake-form"
           id="whatsapp-form"
           data-form-language="es"
-          data-message-intro="Hola, quiero un diagnóstico para Colombia.">
+          data-message-intro="Hola, quiero un triage para Colombia.">
           <div class="field-grid">
-            <label class="field">
-              <span>Nombre</span>
-              <input type="text" name="name" placeholder="Jane Founder" required>
+            <label class="field field--full">
+              <span>ARR actual</span>
+              <select name="arrBand" required>
+                <option value="">Selecciona tu ARR</option>
+                <option value="pre-revenue">Pre-revenue / sin clientes que paguen</option>
+                <option value="<1m">Menos de $1M ARR</option>
+                <option value="1m-3m">$1M – $3M ARR</option>
+                <option value="3m-5m">$3M – $5M ARR</option>
+                <option value="5m+">$5M+ ARR</option>
+              </select>
             </label>
 
             <label class="field">
-              <span>Startup</span>
-              <input type="text" name="startup" placeholder="Acme AI" required>
+              <span>Nombre</span>
+              <input type="text" name="name" placeholder="Jane Founder" required>
             </label>
 
             <label class="field">
@@ -490,17 +502,7 @@
               <input type="email" name="email" placeholder="jane@acme.ai" required>
             </label>
 
-            <label class="field">
-              <span>Revenue mensual</span>
-              <input type="text" name="monthlyRevenue" placeholder="$35,000 MRR" required>
-            </label>
-
-            <label class="field">
-              <span>Ticket promedio</span>
-              <input type="text" name="ticketSize" placeholder="$4,500 ACV" required>
-            </label>
-
-            <label class="field">
+            <label class="field field--full">
               <span>Dónde se rompe el proceso comercial</span>
               <select name="breakpoint" required>
                 <option value="">Selecciona el problema principal</option>
@@ -515,8 +517,9 @@
           </div>
 
           <div class="form-footer">
-            <p class="disclaimer">WhatsApp se abre con el número configurado y el resumen del intake del prospecto.</p>
-            <button class="button button--primary button--wide" type="submit">Quiero Mi Diagnóstico</button>
+            <p class="disclaimer">Al enviar, WhatsApp se abre con tu intake. Queda en tu historial del navegador y en tu chat conmigo — no lo abras en un dispositivo compartido.</p>
+            <p class="disclaimer"><a href="/privacy/" data-i18n="form.privacyLink">Más sobre privacidad →</a></p>
+            <button class="button button--primary button--wide" type="submit">Quiero el Triage</button>
           </div>
         </form>
       </section>
@@ -546,6 +549,7 @@
           <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
           <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
+          <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
