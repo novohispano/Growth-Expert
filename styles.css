@@ -185,13 +185,20 @@ textarea {
 .page-context__siblings {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
+  align-items: center;
+}
+
+.page-context__siblings::before {
+  content: "Compare →";
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .page-context__sibling {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   color: var(--text);
   text-decoration: none;
   font-size: 0.92rem;
@@ -211,8 +218,7 @@ textarea {
 }
 
 .page-context__sibling.is-active {
-  color: var(--text-soft);
-  pointer-events: none;
+  display: none;
 }
 
 .hero {
@@ -1003,6 +1009,21 @@ h3 {
   width: 100%;
   border-radius: var(--radius-xl);
   padding: 18px 20px;
+}
+
+.explore-card__more {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--accent-deep);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.explore-card__more:hover,
+.explore-card__more:focus-visible {
+  color: var(--text);
 }
 
 .explore-link,
