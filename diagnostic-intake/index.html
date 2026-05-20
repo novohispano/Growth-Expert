@@ -39,7 +39,7 @@
           <button class="language-toggle__button is-active" type="button" data-lang-toggle="es">ES</button>
           <button class="language-toggle__button" type="button" data-lang-toggle="en">EN</button>
         </div>
-        <a class="header-cta button button--primary" href="/diagnostic/" data-i18n="header.cta">Reservar Mi Diagnóstico</a>
+        <a class="header-cta button button--secondary" href="/diagnostic/" data-i18n="header.cta">Reservar Mi Diagnóstico</a>
         <button class="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav-sheet" aria-label="Menu" data-i18n-aria-label="nav.menu">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -92,11 +92,6 @@
             <span class="form-tag" data-i18n="form.tag2">Confidencial</span>
             <span class="form-tag" data-i18n="form.tag3">Te llega confirmación al email</span>
           </div>
-          <div class="form-note">
-            <strong data-i18n="form.flowLabel">Flujo:</strong>
-            <span data-i18n="form.flowCopy">llenas el form, le doy submit, recibo tu intake en mi email y arranco la
-              prep antes de nuestra sesión.</span>
-          </div>
         </div>
 
         <form class="intake-form" id="diagnostic-intake-form" novalidate>
@@ -127,29 +122,84 @@
             </label>
 
             <label class="field">
-              <span data-i18n="fields.arr">ARR actual</span>
-              <input type="text" name="arr" placeholder="$1.4M ARR"
-                data-i18n-placeholder="placeholders.arr" required />
+              <span data-i18n="fields.arrBand">ARR actual</span>
+              <select name="arrBand" required>
+                <option value="" data-i18n="arrBand.placeholder">Selecciona tu ARR</option>
+                <option value="<1m" data-i18n="arrBand.lt1m">Menos de $1M ARR</option>
+                <option value="1m-3m" data-i18n="arrBand.1m3m">$1M – $3M ARR</option>
+                <option value="3m-5m" data-i18n="arrBand.3m5m">$3M – $5M ARR</option>
+                <option value="5m+" data-i18n="arrBand.5mPlus">$5M+ ARR</option>
+              </select>
             </label>
 
             <label class="field">
-              <span data-i18n="fields.growth">Crecimiento MRR (últimos 6 meses)</span>
-              <input type="text" name="growth" placeholder="+8% MoM"
-                data-i18n-placeholder="placeholders.growth" required />
+              <span data-i18n="fields.growthBand">Crecimiento MRR (últimos 6 meses)</span>
+              <select name="growthBand" required>
+                <option value="" data-i18n="growthBand.placeholder">Selecciona tu crecimiento</option>
+                <option value="declining" data-i18n="growthBand.declining">Bajando</option>
+                <option value="flat" data-i18n="growthBand.flat">Plano / menos de 5% MoM</option>
+                <option value="5-10" data-i18n="growthBand.5-10">5–10% MoM</option>
+                <option value="10-20" data-i18n="growthBand.10-20">10–20% MoM</option>
+                <option value="20+" data-i18n="growthBand.20plus">20%+ MoM</option>
+              </select>
             </label>
 
-            <label class="field field--full">
-              <span data-i18n="fields.pains">Top 3 dolores principales de GTM</span>
-              <textarea name="pains" rows="4"
-                placeholder="1. ... &#10;2. ... &#10;3. ..."
-                data-i18n-placeholder="placeholders.pains" required></textarea>
+            <label class="field">
+              <span data-i18n="fields.pricingModel">Modelo de pricing</span>
+              <select name="pricingModel" required>
+                <option value="" data-i18n="pricingModel.placeholder">Selecciona tu modelo</option>
+                <option value="transactional" data-i18n="pricingModel.transactional">Transaccional / pago único</option>
+                <option value="seat" data-i18n="pricingModel.seat">Suscripción por asiento</option>
+                <option value="usage" data-i18n="pricingModel.usage">Basado en uso</option>
+                <option value="enterprise" data-i18n="pricingModel.enterprise">Enterprise / contratos anuales</option>
+                <option value="hybrid" data-i18n="pricingModel.hybrid">Híbrido / mezcla</option>
+              </select>
             </label>
 
-            <label class="field field--full">
-              <span data-i18n="fields.outcome">¿Qué resultado quieres de esta sesión?</span>
-              <textarea name="outcome" rows="4"
-                placeholder="Quiero salir con claridad sobre…"
-                data-i18n-placeholder="placeholders.outcome" required></textarea>
+            <label class="field">
+              <span data-i18n="fields.salesCycle">Ciclo de venta promedio</span>
+              <select name="salesCycle" required>
+                <option value="" data-i18n="salesCycle.placeholder">Selecciona el ciclo</option>
+                <option value="<30" data-i18n="salesCycle.lt30">Menos de 30 días</option>
+                <option value="30-60" data-i18n="salesCycle.30-60">30–60 días</option>
+                <option value="60-90" data-i18n="salesCycle.60-90">60–90 días</option>
+                <option value="90+" data-i18n="salesCycle.90plus">90+ días</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.winRate">Tasa de cierre</span>
+              <select name="winRate" required>
+                <option value="" data-i18n="winRate.placeholder">Selecciona tu win rate</option>
+                <option value="<10" data-i18n="winRate.lt10">Menos de 10%</option>
+                <option value="10-25" data-i18n="winRate.10-25">10–25%</option>
+                <option value="25-40" data-i18n="winRate.25-40">25–40%</option>
+                <option value="40+" data-i18n="winRate.40plus">40%+</option>
+                <option value="unknown" data-i18n="winRate.unknown">Aún no lo sé</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.salesTeamSize">Tamaño del equipo de ventas</span>
+              <select name="salesTeamSize" required>
+                <option value="" data-i18n="salesTeamSize.placeholder">Selecciona el tamaño</option>
+                <option value="0" data-i18n="salesTeamSize.0">Founder solo (0)</option>
+                <option value="1-3" data-i18n="salesTeamSize.1-3">1–3</option>
+                <option value="4-10" data-i18n="salesTeamSize.4-10">4–10</option>
+                <option value="10+" data-i18n="salesTeamSize.10plus">10+</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="fields.leadSource">Fuente principal de leads</span>
+              <select name="leadSource" required>
+                <option value="" data-i18n="leadSource.placeholder">Selecciona la fuente</option>
+                <option value="outbound" data-i18n="leadSource.outbound">Outbound principal</option>
+                <option value="inbound" data-i18n="leadSource.inbound">Inbound principal (contenido/SEO)</option>
+                <option value="referral" data-i18n="leadSource.referral">Referidos / partners principal</option>
+                <option value="paid" data-i18n="leadSource.paid">Adquisición paga principal</option>
+                <option value="mix" data-i18n="leadSource.mix">Mezcla, sin fuente dominante</option>
+              </select>
             </label>
 
             <label class="field field--full">
@@ -167,9 +217,10 @@
 
           <div class="form-footer">
             <p class="disclaimer" data-i18n="form.disclaimer">
-              Tu información se manda directo al email de Jorge. No se almacena en ningún CRM ni se comparte con
-              terceros.
+              Tus datos se procesan vía Web3Forms (servicio de envío de formularios) y llegan directo a mi inbox. No
+              los guardo en un CRM ni los comparto con terceros.
             </p>
+            <p class="disclaimer"><a href="/privacy/" data-i18n="form.privacyLink">More on privacy →</a></p>
             <p class="form-status" id="intake-status" role="status" aria-live="polite"></p>
             <button class="button button--primary button--wide" type="submit">
               <span data-i18n="form.submit">Mandar intake</span>
@@ -214,6 +265,7 @@
           <a href="mailto:jorge@thegrowth.expert">jorge@thegrowth.expert</a>
           <a href="https://www.linkedin.com/in/novohispano" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/blog/" data-i18n="footer.blog">Blog</a>
+          <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
         </div>
       </nav>
       <p class="site-footer__meta">© 2026 Growth Expert</p>
@@ -237,27 +289,63 @@
         "form.tag1": "5 minutos",
         "form.tag2": "Confidencial",
         "form.tag3": "Te llega confirmación al email",
-        "form.flowLabel": "Flujo:",
-        "form.flowCopy": "llenas el form, le doy submit, recibo tu intake en mi email y arranco la prep antes de nuestra sesión.",
         "fields.name": "Nombre",
         "fields.company": "Empresa",
         "fields.email": "Email",
-        "fields.arr": "ARR actual",
-        "fields.growth": "Crecimiento MRR (últimos 6 meses)",
-        "fields.pains": "Top 3 dolores principales de GTM",
-        "fields.outcome": "¿Qué resultado quieres de esta sesión?",
+        "fields.arrBand": "ARR actual",
+        "fields.growthBand": "Crecimiento MRR (últimos 6 meses)",
+        "fields.pricingModel": "Modelo de pricing",
+        "fields.salesCycle": "Ciclo de venta promedio",
+        "fields.winRate": "Tasa de cierre",
+        "fields.salesTeamSize": "Tamaño del equipo de ventas",
+        "fields.leadSource": "Fuente principal de leads",
         "fields.context": "Link a Notion o Google Doc con contexto adicional",
         "fields.deck": "Link al deck, si aplica",
         "fields.optional": "(opcional)",
         "placeholders.name": "Jane Founder",
         "placeholders.company": "Acme AI",
         "placeholders.email": "jane@acme.ai",
-        "placeholders.arr": "$1.4M ARR",
-        "placeholders.growth": "+8% MoM",
-        "placeholders.pains": "1. ...\n2. ...\n3. ...",
-        "placeholders.outcome": "Quiero salir con claridad sobre…",
         "placeholders.url": "https://",
-        "form.disclaimer": "Tu información se manda directo al email de Jorge. No se almacena en ningún CRM ni se comparte con terceros.",
+        "arrBand.placeholder": "Selecciona tu ARR",
+        "arrBand.lt1m": "Menos de $1M ARR",
+        "arrBand.1m3m": "$1M – $3M ARR",
+        "arrBand.3m5m": "$3M – $5M ARR",
+        "arrBand.5mPlus": "$5M+ ARR",
+        "growthBand.placeholder": "Selecciona tu crecimiento",
+        "growthBand.declining": "Bajando",
+        "growthBand.flat": "Plano / menos de 5% MoM",
+        "growthBand.5-10": "5–10% MoM",
+        "growthBand.10-20": "10–20% MoM",
+        "growthBand.20plus": "20%+ MoM",
+        "pricingModel.placeholder": "Selecciona tu modelo",
+        "pricingModel.transactional": "Transaccional / pago único",
+        "pricingModel.seat": "Suscripción por asiento",
+        "pricingModel.usage": "Basado en uso",
+        "pricingModel.enterprise": "Enterprise / contratos anuales",
+        "pricingModel.hybrid": "Híbrido / mezcla",
+        "salesCycle.placeholder": "Selecciona el ciclo",
+        "salesCycle.lt30": "Menos de 30 días",
+        "salesCycle.30-60": "30–60 días",
+        "salesCycle.60-90": "60–90 días",
+        "salesCycle.90plus": "90+ días",
+        "winRate.placeholder": "Selecciona tu win rate",
+        "winRate.lt10": "Menos de 10%",
+        "winRate.10-25": "10–25%",
+        "winRate.25-40": "25–40%",
+        "winRate.40plus": "40%+",
+        "winRate.unknown": "Aún no lo sé",
+        "salesTeamSize.placeholder": "Selecciona el tamaño",
+        "salesTeamSize.0": "Founder solo (0)",
+        "salesTeamSize.1-3": "1–3",
+        "salesTeamSize.4-10": "4–10",
+        "salesTeamSize.10plus": "10+",
+        "leadSource.placeholder": "Selecciona la fuente",
+        "leadSource.outbound": "Outbound principal",
+        "leadSource.inbound": "Inbound principal (contenido/SEO)",
+        "leadSource.referral": "Referidos / partners principal",
+        "leadSource.paid": "Adquisición paga principal",
+        "leadSource.mix": "Mezcla, sin fuente dominante",
+        "form.disclaimer": "Tus datos se procesan vía Web3Forms (servicio de envío de formularios) y llegan directo a mi inbox. No los guardo en un CRM ni los comparto con terceros.",
         "form.submit": "Mandar intake",
         "form.sending": "Enviando…",
         "form.error": "Hubo un error. Intenta de nuevo o escríbeme directo a jorge@thegrowth.expert.",
@@ -273,34 +361,70 @@
         "context.intake": "Intake",
         "hero.eyebrow": "Diagnostic Intake",
         "hero.title": "Send me your numbers before the session.",
-        "hero.lede": "Takes 5 minutes. I spend 2 hours reviewing this before our call so the 90 minutes together return their full value. Without context, the session is worth half.",
+        "hero.lede": "Takes 5 minutes. I spend 2 hours digesting it so our 90 minutes together stay sharp.",
         "form.eyebrow": "What I need from you",
         "form.title": "Numbers, pain points, and target outcome.",
-        "form.copy": "Fill it honestly. If you don't know an exact metric, give your best estimate. I'm not here to judge — I'm here to help you see where revenue is leaking and what to fix first.",
+        "form.copy": "Estimates are fine where you don't have an exact number.",
         "form.tag1": "5 minutes",
         "form.tag2": "Confidential",
         "form.tag3": "Confirmation lands in your inbox",
-        "form.flowLabel": "Flow:",
-        "form.flowCopy": "fill the form, hit submit, your intake lands in my inbox, and I start prep before our session.",
         "fields.name": "Name",
         "fields.company": "Company",
         "fields.email": "Email",
-        "fields.arr": "Current ARR",
-        "fields.growth": "MRR growth (last 6 months)",
-        "fields.pains": "Top 3 GTM pain points",
-        "fields.outcome": "What outcome do you want from this session?",
+        "fields.arrBand": "Current ARR",
+        "fields.growthBand": "MRR growth (last 6 months)",
+        "fields.pricingModel": "Pricing model",
+        "fields.salesCycle": "Average sales cycle",
+        "fields.winRate": "Win rate",
+        "fields.salesTeamSize": "Sales team size",
+        "fields.leadSource": "Primary lead source",
         "fields.context": "Link to Notion or Google Doc with extra context",
         "fields.deck": "Link to your deck, if relevant",
         "fields.optional": "(optional)",
         "placeholders.name": "Jane Founder",
         "placeholders.company": "Acme AI",
         "placeholders.email": "jane@acme.ai",
-        "placeholders.arr": "$1.4M ARR",
-        "placeholders.growth": "+8% MoM",
-        "placeholders.pains": "1. ...\n2. ...\n3. ...",
-        "placeholders.outcome": "I want to leave with clarity on…",
         "placeholders.url": "https://",
-        "form.disclaimer": "Your information goes directly to Jorge's inbox. Nothing is stored in a CRM or shared with third parties.",
+        "arrBand.placeholder": "Select your ARR",
+        "arrBand.lt1m": "Under $1M ARR",
+        "arrBand.1m3m": "$1M – $3M ARR",
+        "arrBand.3m5m": "$3M – $5M ARR",
+        "arrBand.5mPlus": "$5M+ ARR",
+        "growthBand.placeholder": "Select your growth",
+        "growthBand.declining": "Declining",
+        "growthBand.flat": "Flat / sub-5% MoM",
+        "growthBand.5-10": "5–10% MoM",
+        "growthBand.10-20": "10–20% MoM",
+        "growthBand.20plus": "20%+ MoM",
+        "pricingModel.placeholder": "Select your model",
+        "pricingModel.transactional": "Transactional / one-time",
+        "pricingModel.seat": "Per-seat subscription",
+        "pricingModel.usage": "Usage-based",
+        "pricingModel.enterprise": "Enterprise / annual contracts",
+        "pricingModel.hybrid": "Hybrid / mix",
+        "salesCycle.placeholder": "Select your cycle",
+        "salesCycle.lt30": "Under 30 days",
+        "salesCycle.30-60": "30–60 days",
+        "salesCycle.60-90": "60–90 days",
+        "salesCycle.90plus": "90+ days",
+        "winRate.placeholder": "Select your win rate",
+        "winRate.lt10": "Under 10%",
+        "winRate.10-25": "10–25%",
+        "winRate.25-40": "25–40%",
+        "winRate.40plus": "40%+",
+        "winRate.unknown": "Don't know yet",
+        "salesTeamSize.placeholder": "Select team size",
+        "salesTeamSize.0": "Founder-led (0)",
+        "salesTeamSize.1-3": "1–3",
+        "salesTeamSize.4-10": "4–10",
+        "salesTeamSize.10plus": "10+",
+        "leadSource.placeholder": "Select lead source",
+        "leadSource.outbound": "Outbound primary",
+        "leadSource.inbound": "Inbound primary (content/SEO)",
+        "leadSource.referral": "Referrals / partners primary",
+        "leadSource.paid": "Paid acquisition primary",
+        "leadSource.mix": "Mix, no dominant source",
+        "form.disclaimer": "Your data is processed via Web3Forms (a form-delivery service) and lands directly in my inbox. I don't store it in a CRM or share it with third parties.",
         "form.submit": "Send intake",
         "form.sending": "Sending…",
         "form.error": "Something went wrong. Try again or email me directly at jorge@thegrowth.expert.",

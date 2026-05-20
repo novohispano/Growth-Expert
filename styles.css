@@ -207,7 +207,6 @@ textarea {
 
 .page-context__sibling:hover,
 .page-context__sibling:focus-visible {
-  transform: translateY(-1px);
   border-color: rgba(229, 56, 44, 0.22);
 }
 
@@ -337,11 +336,14 @@ h3 {
     box-shadow 160ms ease;
 }
 
-.button:hover,
-.button:focus-visible,
-.header-cta:hover,
-.header-cta:focus-visible {
-  transform: translateY(-1px);
+.button--primary:hover,
+.button--primary:focus-visible {
+  background: var(--accent-deep);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  border-color: var(--text);
 }
 
 .button--primary {
@@ -465,7 +467,6 @@ h3 {
 
 .path-selector__card:hover,
 .path-selector__card:focus-visible {
-  transform: translateY(-2px);
   border-color: rgba(229, 56, 44, 0.22);
   background: rgba(255, 255, 255, 0.92);
 }
@@ -620,9 +621,7 @@ h3 {
   margin-top: 24px;
   border-top: 0;
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(135deg, rgba(13, 23, 38, 0.97), rgba(28, 37, 54, 0.94)),
-    radial-gradient(circle at top right, rgba(229, 56, 44, 0.22), transparent 28%);
+  background: #0d1726;
   color: #f5f7fb;
 }
 
@@ -950,7 +949,6 @@ h3 {
 .explore-link:focus-visible,
 .blog-rail__card:hover,
 .blog-rail__card:focus-visible {
-  transform: translateY(-1px);
   border-color: rgba(229, 56, 44, 0.22);
   background: rgba(255, 255, 255, 0.92);
 }
@@ -1055,7 +1053,6 @@ h3 {
 .blog-hub-card__cta:hover,
 .blog-hub-card__cta:focus-visible {
   color: var(--accent-deep);
-  transform: translateX(2px);
 }
 
 .blog-hub-card__cta:focus-visible {
@@ -1144,7 +1141,6 @@ h3 {
 .blog-sidebar__item:focus-visible,
 .blog-sidebar__cta:hover,
 .blog-sidebar__cta:focus-visible {
-  transform: translateY(-1px);
   border-color: rgba(229, 56, 44, 0.16);
 }
 
