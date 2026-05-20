@@ -226,7 +226,7 @@ textarea {
   display: grid;
   grid-template-columns: 1.35fr 0.95fr;
   gap: 0;
-  padding: 32px 0 24px;
+  padding: 32px 0 80px;
   align-items: stretch;
 }
 
@@ -236,11 +236,11 @@ textarea {
 }
 
 .hero__content {
-  padding: 16px 32px 16px 0;
+  padding: 0 32px 0 0;
 }
 
 .hero-card {
-  padding: 16px 0 16px 32px;
+  padding: 0 0 0 32px;
   border-left: 1px solid var(--line);
 }
 
@@ -617,10 +617,8 @@ h3 {
 }
 
 .section--signal {
-  padding: 64px 48px;
-  margin-top: 24px;
+  padding: 80px 0;
   border-top: 0;
-  border-radius: var(--radius-xl);
   background: #0d1726;
   color: #f5f7fb;
 }
@@ -777,6 +775,10 @@ h3 {
   border-left: 1px solid var(--line);
 }
 
+.principle-card:last-child {
+  padding-right: 0;
+}
+
 .principle-card span {
   display: none;
 }
@@ -790,6 +792,10 @@ h3 {
   border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.signal-card:last-child {
+  padding-right: 0;
+}
+
 .form-honeypot {
   display: none;
 }
@@ -801,6 +807,10 @@ h3 {
 .testimonial-card + .testimonial-card {
   padding-left: 24px;
   border-left: 1px solid var(--line);
+}
+
+.testimonial-card:last-child {
+  padding-right: 0;
 }
 
 .testimonial-person {
@@ -876,6 +886,10 @@ h3 {
 .about-card + .about-card {
   padding-left: 24px;
   border-left: 1px solid var(--line);
+}
+
+.about-card:last-child {
+  padding-right: 0;
 }
 
 .related-card,
@@ -1348,7 +1362,7 @@ h3 {
 }
 
 .fit-card {
-  padding: 36px;
+  padding: 24px;
   background: var(--surface-strong);
   display: flex;
   flex-direction: column;
