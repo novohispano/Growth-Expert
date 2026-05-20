@@ -568,17 +568,18 @@ h3 {
 }
 
 .pattern-stack {
-  display: grid;
-  gap: 14px;
-  margin-top: 16px;
+  display: block;
+  margin-top: 8px;
 }
 
 .pattern-item {
   display: block;
-  padding: 16px 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: #ffffff;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pattern-item:first-child {
+  border-top: 0;
 }
 
 .pattern-item__body h3 {
