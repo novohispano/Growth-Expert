@@ -2034,6 +2034,28 @@ code {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  /* "A dónde ir después" mobile reorder & prune.
+     JTBD priority after finishing an article: read more (Artículos),
+     then get help (Programas), then maybe context (Países — but
+     footer already lists them, so hide). */
+  .explore-hub__grid .explore-card:nth-child(2) {
+    display: none;
+  }
+
+  .explore-hub__grid .explore-card:nth-child(1) {
+    order: 2;
+  }
+
+  .explore-hub__grid .explore-card:nth-child(3) {
+    order: 1;
+  }
+
+  .explore-hub__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
 }
 
 @media (max-width: 720px) {
