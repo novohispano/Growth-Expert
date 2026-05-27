@@ -2198,11 +2198,36 @@ code {
 
   .site-footer--expanded .site-footer__links {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
 
+  /* Each footer group becomes one tight row: small label,
+     then links inline separated by " · ". Rams: less but better.
+     Krug: scannable at a glance. JTBD: every link still 1 tap. */
   .site-footer__group {
-    gap: 8px;
+    display: block;
+    gap: 0;
+  }
+
+  .site-footer--expanded .site-footer__group-label {
+    margin-bottom: 4px;
+  }
+
+  .site-footer--expanded .site-footer__group a {
+    display: inline;
+    line-height: 1.6;
+  }
+
+  .site-footer--expanded .site-footer__group a + a::before {
+    content: " · ";
+    color: rgba(82, 96, 113, 0.5);
+    margin: 0 2px;
+  }
+
+  /* "Blog" is already reachable from the nav menu — don't list it
+     a second time in the footer's CONNECT row on mobile. */
+  .site-footer__group a[data-i18n="footer.blog"] {
+    display: none;
   }
 }
 
