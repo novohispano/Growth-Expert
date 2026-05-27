@@ -1071,21 +1071,39 @@ h3 {
   margin-top: 64px;
 }
 
+/* Mobile/tablet default: 1-col vertical list with top hairlines */
 .blog-hub-grid .related-card {
-  padding: 32px 40px 32px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--line);
   border-left: 0;
 }
 
-.blog-hub-grid .related-card:nth-child(-n+2) {
+.blog-hub-grid .related-card:first-child {
   padding-top: 0;
   border-top: 0;
 }
 
-.blog-hub-grid .related-card:nth-child(2n) {
-  padding-left: 40px;
-  padding-right: 0;
-  border-left: 1px solid var(--line);
+/* Desktop 2-col grid */
+@media (min-width: 1081px) {
+  .blog-hub-grid .related-card {
+    padding: 32px 40px 32px 0;
+  }
+
+  .blog-hub-grid .related-card:first-child {
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  .blog-hub-grid .related-card:nth-child(-n+2) {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .blog-hub-grid .related-card:nth-child(2n) {
+    padding-left: 40px;
+    padding-right: 0;
+    border-left: 1px solid var(--line);
+  }
 }
 
 .blog-hub-card {
@@ -1991,6 +2009,30 @@ code {
   .hero__stats,
   .field-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset desktop column-cell styles when grids collapse to 1 col.
+     The vertical hairlines + padding-left were column dividers;
+     in single-column mode they read as a stray indent on alternating cards.
+     !important because the desktop nth-child / adjacent-sibling rules
+     outrank a single-class selector. */
+  .principle-card,
+  .signal-card,
+  .testimonial-card,
+  .about-card,
+  .related-card,
+  .explore-card,
+  .blog-rail__card {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: 0 !important;
+  }
+
+  /* The featured testimonial uses its own 2-col internal layout —
+     stack it too on mobile. */
+  .testimonial-card--featured {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
