@@ -2159,8 +2159,10 @@ code {
   }
 
   .blog-sidebar {
-    position: static;
-    top: auto;
+    /* Hidden on mobile — the article itself should lead.
+       Article-to-article navigation lives in the "A dónde ir después"
+       explore-hub at the bottom of each post. */
+    display: none;
   }
 
   .blog-sidebar__item,
