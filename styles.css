@@ -1996,14 +1996,19 @@ code {
 
 @media (max-width: 720px) {
   .page-shell {
-    width: min(calc(100% - 20px), var(--max-width));
-    padding-top: 12px;
+    width: 100%;
+    padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .site-header {
-    top: 10px;
-    padding: 14px 16px;
-    border-radius: var(--radius-xl);
+    top: 0;
+    padding: 14px 0;
+    border-radius: 0;
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .page-context,
