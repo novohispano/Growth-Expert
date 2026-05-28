@@ -834,21 +834,15 @@ h3 {
   display: none;
 }
 
+/* Symmetric horizontal padding on every supporting card so all four
+   columns have the same content width. The first/last edges lose page-
+   shell flush in exchange for visually uniform columns. */
 .testimonial-card {
-  padding: 16px 40px 16px 0;
+  padding: 16px 40px;
 }
 
 .testimonial-grid > .testimonial-card:nth-child(n+3) {
-  padding-left: 40px;
   border-left: 1px solid var(--line);
-}
-
-.testimonial-grid > .testimonial-card:nth-child(2) {
-  padding-left: 0;
-}
-
-.testimonial-card:last-child {
-  padding-right: 0;
 }
 
 .testimonial-person {
