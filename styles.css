@@ -660,7 +660,11 @@ h3 {
 }
 
 .testimonial-grid {
-  grid-template-columns: repeat(4, 1fr);
+  /* Inner columns get wider to compensate for their double-side padding
+     (40 left + 40 right = 80 total) vs edge columns' single-side padding
+     (40 total). This keeps page-edge flush on the outer cards while
+     equalizing the *content* width of all four supporting columns. */
+  grid-template-columns: 7fr 8fr 8fr 7fr;
   margin-top: 64px;
 }
 
@@ -834,15 +838,21 @@ h3 {
   display: none;
 }
 
-/* Symmetric horizontal padding on every supporting card so all four
-   columns have the same content width. The first/last edges lose page-
-   shell flush in exchange for visually uniform columns. */
 .testimonial-card {
-  padding: 16px 40px;
+  padding: 16px 40px 16px 0;
 }
 
 .testimonial-grid > .testimonial-card:nth-child(n+3) {
+  padding-left: 40px;
   border-left: 1px solid var(--line);
+}
+
+.testimonial-grid > .testimonial-card:nth-child(2) {
+  padding-left: 0;
+}
+
+.testimonial-card:last-child {
+  padding-right: 0;
 }
 
 .testimonial-person {
