@@ -871,8 +871,6 @@ h3 {
 
 .testimonial-avatar--image {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center 18%;
   box-shadow: none;
