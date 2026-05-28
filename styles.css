@@ -855,7 +855,7 @@ h3 {
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 16px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 18px;
 }
 
