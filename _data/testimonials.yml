@@ -1,0 +1,45 @@
+# Canonical testimonials. Rendered by _includes/testimonials.html.
+# Quote language is chosen by page.lang at build time. Falls back to en.
+# Order here matches the canonical ICP-fit ordering used on index.html.
+# When editing: change here, not in page markup.
+
+- slug: pablo
+  name: "Pablo Robles"
+  role: "CEO &amp; Co-Founder, efektiva · 🇲🇽"
+  avatar: "/images/pablo_robles.jpg"
+  featured: true
+  quote:
+    en: "“With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results and drive measurable execution.”"
+    es: "“Con Jorge logramos poner nuestra estructura comercial en orden en cuatro semanas. Las bases que aplicamos podrían llevarnos a triplicar resultados y ejecutar con más claridad.”"
+
+- slug: yaritza
+  name: "Yaritza Rodelo"
+  role: "CEO &amp; Co-Founder, EasyLex · 🇲🇽"
+  avatar: "/images/yaritza_rodelo.jpg"
+  quote:
+    en: "“Jorge has been key to my company's growth. He doesn't just listen — he engages with strategy, bringing experience and clarity.”"
+    es: "“Jorge ha sido clave en el crecimiento de mi empresa. No solo escucha: se involucra en la estrategia, con experiencia y claridad.”"
+
+- slug: valentina
+  name: "Valentina Ríos"
+  role: "Co-Founder, Docokids · 🇨🇴"
+  avatar: "/images/valentina_rios.jpg"
+  quote:
+    en: "“He has consistently made himself available to provide guidance and support, giving above and beyond to help us navigate startup challenges.”"
+    es: "“Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.”"
+
+- slug: rodrigo
+  name: "Rodrigo Pérez Arzate"
+  role: "CEO &amp; Founder, SuperMango · 🇲🇽"
+  avatar: "/images/rodrigo_perez.jpg"
+  quote:
+    en: "“Jorge Téllez delivers an exceptional mentoring skillset, impactful across growth, branding, capital raising, and strategic execution.”"
+    es: "“Jorge Téllez tiene una capacidad excepcional de mentoría, valiosa en growth, branding, levantamiento de capital y ejecución estratégica.”"
+
+- slug: alejandro
+  name: "Alejandro Salcedo Junco"
+  role: "Founder, DogDay &amp; Wiggly · 🇲🇽"
+  avatar: "/images/alejandro_junco.jpg"
+  quote:
+    en: "“Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.”"
+    es: "“Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.”"

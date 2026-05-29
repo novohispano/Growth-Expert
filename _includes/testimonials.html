@@ -1,0 +1,30 @@
+{%- comment -%}
+  Renders the canonical testimonial grid. Data lives in _data/testimonials.yml.
+  Picks the quote variant for page.lang (default: en).
+  Falls back to en if the requested lang is missing and emits an HTML comment.
+
+  Wrap this include in your own <section class="section section--testimonials">
+  and section-heading on each page — those are page-specific copy.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+        <div class="testimonial-grid">
+{%- for t in site.data.testimonials -%}
+{%- assign quote = t.quote[lang] -%}
+{%- if quote == nil or quote == "" -%}
+{%- assign quote = t.quote.en -%}
+          <!-- testimonial missing for lang={{ lang }} (slug={{ t.slug }}) -->
+{%- endif %}
+          <article class="testimonial-card{% if t.featured %} testimonial-card--featured{% endif %}">
+            <div class="testimonial-person">
+              <img class="testimonial-avatar testimonial-avatar--image" src="{{ t.avatar | relative_url }}" alt="{{ t.name }}" />
+              <div class="testimonial-meta">
+                <h3>{{ t.name }}</h3>
+                <p class="testimonial-role">{{ t.role }}</p>
+              </div>
+            </div>
+            <p class="testimonial-quote">
+              {{ quote }}
+            </p>
+          </article>
+{%- endfor %}
+        </div>
