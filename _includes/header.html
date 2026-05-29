@@ -1,0 +1,33 @@
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Growth Expert home">
+        <span class="brand__mark">G</span>
+        <span class="brand__text"><strong>Growth Expert</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <details class="nav-dropdown">
+          <summary>
+            <span data-i18n="nav.programs">Programs</span>
+            <svg class="nav-caret" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <ul class="nav-menu" role="menu">
+            <li role="none"><a role="menuitem" href="/revenue-unlock/" data-i18n="services.unlock.title">Revenue Unlock Program</a></li>
+            <li role="none"><a role="menuitem" href="/series-a-fundraising/" data-i18n="services.fundraising.title">Series A Fundraising</a></li>
+          </ul>
+        </details>
+        <a class="nav-link" href="/blog/" data-i18n="nav.blog">Blog</a>
+      </nav>
+      <div class="header-controls">
+        {% if page.show_lang_toggle %}<div class="language-toggle" role="group" aria-label="Language selector">
+          <button class="language-toggle__button is-active" type="button" data-lang-toggle="en">
+            EN
+          </button>
+          <button class="language-toggle__button" type="button" data-lang-toggle="es">
+            ES
+          </button>
+        </div>
+        {% endif %}<a class="header-cta button button--secondary" href="/diagnostic/" data-i18n="header.cta">{{ page.header_cta_label | default: 'Book My Diagnostic' }}</a>
+        <button class="nav-burger" type="button" aria-expanded="false" aria-controls="mobile-nav-sheet" aria-label="Menu" data-i18n-aria-label="nav.menu">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </header>

@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>{% include head.html %}{% if page.schema_include %}{% include {{ page.schema_include }} %}{% endif %}</head>
+<body><div class="page-shell">{% include header.html %}{% include mobile-nav.html %}{{ content }}{% include footer.html %}</div>{% include scripts.html %}</body>
+</html>

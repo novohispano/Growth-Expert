@@ -1,0 +1,14 @@
+title: Growth Expert
+url: https://thegrowth.expert
+baseurl: ""
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - AGENTS.md
+  - README.md
+  - .claude
+  - scripts
+  - render_social_card.swift
+  - _site_test
