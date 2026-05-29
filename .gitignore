@@ -5,3 +5,6 @@ _site_test/
 .bundle/
 vendor/bundle/
 .DS_Store
+
+# Per-user agent state
+.claude/
