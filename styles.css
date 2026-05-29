@@ -15,6 +15,8 @@
   --radius-sm: 2px;
   --radius-pill: 999px;
   --max-width: 1200px;
+  --col-pad-x: 40px;
+  --col-pad-y: 16px;
 }
 
 * {
@@ -745,16 +747,19 @@ h3 {
   border-radius: var(--radius-md);
 }
 
-.principle-card {
-  padding: 16px 40px 16px 0;
+/* Column-with-divider recipe shared by 4 card types.
+   :where() keeps specificity at 0 so the mobile reset below
+   doesn't need to fight specificity wars. */
+:where(.principle-card, .about-card, .related-card, .explore-card) {
+  padding: var(--col-pad-y) var(--col-pad-x) var(--col-pad-y) 0;
 }
 
-.principle-card + .principle-card {
-  padding-left: 40px;
+:where(.principle-card, .about-card, .related-card, .explore-card) + :where(.principle-card, .about-card, .related-card, .explore-card) {
+  padding-left: var(--col-pad-x);
   border-left: 1px solid var(--line);
 }
 
-.principle-card:last-child {
+:where(.principle-card, .about-card, .related-card, .explore-card):last-child {
   padding-right: 0;
 }
 
@@ -858,35 +863,6 @@ h3 {
   font-size: 0.9rem;
   line-height: 1.45;
   color: var(--text-soft);
-}
-
-.about-card {
-  padding: 16px 40px 16px 0;
-}
-
-.about-card + .about-card {
-  padding-left: 40px;
-  border-left: 1px solid var(--line);
-}
-
-.about-card:last-child {
-  padding-right: 0;
-}
-
-.related-card,
-.explore-card {
-  padding: 16px 40px 16px 0;
-}
-
-.related-card + .related-card,
-.explore-card + .explore-card {
-  padding-left: 40px;
-  border-left: 1px solid var(--line);
-}
-
-.related-card:last-child,
-.explore-card:last-child {
-  padding-right: 0;
 }
 
 .explore-card.is-active {
