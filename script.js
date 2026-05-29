@@ -388,13 +388,6 @@ const translations = {
   },
 };
 
-const form = document.querySelector("#whatsapp-form");
-const translationNodes = document.querySelectorAll("[data-i18n]");
-const placeholderNodes = document.querySelectorAll("[data-i18n-placeholder]");
-const languageButtons = document.querySelectorAll("[data-lang-toggle]");
-const forcedFormLanguage = form?.dataset.formLanguage || "";
-let currentLanguage = forcedFormLanguage || DEFAULT_LANGUAGE;
-
 function getDictionary(lang) {
   const baseDictionary = translations[lang] || translations.en;
   const pageDictionary = PAGE_TRANSLATIONS[lang] || {};
@@ -405,117 +398,138 @@ function getDictionary(lang) {
   };
 }
 
-function translate(lang) {
+function translate(lang, root) {
+  const scope = root || document;
   const dictionary = getDictionary(lang);
-  currentLanguage = lang;
   document.documentElement.lang = lang;
 
-  translationNodes.forEach((node) => {
+  scope.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
     if (dictionary[key]) {
       node.textContent = dictionary[key];
     }
   });
 
-  placeholderNodes.forEach((node) => {
+  scope.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     const key = node.dataset.i18nPlaceholder;
     if (dictionary[key]) {
       node.setAttribute("placeholder", dictionary[key]);
     }
   });
 
-  languageButtons.forEach((button) => {
+  scope.querySelectorAll("[data-lang-toggle]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.langToggle === lang);
     button.setAttribute("aria-pressed", String(button.dataset.langToggle === lang));
   });
 }
 
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const lang = button.dataset.langToggle;
-    writeStoredLanguage(lang);
-    translate(lang);
+function initI18n(root) {
+  const scope = root || document;
+  const form = scope.querySelector("#whatsapp-form");
+  const forcedFormLanguage = (form && form.dataset.formLanguage) || "";
+  const initialLanguage = forcedFormLanguage || DEFAULT_LANGUAGE;
+
+  scope.querySelectorAll("[data-lang-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const lang = button.dataset.langToggle;
+      writeStoredLanguage(lang);
+      translate(lang, scope);
+    });
   });
-});
 
-translate(currentLanguage);
+  translate(initialLanguage, scope);
+}
 
-if (form) {
+function extractPayload(form) {
+  const data = new FormData(form);
+  return {
+    arrBand: (data.get("arrBand") || "").toString().trim(),
+    name: (data.get("name") || "").toString().trim(),
+    email: (data.get("email") || "").toString().trim(),
+    breakpoint: (data.get("breakpoint") || "").toString().trim(),
+  };
+}
+
+function isPreRevenue(payload) {
+  return payload.arrBand === "pre-revenue";
+}
+
+function showPreRevenueNotice(form) {
   const preRevenueNotice = document.getElementById("prerevenue-notice");
+  if (!preRevenueNotice) return;
   const formSection = form.closest(".section--form");
   const formCopyBlock = formSection ? formSection.querySelector(".form-copy") : null;
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const data = new FormData(form);
-
-    // Pre-revenue qualification gate — pre-revenue prospects don't go to WhatsApp
-    const arrBandValue = (data.get("arrBand") || "").toString();
-    if (arrBandValue === "pre-revenue" && preRevenueNotice) {
-      form.hidden = true;
-      if (formCopyBlock) formCopyBlock.hidden = true;
-      preRevenueNotice.classList.add("is-visible");
-      preRevenueNotice.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-
-    const payload = {
-      arrBand: arrBandValue.trim(),
-      name: (data.get("name") || "").toString().trim(),
-      email: (data.get("email") || "").toString().trim(),
-      breakpoint: (data.get("breakpoint") || "").toString().trim(),
-    };
-
-    const requiredFields = [
-      payload.arrBand,
-      payload.name,
-      payload.email,
-      payload.breakpoint,
-    ];
-
-    if (requiredFields.some((value) => !value)) {
-      form.reportValidity();
-      return;
-    }
-
-    const submissionLanguage = forcedFormLanguage || currentLanguage;
-    const dictionary = getDictionary(submissionLanguage);
-    const customIntro =
-      submissionLanguage === "es"
-        ? form.dataset.messageIntroEs || form.dataset.messageIntro
-        : form.dataset.messageIntroEn || form.dataset.messageIntro;
-
-    // Map arrBand value back to localized label for the message
-    const arrBandLabelMap = {
-      "pre-revenue": dictionary["arrBand.preRevenue"],
-      "<1m": dictionary["arrBand.lt1m"],
-      "1m-3m": dictionary["arrBand.1m3m"],
-      "3m-5m": dictionary["arrBand.3m5m"],
-      "5m+": dictionary["arrBand.5mPlus"],
-    };
-    const arrBandLabel = arrBandLabelMap[payload.arrBand] || payload.arrBand;
-
-    const lines = [
-      customIntro || dictionary["message.intro"],
-      "",
-      `${dictionary["message.arrBand"]}: ${arrBandLabel}`,
-      `${dictionary["message.name"]}: ${payload.name}`,
-      `${dictionary["message.email"]}: ${payload.email}`,
-      `${dictionary["message.breakpoint"]}: ${payload.breakpoint}`,
-    ];
-
-    const message = encodeURIComponent(lines.join("\n"));
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-
-    window.open(url, "_blank", "noopener,noreferrer");
-  });
+  form.hidden = true;
+  if (formCopyBlock) formCopyBlock.hidden = true;
+  preRevenueNotice.classList.add("is-visible");
+  preRevenueNotice.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// Header navigation: dropdown click-outside-to-close + Escape + mobile burger sheet
-(function () {
-  const dropdowns = document.querySelectorAll(".nav-dropdown");
-  dropdowns.forEach((details) => {
+function isValid(payload) {
+  return Boolean(payload.arrBand && payload.name && payload.email && payload.breakpoint);
+}
+
+function buildWhatsappUrl(payload, lang, form) {
+  const forcedFormLanguage = (form && form.dataset.formLanguage) || "";
+  const submissionLanguage = forcedFormLanguage || lang;
+  const dictionary = getDictionary(submissionLanguage);
+  const customIntro =
+    submissionLanguage === "es"
+      ? (form && (form.dataset.messageIntroEs || form.dataset.messageIntro))
+      : (form && (form.dataset.messageIntroEn || form.dataset.messageIntro));
+
+  // Map arrBand value back to localized label for the message
+  const arrBandLabelMap = {
+    "pre-revenue": dictionary["arrBand.preRevenue"],
+    "<1m": dictionary["arrBand.lt1m"],
+    "1m-3m": dictionary["arrBand.1m3m"],
+    "3m-5m": dictionary["arrBand.3m5m"],
+    "5m+": dictionary["arrBand.5mPlus"],
+  };
+  const arrBandLabel = arrBandLabelMap[payload.arrBand] || payload.arrBand;
+
+  const lines = [
+    customIntro || dictionary["message.intro"],
+    "",
+    `${dictionary["message.arrBand"]}: ${arrBandLabel}`,
+    `${dictionary["message.name"]}: ${payload.name}`,
+    `${dictionary["message.email"]}: ${payload.email}`,
+    `${dictionary["message.breakpoint"]}: ${payload.breakpoint}`,
+  ];
+
+  const message = encodeURIComponent(lines.join("\n"));
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const payload = extractPayload(form);
+
+  if (isPreRevenue(payload)) {
+    showPreRevenueNotice(form);
+    return;
+  }
+
+  if (!isValid(payload)) {
+    form.reportValidity();
+    return;
+  }
+
+  const lang = document.documentElement.lang || "en";
+  const url = buildWhatsappUrl(payload, lang, form);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function initForm(form) {
+  form.addEventListener("submit", handleSubmit);
+}
+
+function initNav(root) {
+  const scope = root || document;
+
+  scope.querySelectorAll(".nav-dropdown").forEach((details) => {
     details.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && details.open) {
         details.open = false;
@@ -524,6 +538,7 @@ if (form) {
       }
     });
   });
+
   document.addEventListener("click", (event) => {
     document.querySelectorAll(".nav-dropdown").forEach((details) => {
       if (details.open && !details.contains(event.target)) {
@@ -532,8 +547,8 @@ if (form) {
     });
   });
 
-  const burger = document.querySelector(".nav-burger");
-  const sheet = document.getElementById("mobile-nav-sheet");
+  const burger = scope.querySelector(".nav-burger");
+  const sheet = scope.querySelector("#mobile-nav-sheet");
   if (burger && sheet) {
     const closeSheet = () => {
       sheet.hidden = true;
@@ -561,4 +576,13 @@ if (form) {
       link.addEventListener("click", closeSheet);
     });
   }
-})();
+}
+
+function boot() {
+  initI18n(document);
+  const form = document.querySelector("#whatsapp-form");
+  if (form) initForm(form);
+  initNav(document);
+}
+
+boot();
