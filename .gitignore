@@ -8,3 +8,4 @@ vendor/bundle/
 
 # Per-user agent state
 .claude/
+AGENTS.md

@@ -1,1 +1,0 @@
-/Users/novohispano/Code/agents/AGENTS.md
