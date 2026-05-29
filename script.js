@@ -516,16 +516,18 @@ if (form) {
 (function () {
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   dropdowns.forEach((details) => {
-    document.addEventListener("click", (event) => {
-      if (details.open && !details.contains(event.target)) {
-        details.open = false;
-      }
-    });
     details.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && details.open) {
         details.open = false;
         const summary = details.querySelector("summary");
         if (summary) summary.focus();
+      }
+    });
+  });
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".nav-dropdown").forEach((details) => {
+      if (details.open && !details.contains(event.target)) {
+        details.open = false;
       }
     });
   });
