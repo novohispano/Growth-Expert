@@ -3,9 +3,19 @@ const LANG_STORAGE_KEY = "growthexpert.lang";
 const BROWSER_LANGUAGE = navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
 const PAGE_TRANSLATIONS = window.PAGE_TRANSLATIONS || {};
 
+const ARR_BANDS = Object.freeze({
+  PRE_REVENUE: "pre-revenue",
+  LT_1M: "<1m",
+  BAND_1M_3M: "1m-3m",
+  BAND_3M_5M: "3m-5m",
+  BAND_5M_PLUS: "5m+",
+});
+
+const MISSING_I18N_KEYS = new Set();
+
 function pageSupportsLanguage(lang) {
-  if (window.PAGE_TRANSLATIONS && Object.keys(window.PAGE_TRANSLATIONS).length > 0) {
-    return Boolean(window.PAGE_TRANSLATIONS[lang]);
+  if (PAGE_TRANSLATIONS && Object.keys(PAGE_TRANSLATIONS).length > 0) {
+    return Boolean(PAGE_TRANSLATIONS[lang]);
   }
   return true;
 }
@@ -58,12 +68,9 @@ const translations = {
     "patterns.text2": "The motion doesn't scale beyond you.",
     "patterns.title3": "Pricing leaves money on the table",
     "patterns.text3": "ACV, conversion, and expansion are all underperforming.",
-    "testimonials.eyebrow": "From founders who shipped the work",
     "testimonials.title": "Founders who fixed their commercial structure with Jorge.",
-    "testimonials.quote1": "\"Jorge Téllez delivers an exceptional mentoring skillset, impactful across growth, branding, capital raising, and strategic execution.\"",
     "testimonials.quote2": "\"Jorge is more than a mentor: he combines strategic vision with practical judgment to make decisions with focus and speed.\"",
     "testimonials.quote3": "\"He has consistently made himself available to provide guidance and support, going above and beyond to help us navigate startup challenges.\"",
-    "testimonials.quote4": "\"With Jorge, we got our commercial structure in order in four weeks. The foundation we put in place could take us to triple our results and drive measurable execution.\"",
     "testimonials.quote5": "\"Jorge has been key to my company's growth. He doesn't just listen — he engages with strategy, bringing experience and clarity.\"",
     "about.eyebrow": "Why Jorge",
     "about.title": "I help early-stage startups fix GTM bottlenecks and grow revenue.",
@@ -233,12 +240,9 @@ const translations = {
     "patterns.text2": "Las ventas no escalan sin ti.",
     "patterns.title3": "El pricing deja dinero sobre la mesa",
     "patterns.text3": "ACV, conversión y expansión rinden por debajo.",
-    "testimonials.eyebrow": "Founders que sí ejecutaron",
     "testimonials.title": "Founders que ordenaron su estructura comercial con Jorge.",
-    "testimonials.quote1": "\"Jorge Téllez tiene una capacidad excepcional de mentoría, valiosa en growth, branding, levantamiento de capital y ejecución estratégica.\"",
     "testimonials.quote2": "\"Jorge es más que un mentor: mezcla visión estratégica con un entendimiento práctico para tomar decisiones con foco y velocidad.\"",
     "testimonials.quote3": "\"Siempre ha estado disponible para brindar guía y apoyo, y ha ido más allá para ayudarnos a navegar los retos de una startup.\"",
-    "testimonials.quote4": "\"Con Jorge logramos poner nuestra estructura comercial en orden en 4 semanas. Las bases que aplicamos podrían llevarnos a triplicar nuestros resultados.\"",
     "testimonials.quote5": "\"Jorge ha sido clave en el crecimiento de mi empresa. No solo escucha: se involucra en la estrategia, con experiencia y claridad.\"",
     "about.eyebrow": "Por qué Jorge",
     "about.title": "Ayudo a startups early-stage a destrabar GTM y mover revenue.",
@@ -398,6 +402,28 @@ function getDictionary(lang) {
   };
 }
 
+function warnMissingKeyOnce(key, lang, fallbackAvailable) {
+  const dedupeKey = `${lang}::${key}`;
+  if (MISSING_I18N_KEYS.has(dedupeKey)) return;
+  MISSING_I18N_KEYS.add(dedupeKey);
+  if (fallbackAvailable) {
+    console.warn(`[i18n] missing key "${key}" for lang "${lang}", falling back to en`);
+  } else {
+    console.warn(`[i18n] missing key "${key}" — undefined in all dictionaries`);
+  }
+}
+
+function resolveTranslation(key, lang, dictionary) {
+  if (dictionary[key] !== undefined) return dictionary[key];
+  const enFallback = translations.en[key];
+  if (enFallback !== undefined) {
+    warnMissingKeyOnce(key, lang, true);
+    return enFallback;
+  }
+  warnMissingKeyOnce(key, lang, false);
+  return undefined;
+}
+
 function translate(lang, root) {
   const scope = root || document;
   const dictionary = getDictionary(lang);
@@ -405,15 +431,17 @@ function translate(lang, root) {
 
   scope.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    if (dictionary[key]) {
-      node.textContent = dictionary[key];
+    const value = resolveTranslation(key, lang, dictionary);
+    if (value !== undefined) {
+      node.textContent = value;
     }
   });
 
   scope.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     const key = node.dataset.i18nPlaceholder;
-    if (dictionary[key]) {
-      node.setAttribute("placeholder", dictionary[key]);
+    const value = resolveTranslation(key, lang, dictionary);
+    if (value !== undefined) {
+      node.setAttribute("placeholder", value);
     }
   });
 
@@ -451,7 +479,7 @@ function extractPayload(form) {
 }
 
 function isPreRevenue(payload) {
-  return payload.arrBand === "pre-revenue";
+  return payload.arrBand === ARR_BANDS.PRE_REVENUE;
 }
 
 function showPreRevenueNotice(form) {
@@ -481,11 +509,11 @@ function buildWhatsappUrl(payload, lang, form) {
 
   // Map arrBand value back to localized label for the message
   const arrBandLabelMap = {
-    "pre-revenue": dictionary["arrBand.preRevenue"],
-    "<1m": dictionary["arrBand.lt1m"],
-    "1m-3m": dictionary["arrBand.1m3m"],
-    "3m-5m": dictionary["arrBand.3m5m"],
-    "5m+": dictionary["arrBand.5mPlus"],
+    [ARR_BANDS.PRE_REVENUE]: dictionary["arrBand.preRevenue"],
+    [ARR_BANDS.LT_1M]: dictionary["arrBand.lt1m"],
+    [ARR_BANDS.BAND_1M_3M]: dictionary["arrBand.1m3m"],
+    [ARR_BANDS.BAND_3M_5M]: dictionary["arrBand.3m5m"],
+    [ARR_BANDS.BAND_5M_PLUS]: dictionary["arrBand.5mPlus"],
   };
   const arrBandLabel = arrBandLabelMap[payload.arrBand] || payload.arrBand;
 
@@ -549,6 +577,10 @@ function initNav(root) {
 
   const burger = scope.querySelector(".nav-burger");
   const sheet = scope.querySelector("#mobile-nav-sheet");
+  if (Boolean(burger) !== Boolean(sheet)) {
+    console.warn("[nav] mobile nav partially wired — burger XOR sheet present, both required");
+    return;
+  }
   if (burger && sheet) {
     const closeSheet = () => {
       sheet.hidden = true;
